@@ -42,15 +42,15 @@
 
 </span>
 
-      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
-        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 36 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">36</span>
       </a>
       <details class="user-menu">
-        <summary>Avery <span class="muted small">▾</span></summary>
-        <div class="menu" role="menu">
+        <summary>Avery<span class="sr-only">, account menu</span> <span class="muted small" aria-hidden="true">▾</span></summary>
+        <div class="menu">
           <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
-          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
-          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit">Sign out</button></form>
         </div>
       </details>
     </div>
@@ -74,8 +74,8 @@
 </nav>
 
 <form method="get" class="filters"><div class="form-grid">
-  <div class="field"><label for="a-action">Area</label><select id="a-action" name="action"><option value="">Everything</option><option value="report">report</option><option value="time_entry">time_entry</option><option value="timesheet">timesheet</option></select></div>
-  <div class="field"><label for="a-person">Person (actor or subject)</label><select id="a-person" name="person"><option value="">Anyone</option><option value="1">Avery Admin</option><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="3">Jordan Designer</option><option value="7">Morgan Former</option><option value="5">Riley Video</option><option value="4">Sam Developer</option></select></div>
+  <div class="field"><label for="a-action">Area</label><select id="a-action" name="action"><option value="">Everything</option><option value="account">account</option><option value="project">project</option><option value="time_entry">time_entry</option><option value="timesheet">timesheet</option></select></div>
+  <div class="field"><label for="a-person">Person (actor or subject)</label><select id="a-person" name="person"><option value="">Anyone</option><option value="1">Avery Admin</option><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="8">Drew Contractor</option><option value="3">Jordan Designer</option><option value="7">Morgan Former</option><option value="5">Riley Video</option><option value="4">Sam Developer</option></select></div>
   <div class="field"><label for="a-object">Record ID</label><input id="a-object" type="text" name="object_id" value=""></div>
   <div class="field"><label for="a-days">Period</label><select id="a-days" name="days">
     <option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option><option value="365">Last year</option><option value="0">All time</option></select></div>
@@ -85,504 +85,504 @@
 <div class="table-wrap"><table class="table table-compact">
   <thead><tr><th>When</th><th>Who</th><th>Action</th><th>Record</th><th>Changes</th><th>Reason</th></tr></thead>
   <tbody>
-    <tr><td class="nowrap">2026-10-16 00:41:20</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-summary-project-20261001-20261031 <span class="muted small">#summary</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Drew Contractor 2026-10-05 <span class="muted small">#41</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:41:20</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Drew Contractor 2026-09-28 <span class="muted small">#40</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:41:20</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Drew Contractor 2026-09-28 <span class="muted small">#40</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:41:19</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-summary-project-20261001-20261031 <span class="muted small">#summary</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Drew Contractor 2026-09-21 <span class="muted small">#39</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:41:19</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Drew Contractor 2026-09-21 <span class="muted small">#39</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:41:19</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Drew Contractor 2026-09-14 <span class="muted small">#38</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:17:37</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-summary-project-20261001-20261031 <span class="muted small">#summary</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Drew Contractor 2026-09-14 <span class="muted small">#38</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:17:37</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Drew Contractor 2026-09-07 <span class="muted small">#37</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:17:37</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Drew Contractor 2026-09-07 <span class="muted small">#37</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:17:36</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-summary-project-20261001-20261031 <span class="muted small">#summary</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#905 Drew Contractor 2026-10-14 HBF-REBRAND › Design <span class="muted small">#905</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-14</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 1800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:17:36</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#904 Drew Contractor 2026-10-14 HBF-REBRAND › Motion Graphics <span class="muted small">#904</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-14</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:17:36</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#903 Drew Contractor 2026-10-14 HBF-REBRAND › Design <span class="muted small">#903</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-14</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:16:38</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-summary-project-20261001-20261031 <span class="muted small">#summary</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#902 Drew Contractor 2026-10-14 HBF-REBRAND › Design <span class="muted small">#902</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-14</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:16:38</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#901 Drew Contractor 2026-10-14 HBF-REBRAND › Design <span class="muted small">#901</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-14</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:16:38</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#900 Drew Contractor 2026-10-14 HBF-REBRAND › Design <span class="muted small">#900</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-14</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:16:37</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-summary-project-20261001-20261031 <span class="muted small">#summary</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#899 Drew Contractor 2026-10-13 HBF-REBRAND › Design <span class="muted small">#899</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-13</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:16:37</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#898 Drew Contractor 2026-10-13 HBF-REBRAND › Design <span class="muted small">#898</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-13</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:16:37</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
-      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
-      <td class="small"></td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#897 Drew Contractor 2026-10-13 HBF-REBRAND › Design <span class="muted small">#897</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-13</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#896 Drew Contractor 2026-10-13 HBF-REBRAND › Motion Graphics <span class="muted small">#896</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Logo sting animation</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-13</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#895 Drew Contractor 2026-10-12 HBF-REBRAND › Design <span class="muted small">#895</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-12</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#894 Drew Contractor 2026-10-12 HBF-REBRAND › Motion Graphics <span class="muted small">#894</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Logo sting animation</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-12</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#893 Drew Contractor 2026-10-12 HBF-REBRAND › Design <span class="muted small">#893</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-12</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#892 Drew Contractor 2026-10-12 HBF-REBRAND › Motion Graphics <span class="muted small">#892</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Logo sting animation</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-12</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#891 Drew Contractor 2026-10-12 HBF-REBRAND › Design <span class="muted small">#891</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 42</div><div><span class="muted">work_date:</span> — → 2026-10-12</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#890 Drew Contractor 2026-10-07 HBF-REBRAND › Motion Graphics <span class="muted small">#890</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 41</div><div><span class="muted">work_date:</span> — → 2026-10-07</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#889 Drew Contractor 2026-10-07 HBF-REBRAND › Design <span class="muted small">#889</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 41</div><div><span class="muted">work_date:</span> — → 2026-10-07</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#888 Drew Contractor 2026-10-07 HBF-REBRAND › Design <span class="muted small">#888</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 41</div><div><span class="muted">work_date:</span> — → 2026-10-07</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#887 Drew Contractor 2026-10-07 HBF-REBRAND › Design <span class="muted small">#887</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 41</div><div><span class="muted">work_date:</span> — → 2026-10-07</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#886 Drew Contractor 2026-10-07 HBF-REBRAND › Design <span class="muted small">#886</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 41</div><div><span class="muted">work_date:</span> — → 2026-10-07</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#885 Drew Contractor 2026-10-06 HBF-REBRAND › Design <span class="muted small">#885</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 41</div><div><span class="muted">work_date:</span> — → 2026-10-06</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#884 Drew Contractor 2026-10-06 HBF-REBRAND › Motion Graphics <span class="muted small">#884</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Logo sting animation</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 41</div><div><span class="muted">work_date:</span> — → 2026-10-06</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#883 Drew Contractor 2026-10-06 HBF-REBRAND › Design <span class="muted small">#883</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 41</div><div><span class="muted">work_date:</span> — → 2026-10-06</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#882 Drew Contractor 2026-10-06 HBF-REBRAND › Design <span class="muted small">#882</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 41</div><div><span class="muted">work_date:</span> — → 2026-10-06</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#881 Drew Contractor 2026-10-05 HBF-REBRAND › Design <span class="muted small">#881</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 41</div><div><span class="muted">work_date:</span> — → 2026-10-05</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#880 Drew Contractor 2026-10-05 HBF-REBRAND › Motion Graphics <span class="muted small">#880</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 41</div><div><span class="muted">work_date:</span> — → 2026-10-05</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#879 Drew Contractor 2026-10-05 HBF-REBRAND › Design <span class="muted small">#879</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 41</div><div><span class="muted">work_date:</span> — → 2026-10-05</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#878 Drew Contractor 2026-10-05 HBF-REBRAND › Motion Graphics <span class="muted small">#878</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Logo sting animation</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 41</div><div><span class="muted">work_date:</span> — → 2026-10-05</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#877 Drew Contractor 2026-09-30 HBF-REBRAND › Motion Graphics <span class="muted small">#877</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Logo sting animation</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-30</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 1800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#876 Drew Contractor 2026-09-30 HBF-REBRAND › Design <span class="muted small">#876</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-30</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#875 Drew Contractor 2026-09-30 HBF-REBRAND › Design <span class="muted small">#875</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-30</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#874 Drew Contractor 2026-09-30 HBF-REBRAND › Design <span class="muted small">#874</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-30</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#873 Drew Contractor 2026-09-30 HBF-REBRAND › Design <span class="muted small">#873</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-30</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#872 Drew Contractor 2026-09-29 HBF-REBRAND › Design <span class="muted small">#872</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-29</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 1800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#871 Drew Contractor 2026-09-29 HBF-REBRAND › Design <span class="muted small">#871</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-29</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#870 Drew Contractor 2026-09-29 HBF-REBRAND › Design <span class="muted small">#870</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-29</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#869 Drew Contractor 2026-09-29 HBF-REBRAND › Design <span class="muted small">#869</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-29</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#868 Drew Contractor 2026-09-29 HBF-REBRAND › Design <span class="muted small">#868</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-29</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#867 Drew Contractor 2026-09-28 HBF-REBRAND › Design <span class="muted small">#867</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-28</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#866 Drew Contractor 2026-09-28 HBF-REBRAND › Motion Graphics <span class="muted small">#866</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Logo sting animation</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-28</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#865 Drew Contractor 2026-09-28 HBF-REBRAND › Motion Graphics <span class="muted small">#865</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-28</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#864 Drew Contractor 2026-09-28 HBF-REBRAND › Motion Graphics <span class="muted small">#864</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 40</div><div><span class="muted">work_date:</span> — → 2026-09-28</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#863 Drew Contractor 2026-09-23 HBF-REBRAND › Design <span class="muted small">#863</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 39</div><div><span class="muted">work_date:</span> — → 2026-09-23</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#862 Drew Contractor 2026-09-23 HBF-REBRAND › Motion Graphics <span class="muted small">#862</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 39</div><div><span class="muted">work_date:</span> — → 2026-09-23</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#861 Drew Contractor 2026-09-23 HBF-REBRAND › Design <span class="muted small">#861</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 39</div><div><span class="muted">work_date:</span> — → 2026-09-23</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#860 Drew Contractor 2026-09-23 HBF-REBRAND › Motion Graphics <span class="muted small">#860</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Logo sting animation</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 39</div><div><span class="muted">work_date:</span> — → 2026-09-23</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#859 Drew Contractor 2026-09-22 HBF-REBRAND › Design <span class="muted small">#859</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 39</div><div><span class="muted">work_date:</span> — → 2026-09-22</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#858 Drew Contractor 2026-09-22 HBF-REBRAND › Design <span class="muted small">#858</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 39</div><div><span class="muted">work_date:</span> — → 2026-09-22</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#857 Drew Contractor 2026-09-22 HBF-REBRAND › Motion Graphics <span class="muted small">#857</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 39</div><div><span class="muted">work_date:</span> — → 2026-09-22</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#856 Drew Contractor 2026-09-21 HBF-REBRAND › Design <span class="muted small">#856</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 39</div><div><span class="muted">work_date:</span> — → 2026-09-21</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#855 Drew Contractor 2026-09-21 HBF-REBRAND › Design <span class="muted small">#855</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 39</div><div><span class="muted">work_date:</span> — → 2026-09-21</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#854 Drew Contractor 2026-09-21 HBF-REBRAND › Design <span class="muted small">#854</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 39</div><div><span class="muted">work_date:</span> — → 2026-09-21</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#853 Drew Contractor 2026-09-16 HBF-REBRAND › Design <span class="muted small">#853</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 38</div><div><span class="muted">work_date:</span> — → 2026-09-16</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#852 Drew Contractor 2026-09-16 HBF-REBRAND › Design <span class="muted small">#852</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 38</div><div><span class="muted">work_date:</span> — → 2026-09-16</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#851 Drew Contractor 2026-09-16 HBF-REBRAND › Design <span class="muted small">#851</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 38</div><div><span class="muted">work_date:</span> — → 2026-09-16</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#850 Drew Contractor 2026-09-16 HBF-REBRAND › Design <span class="muted small">#850</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 38</div><div><span class="muted">work_date:</span> — → 2026-09-16</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#849 Drew Contractor 2026-09-16 HBF-REBRAND › Design <span class="muted small">#849</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 38</div><div><span class="muted">work_date:</span> — → 2026-09-16</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#848 Drew Contractor 2026-09-15 HBF-REBRAND › Design <span class="muted small">#848</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 38</div><div><span class="muted">work_date:</span> — → 2026-09-15</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 1800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#847 Drew Contractor 2026-09-15 HBF-REBRAND › Design <span class="muted small">#847</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 38</div><div><span class="muted">work_date:</span> — → 2026-09-15</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#846 Drew Contractor 2026-09-15 HBF-REBRAND › Motion Graphics <span class="muted small">#846</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 38</div><div><span class="muted">work_date:</span> — → 2026-09-15</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#845 Drew Contractor 2026-09-15 HBF-REBRAND › Design <span class="muted small">#845</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 38</div><div><span class="muted">work_date:</span> — → 2026-09-15</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#844 Drew Contractor 2026-09-15 HBF-REBRAND › Motion Graphics <span class="muted small">#844</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 38</div><div><span class="muted">work_date:</span> — → 2026-09-15</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:26</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#843 Drew Contractor 2026-09-09 HBF-REBRAND › Motion Graphics <span class="muted small">#843</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Logo sting animation</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 37</div><div><span class="muted">work_date:</span> — → 2026-09-09</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#842 Drew Contractor 2026-09-09 HBF-REBRAND › Motion Graphics <span class="muted small">#842</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 37</div><div><span class="muted">work_date:</span> — → 2026-09-09</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#841 Drew Contractor 2026-09-09 HBF-REBRAND › Design <span class="muted small">#841</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Festival map illustration</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 37</div><div><span class="muted">work_date:</span> — → 2026-09-09</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#840 Drew Contractor 2026-09-08 HBF-REBRAND › Design <span class="muted small">#840</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 37</div><div><span class="muted">work_date:</span> — → 2026-09-08</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#839 Drew Contractor 2026-09-08 HBF-REBRAND › Motion Graphics <span class="muted small">#839</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Logo sting animation</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 37</div><div><span class="muted">work_date:</span> — → 2026-09-08</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#838 Drew Contractor 2026-09-08 HBF-REBRAND › Design <span class="muted small">#838</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 37</div><div><span class="muted">work_date:</span> — → 2026-09-08</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#837 Drew Contractor 2026-09-08 HBF-REBRAND › Motion Graphics <span class="muted small">#837</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 37</div><div><span class="muted">work_date:</span> — → 2026-09-08</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#836 Drew Contractor 2026-09-07 HBF-REBRAND › Design <span class="muted small">#836</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Wayfinding sign layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 37</div><div><span class="muted">work_date:</span> — → 2026-09-07</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#835 Drew Contractor 2026-09-07 HBF-REBRAND › Motion Graphics <span class="muted small">#835</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 37</div><div><span class="muted">work_date:</span> — → 2026-09-07</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#834 Drew Contractor 2026-09-07 HBF-REBRAND › Design <span class="muted small">#834</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Poster series layouts</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 37</div><div><span class="muted">work_date:</span> — → 2026-09-07</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Drew Contractor &lt;drew@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#833 Drew Contractor 2026-09-07 HBF-REBRAND › Motion Graphics <span class="muted small">#833</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 8</div><div><span class="muted">notes:</span> — → Logo sting animation</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 55.00</div><div><span class="muted">timesheet:</span> — → 37</div><div><span class="muted">work_date:</span> — → 2026-09-07</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">project.manager_set</td>
+      <td>Harbourfront Festival (demo) · Festival Rebrand <span class="muted small">#13</span></td>
+      <td class="small"><div><span class="muted">is_manager:</span> False → True</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">project.manager_set</td>
+      <td>Northwind Outfitters (demo) · Website Support <span class="muted small">#12</span></td>
+      <td class="small"><div><span class="muted">is_manager:</span> False → True</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">account.role_change</td>
+      <td>Casey Strategist &lt;casey@peach-demo.example&gt; <span class="muted small">#6</span></td>
+      <td class="small"><div><span class="muted">role:</span> employee → manager</div><div><span class="muted">financial_access:</span> False → True</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
       <td>Timesheet Casey Strategist 2026-10-05 <span class="muted small">#30</span></td>
       <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
       <td>Timesheet Riley Video 2026-10-05 <span class="muted small">#29</span></td>
       <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.reject</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.reject</td>
       <td>Timesheet Jordan Designer 2026-10-05 <span class="muted small">#27</span></td>
       <td class="small"><div><span class="muted">status:</span> submitted → rejected</div></td>
       <td class="small">Please add notes to Friday&#x27;s design time (demo).</td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
       <td>Timesheet Jordan Designer 2026-10-05 <span class="muted small">#27</span></td>
       <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
       <td>Timesheet Blake Reviewer 2026-10-05 <span class="muted small">#26</span></td>
       <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
       <td>Timesheet Avery Admin 2026-10-05 <span class="muted small">#25</span></td>
       <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
       <td>Timesheet Casey Strategist 2026-09-28 <span class="muted small">#24</span></td>
       <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
       <td>Timesheet Casey Strategist 2026-09-28 <span class="muted small">#24</span></td>
       <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
       <td>Timesheet Riley Video 2026-09-28 <span class="muted small">#23</span></td>
       <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
       <td>Timesheet Riley Video 2026-09-28 <span class="muted small">#23</span></td>
       <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
       <td>Timesheet Sam Developer 2026-09-28 <span class="muted small">#22</span></td>
       <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
       <td>Timesheet Sam Developer 2026-09-28 <span class="muted small">#22</span></td>
       <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
       <td>Timesheet Jordan Designer 2026-09-28 <span class="muted small">#21</span></td>
       <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
       <td>Timesheet Jordan Designer 2026-09-28 <span class="muted small">#21</span></td>
       <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
       <td class="small"></td></tr>
   
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+    <tr><td class="nowrap">2026-10-16 10:28:25</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
       <td>Timesheet Blake Reviewer 2026-09-28 <span class="muted small">#20</span></td>
       <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Blake Reviewer 2026-09-28 <span class="muted small">#20</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Avery Admin 2026-09-28 <span class="muted small">#19</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Avery Admin 2026-09-28 <span class="muted small">#19</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Casey Strategist 2026-09-21 <span class="muted small">#18</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Casey Strategist 2026-09-21 <span class="muted small">#18</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Riley Video 2026-09-21 <span class="muted small">#17</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Riley Video 2026-09-21 <span class="muted small">#17</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Sam Developer 2026-09-21 <span class="muted small">#16</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Sam Developer 2026-09-21 <span class="muted small">#16</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Jordan Designer 2026-09-21 <span class="muted small">#15</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Jordan Designer 2026-09-21 <span class="muted small">#15</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Blake Reviewer 2026-09-21 <span class="muted small">#14</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Blake Reviewer 2026-09-21 <span class="muted small">#14</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Avery Admin 2026-09-21 <span class="muted small">#13</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Avery Admin 2026-09-21 <span class="muted small">#13</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Casey Strategist 2026-09-14 <span class="muted small">#12</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Casey Strategist 2026-09-14 <span class="muted small">#12</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Riley Video 2026-09-14 <span class="muted small">#11</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Riley Video 2026-09-14 <span class="muted small">#11</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Sam Developer 2026-09-14 <span class="muted small">#10</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Sam Developer 2026-09-14 <span class="muted small">#10</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Jordan Designer 2026-09-14 <span class="muted small">#9</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Jordan Designer 2026-09-14 <span class="muted small">#9</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Blake Reviewer 2026-09-14 <span class="muted small">#8</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Blake Reviewer 2026-09-14 <span class="muted small">#8</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Avery Admin 2026-09-14 <span class="muted small">#7</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Avery Admin 2026-09-14 <span class="muted small">#7</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Casey Strategist 2026-09-07 <span class="muted small">#6</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Casey Strategist 2026-09-07 <span class="muted small">#6</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Riley Video 2026-09-07 <span class="muted small">#5</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Riley Video 2026-09-07 <span class="muted small">#5</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Sam Developer 2026-09-07 <span class="muted small">#4</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Sam Developer 2026-09-07 <span class="muted small">#4</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Jordan Designer 2026-09-07 <span class="muted small">#3</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Jordan Designer 2026-09-07 <span class="muted small">#3</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Blake Reviewer 2026-09-07 <span class="muted small">#2</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Blake Reviewer 2026-09-07 <span class="muted small">#2</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
-      <td>Timesheet Avery Admin 2026-09-07 <span class="muted small">#1</span></td>
-      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
-      <td>Timesheet Avery Admin 2026-09-07 <span class="muted small">#1</span></td>
-      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#832 Casey Strategist 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#832</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 6</div><div><span class="muted">notes:</span> — → Email and planning</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 52.00</div><div><span class="muted">timesheet:</span> — → 36</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#831 Casey Strategist 2026-10-16 HBF-REBRAND › Strategy <span class="muted small">#831</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 2</div><div><span class="muted">user:</span> — → 6</div><div><span class="muted">notes:</span> — → Quarterly content plan</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 52.00</div><div><span class="muted">timesheet:</span> — → 36</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Strategy</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#830 Casey Strategist 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#830</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 6</div><div><span class="muted">notes:</span> — → Email and planning</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 52.00</div><div><span class="muted">timesheet:</span> — → 36</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#829 Casey Strategist 2026-10-16 HBF-REBRAND › Strategy <span class="muted small">#829</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 2</div><div><span class="muted">user:</span> — → 6</div><div><span class="muted">notes:</span> — → Campaign planning workshop</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 52.00</div><div><span class="muted">timesheet:</span> — → 36</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Strategy</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#828 Casey Strategist 2026-10-16 CCT-2026-RET › Strategy <span class="muted small">#828</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 2</div><div><span class="muted">user:</span> — → 6</div><div><span class="muted">notes:</span> — → Quarterly content plan</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 52.00</div><div><span class="muted">timesheet:</span> — → 36</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Strategy</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#827 Riley Video 2026-10-16 CCT-2026-RET › Production <span class="muted small">#827</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 12</div><div><span class="muted">user:</span> — → 5</div><div><span class="muted">notes:</span> — → B-roll capture</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 48.00</div><div><span class="muted">timesheet:</span> — → 35</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Production</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 1800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#826 Riley Video 2026-10-16 HBF-REBRAND › Motion Graphics <span class="muted small">#826</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 5</div><div><span class="muted">notes:</span> — → Logo sting animation</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 48.00</div><div><span class="muted">timesheet:</span> — → 35</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#825 Riley Video 2026-10-16 CCT-2026-RET › Production <span class="muted small">#825</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 12</div><div><span class="muted">user:</span> — → 5</div><div><span class="muted">notes:</span> — → B-roll capture</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 48.00</div><div><span class="muted">timesheet:</span> — → 35</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Production</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#824 Riley Video 2026-10-16 HBF-REBRAND › Motion Graphics <span class="muted small">#824</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 5</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 48.00</div><div><span class="muted">timesheet:</span> — → 35</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#823 Sam Developer 2026-10-16 CCT-2026-RET › Quality Assurance Testing <span class="muted small">#823</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 15</div><div><span class="muted">user:</span> — → 4</div><div><span class="muted">notes:</span> — → Ongoing work</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 50.00</div><div><span class="muted">timesheet:</span> — → 34</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Quality Assurance Testing</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#822 Sam Developer 2026-10-16 NWO-WEB › Programming <span class="muted small">#822</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 13</div><div><span class="muted">user:</span> — → 4</div><div><span class="muted">notes:</span> — → Analytics events</div><div><span class="muted">project:</span> — → 12</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 50.00</div><div><span class="muted">timesheet:</span> — → 34</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Programming</div><div><span class="muted">billing_rate:</span> — → 120.00</div><div><span class="muted">project_label:</span> — → Northwind Outfitters (demo) · Website Support (NWO-WEB)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → project</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#821 Sam Developer 2026-10-16 CCT-2026-RET › Development <span class="muted small">#821</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 1</div><div><span class="muted">user:</span> — → 4</div><div><span class="muted">notes:</span> — → Page speed improvements</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 50.00</div><div><span class="muted">timesheet:</span> — → 34</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Development</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#820 Sam Developer 2026-10-16 CCT-2026-RET › Development <span class="muted small">#820</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 1</div><div><span class="muted">user:</span> — → 4</div><div><span class="muted">notes:</span> — → Fix menu on mobile</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 50.00</div><div><span class="muted">timesheet:</span> — → 34</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Development</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#819 Sam Developer 2026-10-16 CCT-2026-RET › Quality Assurance Testing <span class="muted small">#819</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 15</div><div><span class="muted">user:</span> — → 4</div><div><span class="muted">notes:</span> — → Ongoing work</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 50.00</div><div><span class="muted">timesheet:</span> — → 34</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Quality Assurance Testing</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#818 Jordan Designer 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#818</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 3</div><div><span class="muted">notes:</span> — → Expense sorting</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 45.00</div><div><span class="muted">timesheet:</span> — → 33</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#817 Jordan Designer 2026-10-16 HBF-REBRAND › Design <span class="muted small">#817</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 3</div><div><span class="muted">notes:</span> — → Brand palette clean-up</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 45.00</div><div><span class="muted">timesheet:</span> — → 33</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#816 Jordan Designer 2026-10-16 CCT-2026-RET › Design - Assets <span class="muted small">#816</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 6</div><div><span class="muted">user:</span> — → 3</div><div><span class="muted">notes:</span> — → Ongoing work</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 45.00</div><div><span class="muted">timesheet:</span> — → 33</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Design - Assets</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 1800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#815 Jordan Designer 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#815</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 3</div><div><span class="muted">notes:</span> — → Expense sorting</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 45.00</div><div><span class="muted">timesheet:</span> — → 33</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#814 Jordan Designer 2026-10-16 CCT-2026-RET › Design - Assets <span class="muted small">#814</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 6</div><div><span class="muted">user:</span> — → 3</div><div><span class="muted">notes:</span> — → Ongoing work</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 45.00</div><div><span class="muted">timesheet:</span> — → 33</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Design - Assets</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#813 Blake Reviewer 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#813</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 2</div><div><span class="muted">notes:</span> — → Expense sorting</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 60.00</div><div><span class="muted">timesheet:</span> — → 32</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#812 Blake Reviewer 2026-10-16 HBF-REBRAND › Project Management <span class="muted small">#812</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 14</div><div><span class="muted">user:</span> — → 2</div><div><span class="muted">notes:</span> — → Client check-in call</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 60.00</div><div><span class="muted">timesheet:</span> — → 32</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Project Management</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#811 Blake Reviewer 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#811</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 2</div><div><span class="muted">notes:</span> — → Email and planning</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 60.00</div><div><span class="muted">timesheet:</span> — → 32</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#810 Blake Reviewer 2026-10-16 HBF-REBRAND › Project Management <span class="muted small">#810</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 14</div><div><span class="muted">user:</span> — → 2</div><div><span class="muted">notes:</span> — → Scope review</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 60.00</div><div><span class="muted">timesheet:</span> — → 32</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Project Management</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#809 Avery Admin 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#809</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 1</div><div><span class="muted">notes:</span> — → Expense sorting</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 65.00</div><div><span class="muted">timesheet:</span> — → 31</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#808 Avery Admin 2026-10-16 NWO-WEB › Project Management <span class="muted small">#808</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 14</div><div><span class="muted">user:</span> — → 1</div><div><span class="muted">notes:</span> — → Timeline update</div><div><span class="muted">project:</span> — → 12</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 65.00</div><div><span class="muted">timesheet:</span> — → 31</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Project Management</div><div><span class="muted">billing_rate:</span> — → 120.00</div><div><span class="muted">project_label:</span> — → Northwind Outfitters (demo) · Website Support (NWO-WEB)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → project</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#807 Avery Admin 2026-10-16 CCT-2026-RET › Project Management <span class="muted small">#807</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 14</div><div><span class="muted">user:</span> — → 1</div><div><span class="muted">notes:</span> — → Timeline update</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 65.00</div><div><span class="muted">timesheet:</span> — → 31</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Project Management</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 1800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#806 Avery Admin 2026-10-16 CCT-2026-RET › Project Management <span class="muted small">#806</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 14</div><div><span class="muted">user:</span> — → 1</div><div><span class="muted">notes:</span> — → Timeline update</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 65.00</div><div><span class="muted">timesheet:</span> — → 31</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Project Management</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 1800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
-      <td class="small"></td></tr>
-  
-    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
-      <td>#805 Avery Admin 2026-10-16 CCT-2026-RET › Project Management <span class="muted small">#805</span></td>
-      <td class="small"><div><span class="muted">task:</span> — → 14</div><div><span class="muted">user:</span> — → 1</div><div><span class="muted">notes:</span> — → Timeline update</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 65.00</div><div><span class="muted">timesheet:</span> — → 31</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Project Management</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
       <td class="small"></td></tr>
   </tbody>
 </table>
@@ -592,5 +592,6 @@
 </main>
 <footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
 <div class="toast-region" aria-live="polite"></div>
+<div id="announcer" class="sr-only" role="status"></div>
 </body>
 </html>

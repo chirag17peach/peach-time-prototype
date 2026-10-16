@@ -25,6 +25,16 @@
     for (var i = 0; i < words.length; i++) if (haystack.indexOf(words[i]) === -1) return false;
     return true;
   }
+  // Leading symbols (★, ←) are decoration: screen readers get the words only.
+  function labelled(node, text) {
+    var symbol = /^([★←]) /.exec(text);
+    if (symbol) {
+      node.appendChild(el("span", { "aria-hidden": "true" }, symbol[0]));
+      text = text.slice(symbol[0].length);
+    }
+    node.appendChild(document.createTextNode(text));
+    return node;
+  }
 
   var counter = 0;
 
@@ -59,23 +69,28 @@
     var labelId = (label && label.id) || this.uid + "-label";
     if (label) { label.id = labelId; label.setAttribute("for", this.uid + "-button"); }
     this.button = el("button", {
-      type: "button", class: "picker-button", id: this.uid + "-button", "aria-haspopup": "listbox",
-      "aria-expanded": "false", "aria-labelledby": labelId + " " + this.uid + "-button",
+      type: "button", class: "picker-button", id: this.uid + "-button", "aria-haspopup": "dialog",
+      "aria-expanded": "false", "aria-controls": this.uid + "-popup", "aria-labelledby": labelId + " " + this.uid + "-button",
     });
     if (this.select.hasAttribute("aria-invalid")) this.button.setAttribute("aria-invalid", "true");
     if (this.select.getAttribute("aria-describedby")) this.button.setAttribute("aria-describedby", this.select.getAttribute("aria-describedby"));
-    this.popup = el("div", { class: "picker-popup", hidden: true });
+    // The popup is a small non-modal dialog: a search combobox controlling a listbox of grouped options.
+    this.popup = el("div", { class: "picker-popup", id: this.uid + "-popup", role: "dialog", "aria-label": "Choose a project and task", hidden: true });
     this.search = el("input", {
       type: "text", role: "combobox", "aria-autocomplete": "list", "aria-expanded": "true",
       "aria-controls": this.uid + "-list", "aria-label": "Search projects and tasks", autocomplete: "off",
       spellcheck: "false", placeholder: "Search…",
     });
-    this.list = el("ul", { role: "listbox", id: this.uid + "-list", class: "picker-list", "aria-label": "Projects and tasks" });
+    this.context = el("div", { class: "picker-context", hidden: true });
+    this.list = el("div", { role: "listbox", id: this.uid + "-list", class: "picker-list", "aria-label": "Projects and tasks" });
+    this.empty = el("p", { class: "picker-empty", hidden: true });
     this.live = el("div", { class: "sr-only", "aria-live": "polite" });
     var searchRow = el("div", { class: "picker-search-row" });
     searchRow.appendChild(this.search);
     this.popup.appendChild(searchRow);
+    this.popup.appendChild(this.context);
     this.popup.appendChild(this.list);
+    this.popup.appendChild(this.empty);
     this.select.insertAdjacentElement("afterend", this.button);
     this.button.insertAdjacentElement("afterend", this.popup);
     this.popup.insertAdjacentElement("afterend", this.live);
@@ -123,6 +138,7 @@
     this.currentProject = null;
     if (selected && !initial) { this.level = "tasks"; this.currentProject = selected.project; }
     this.popup.hidden = false;
+    this.root.classList.add("open");
     this.button.setAttribute("aria-expanded", "true");
     this.search.value = initial || "";
     this.render();
@@ -131,6 +147,7 @@
 
   Picker.prototype.close = function (focusButton) {
     this.popup.hidden = true;
+    this.root.classList.remove("open");
     this.button.setAttribute("aria-expanded", "false");
     this.search.removeAttribute("aria-activedescendant");
     if (focusButton) this.button.focus();
@@ -154,7 +171,6 @@
 
     if (this.level === "tasks" && this.currentProject) {
       var project = this.currentProject;
-      items.push({ kind: "context", label: project.name, sub: project.client + " · " + project.code });
       items.push({ kind: "back", label: "← All projects" });
       ["billable", "non-billable"].forEach(function (kind) {
         var tasks = project.tasks.filter(function (task) {
@@ -198,32 +214,41 @@
 
   Picker.prototype.render = function () {
     var self = this;
+    var project = this.level === "tasks" ? this.currentProject : null;
     this.items = this.buildItems();
-    this.list.textContent = "";
-    var optionCount = 0;
-    this.items.forEach(function (item, index) {
-      var node;
-      if (item.kind === "group") {
-        node = el("li", { role: "presentation", class: "picker-group" }, item.label);
-      } else if (item.kind === "context") {
-        node = el("li", { role: "presentation", class: "picker-context" });
-        node.appendChild(el("span", { class: "picker-client" }, item.sub));
-        node.appendChild(el("span", { class: "picker-project" }, item.label));
-      } else {
-        optionCount++;
-        node = el("li", {
-          role: "option", id: self.uid + "-opt-" + index, class: "picker-option" + (item.kind === "back" ? " back" : ""),
-          "data-index": index, "aria-selected": "false",
-        });
-        node.appendChild(document.createTextNode(item.label));
-        if (item.sub) node.appendChild(el("span", { class: "sub" }, item.sub));
-      }
-      self.list.appendChild(node);
-    });
-    if (!optionCount || (optionCount === 1 && this.items.some(function (i) { return i.kind === "back"; }) && this.search.value)) {
-      this.list.appendChild(el("li", { role: "presentation", class: "picker-empty" },
-        this.data.projects.length ? "No matches. Try another word." : "You aren't assigned to any active projects yet. Ask an administrator to add you."));
+    this.context.hidden = !project;
+    this.context.textContent = "";
+    if (project) {
+      this.context.appendChild(el("span", { class: "picker-client" }, project.client + " · " + project.code));
+      this.context.appendChild(el("span", { class: "picker-project" }, project.name));
     }
+    this.list.setAttribute("aria-label", project ? "Tasks for " + project.name : "Projects and tasks");
+    this.list.textContent = "";
+    var container = this.list, optionCount = 0, groupCount = 0;
+    this.items.forEach(function (item, index) {
+      if (item.kind === "group") {
+        // Options sit in labelled groups (a client, Recent, Billable…) so the group name is announced with them.
+        var labelId = self.uid + "-group-" + (++groupCount);
+        container = el("div", { role: "group", "aria-labelledby": labelId });
+        container.appendChild(labelled(el("div", { class: "picker-group", id: labelId }), item.label));
+        self.list.appendChild(container);
+        return;
+      }
+      optionCount++;
+      var node = el("div", {
+        role: "option", id: self.uid + "-opt-" + index, class: "picker-option" + (item.kind === "back" ? " back" : ""),
+        "data-index": index, "aria-selected": "false",
+      });
+      labelled(node, item.label);
+      if (item.sub) node.appendChild(labelled(el("span", { class: "sub" }), item.sub));
+      container.appendChild(node);
+    });
+    var empty = !optionCount || (optionCount === 1 && this.items[0].kind === "back" && !!this.search.value);
+    this.empty.hidden = !empty;
+    this.empty.textContent = !empty ? ""
+      : project ? "No matching tasks in " + project.name + ". Choose “All projects” to search everything."
+      : this.data.projects.length ? "No matches. Try another word."
+      : "You aren't assigned to any active projects yet. Ask an administrator to add you.";
     var firstSelectable = this.items.findIndex(function (item) {
       return item.kind === "pt" || item.kind === "project";
     });
@@ -231,7 +256,7 @@
       return item.kind === "pt" && item.value === self.select.value;
     });
     this.setActive(selectedIndex >= 0 && !this.search.value ? selectedIndex : firstSelectable, true);
-    this.live.textContent = optionCount + " options";
+    this.live.textContent = empty ? this.empty.textContent : optionCount + (optionCount === 1 ? " option" : " options");
   };
 
   Picker.prototype.setActive = function (index, scroll) {
@@ -335,8 +360,12 @@
     if (this.favButton) {
       var isFav = entry && this.favourites.has(this.select.value);
       this.favButton.hidden = !entry;
+      // A toggle button keeps one name; aria-pressed (and the filled star) carry the state.
       this.favButton.setAttribute("aria-pressed", isFav ? "true" : "false");
-      this.favButton.textContent = isFav ? "★ Favourite" : "☆ Add to favourites";
+      this.favButton.title = isFav ? "Remove from favourites" : "Add to favourites";
+      this.favButton.textContent = "";
+      this.favButton.appendChild(el("span", { "aria-hidden": "true" }, isFav ? "★ " : "☆ "));
+      this.favButton.appendChild(document.createTextNode("Favourite"));
     }
   };
 

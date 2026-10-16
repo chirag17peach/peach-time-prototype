@@ -42,15 +42,15 @@
 
 </span>
 
-      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
-        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 36 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">36</span>
       </a>
       <details class="user-menu">
-        <summary>Avery <span class="muted small">▾</span></summary>
-        <div class="menu" role="menu">
+        <summary>Avery<span class="sr-only">, account menu</span> <span class="muted small" aria-hidden="true">▾</span></summary>
+        <div class="menu">
           <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
-          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
-          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit">Sign out</button></form>
         </div>
       </details>
     </div>
@@ -84,7 +84,7 @@
 </div>
 <div class="table-wrap">
 <table class="table">
-  <thead><tr><th>Code</th><th>Project</th><th>Client</th><th>Billing</th><th>Budget (current period)</th><th class="num">This month</th><th class="num">All time</th><th></th></tr></thead>
+  <thead><tr><th>Code</th><th>Project</th><th>Client</th><th>Billing</th><th>Budget (current period)</th><th class="num">This month</th><th class="num">All time</th><th><span class="sr-only">Actions</span></th></tr></thead>
   <tbody>
   
     <tr>
@@ -115,17 +115,17 @@
       <td>Fixed fee</td>
       <td>
   
-  <svg class="meter" viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="46.44% used" focusable="false"><rect class="meter-bg" width="100" height="8" rx="4"></rect><rect class="meter-fill" width="46.4" height="8" rx="4"></rect></svg>
+  <svg class="meter" viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="66.53% used" focusable="false"><rect class="meter-bg" width="100" height="8" rx="4"></rect><rect class="meter-fill" width="66.5" height="8" rx="4"></rect></svg>
 
   <div class="small">
-    274:00 of 590:00 h
-    · 46.44% <span class="badge badge-ok">Ok</span>
+    392:30 of 590:00 h
+    · 66.53% <span class="badge badge-ok">Ok</span>
   </div>
   
 
 </td>
-      <td class="num">119:00</td>
-      <td class="num">274:00</td>
+      <td class="num">161:00</td>
+      <td class="num">392:30</td>
       <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Report</a></td>
     </tr>
   
@@ -277,5 +277,6 @@
 </main>
 <footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
 <div class="toast-region" aria-live="polite"></div>
+<div id="announcer" class="sr-only" role="status"></div>
 </body>
 </html>

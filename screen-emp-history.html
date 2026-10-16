@@ -38,11 +38,11 @@
         <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">5</span>
       </a>
       <details class="user-menu">
-        <summary>Jordan <span class="muted small">▾</span></summary>
-        <div class="menu" role="menu">
+        <summary>Jordan<span class="sr-only">, account menu</span> <span class="muted small" aria-hidden="true">▾</span></summary>
+        <div class="menu">
           <div class="menu-head muted small">jordan@peach-demo.example<br>Employee</div>
-          <a href="screen-emp-account.html" role="menuitem">Account &amp; security</a>
-          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+          <a href="screen-emp-account.html">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit">Sign out</button></form>
         </div>
       </details>
     </div>
@@ -66,7 +66,7 @@
   <ul class="audit-list">
     
       <li>
-        <strong>Create</strong> by Jordan Designer &lt;jordan@peach-demo.example&gt; · Fri 16 Oct 2026 00:12
+        <strong>Create</strong> by Jordan Designer &lt;jordan@peach-demo.example&gt; · Fri 16 Oct 2026 10:28
         
         
         <ul class="changes">
@@ -103,5 +103,6 @@
 </main>
 <footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
 <div class="toast-region" aria-live="polite"></div>
+<div id="announcer" class="sr-only" role="status"></div>
 </body>
 </html>

@@ -1,0 +1,4457 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Detailed time report · Peach Time</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="brand.css">
+  <script src="picker.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body data-proto-role="Viewing as Casey Strategist (project manager)">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="screen-mgr-day.html"><span class="brand-dot" aria-hidden="true"></span>Peach Time</a>
+    <nav class="nav" aria-label="Main">
+      
+        <a href="screen-mgr-day.html">My Time</a>
+      
+        <a href="screen-mgr-reports.html" aria-current="page">Reports</a>
+      
+        <a href="screen-mgr-approvals.html">Approvals</a>
+      
+        <a href="screen-mgr-account.html">Settings</a>
+      
+    </nav>
+    <div class="topbar-right">
+      <span id="timer-pill-slot">
+
+  <span data-timer-id="" hidden></span>
+
+</span>
+
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 9 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">9</span>
+      </a>
+      <details class="user-menu">
+        <summary>Casey<span class="sr-only">, account menu</span> <span class="muted small" aria-hidden="true">▾</span></summary>
+        <div class="menu">
+          <div class="menu-head muted small">casey@peach-demo.example<br>Project manager</div>
+          <a href="screen-mgr-account.html">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit">Sign out</button></form>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container ">
+  
+
+  
+<div class="page-head">
+  <h1>Reports · Detailed time</h1>
+  <div class="row no-print">
+    
+<a class="btn" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">CSV</a>
+<a class="btn" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">XLSX</a>
+
+    <button class="btn" type="button" data-print>Print / PDF</button>
+  </div>
+</div>
+<nav class="subnav" aria-label="Reports">
+  <a href="screen-mgr-reports.html">Overview</a>
+  <a href="screen-mgr-detailed.html" aria-current="page">Detailed time</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Clients &amp; projects</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Team</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Tasks</a>
+  
+  <a href="screen-mgr-financial.html">Financial</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Saved</a>
+</nav>
+
+<div class="print-only">
+  <h2>Peach Time · Detailed time</h2>
+  <p>Date range: 2026-09-01 to 2026-09-30 (Last month) · Generated 2026-10-16 10:28 (America/Halifax) by Casey Strategist</p>
+</div>
+<form method="get" class="filters no-print" aria-label="Report filters">
+  <input type="hidden" name="col" value="id"><input type="hidden" name="col" value="date"><input type="hidden" name="col" value="person"><input type="hidden" name="col" value="client"><input type="hidden" name="col" value="project"><input type="hidden" name="col" value="task"><input type="hidden" name="col" value="notes"><input type="hidden" name="col" value="duration"><input type="hidden" name="col" value="billable"><input type="hidden" name="col" value="approval"><input type="hidden" name="col" value="billing"><input type="hidden" name="col" value="rate"><input type="hidden" name="col" value="value"><input type="hidden" name="col" value="cost">
+  
+  <div class="form-grid">
+    <div class="field"><label for="f-preset">Period</label>
+      <select id="f-preset" name="preset"><option value="">Custom dates</option><option value="today">Today</option><option value="yesterday">Yesterday</option><option value="this_week">This week</option><option value="last_week">Last week</option><option value="this_month">This month</option><option value="last_month" selected>Last month</option><option value="this_quarter">This quarter</option><option value="last_quarter">Last quarter</option><option value="this_year">This year</option><option value="last_year">Last year</option><option value="last_30_days">Last 30 days</option></select></div>
+    <div class="field"><label for="f-start">From</label><input id="f-start" type="date" name="start" value="2026-09-01"></div>
+    <div class="field"><label for="f-end">To</label><input id="f-end" type="date" name="end" value="2026-09-30"></div>
+    <div class="field"><label for="f-client">Client</label>
+      <select id="f-client" name="client"><option value="">All clients</option><option value="2">Cedar Coast Tourism (demo)</option><option value="4">Harbourfront Festival (demo)</option><option value="3">Northwind Outfitters (demo)</option><option value="1">Peach</option></select></div>
+    <div class="field"><label for="f-project">Project</label>
+      <select id="f-project" name="project"><option value="">All projects</option><option value="11">Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits</option><option value="13">Harbourfront Festival (demo) · Festival Rebrand</option><option value="12">Northwind Outfitters (demo) · Website Support</option><option value="1">Peach · Admin</option><option value="3">Peach · Business Development</option><option value="4">Peach · Contract Base - Custom Time Entry</option><option value="5">Peach · Huddle</option><option value="6">Peach · Misc.</option><option value="8">Peach · SOP</option><option value="7">Peach · Social Media</option><option value="9">Peach · Viva Events</option><option value="2">Peach · Website</option><option value="10">Peach · Witch Crawl</option></select></div>
+    <div class="field"><label for="f-task">Task</label>
+      <select id="f-task" name="task"><option value="">All tasks</option><option value="3">Admin</option><option value="4">Copywriting</option><option value="5">Design</option><option value="6">Design - Assets</option><option value="1">Development</option><option value="7">Huddle</option><option value="8">Monitoring</option><option value="9">Motion Graphics</option><option value="10">Post-Production</option><option value="11">Pre-Production</option><option value="12">Production</option><option value="13">Programming</option><option value="14">Project Management</option><option value="15">Quality Assurance Testing</option><option value="16">Reporting</option><option value="17">Research</option><option value="18">Scheduling</option><option value="19">Social Media Planning</option><option value="20">Storyboard - Production</option><option value="21">Storyboard Design - Motion</option><option value="2">Strategy</option></select></div>
+    
+    <div class="field"><label for="f-person">Person</label>
+      <select id="f-person" name="person"><option value="">Everyone</option><option value="1">Avery Admin</option><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="8">Drew Contractor</option><option value="3">Jordan Designer</option><option value="5">Riley Video</option><option value="4">Sam Developer</option></select></div>
+    
+    
+    <div class="field"><label for="f-billable">Billable</label>
+      <select id="f-billable" name="billable"><option value="all" selected>Billable and non-billable</option><option value="billable">Billable only</option><option value="non_billable">Non-billable only</option></select></div>
+    <div class="field"><label for="f-approval">Approval</label>
+      <select id="f-approval" name="approval"><option value="">Any status</option><option value="draft">Draft (not submitted)</option><option value="submitted">Submitted</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></div>
+    <div class="field"><label for="f-billing">Billing status</label>
+      <select id="f-billing" name="billing"><option value="all" selected>Any</option><option value="uninvoiced">Billable, not invoiced</option><option value="invoiced">Invoiced</option><option value="non_billable">Non-billable</option></select></div>
+    <div class="field"><label for="f-pstatus">Project status</label>
+      <select id="f-pstatus" name="project_status"><option value="all" selected>Active and archived</option><option value="active">Active projects</option><option value="archived">Archived projects</option></select></div>
+    
+    <div class="field"><label for="f-valuation">Valuation</label>
+      <select id="f-valuation" name="valuation"><option value="all" selected>Any</option><option value="missing_rate">Missing billing rate</option><option value="missing_cost">Missing cost rate</option></select></div>
+    
+    <div class="field"><label for="f-q">Notes contain</label><input id="f-q" type="search" name="q" value=""></div>
+    <div class="filter-actions"><button class="btn btn-primary" type="submit">Apply</button><a class="btn btn-ghost" href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Reset</a></div>
+  </div>
+  <p class="help">Choosing a period overrides the From/To dates; choose “Custom dates” to use them. All summaries, charts, drill-downs and exports use exactly these filters.</p>
+</form>
+<p class="filter-summary"><strong>Date range:</strong> 2026-09-01 to 2026-09-30 (Last month)</p>
+
+
+
+<div class="stats">
+  <div class="stat"><p class="label">Entries (all pages)</p><div class="value">257</div></div>
+  <div class="stat"><p class="label">Total</p><div class="value">424:00</div><div class="sub">424.00 h</div></div>
+  <div class="stat"><p class="label">Billable</p><div class="value">403:30</div><div class="sub">95.17% of logged</div></div>
+  <div class="stat"><p class="label">Non-billable</p><div class="value">20:30</div></div>
+  <div class="stat"><p class="label">Hourly billing value</p><div class="value">$17,940.00</div><div class="sub">all hourly billable entries valued</div></div>
+  <div class="stat"><p class="label">Est. labour cost</p><div class="value">$20,504.50</div><div class="sub">all entries costed</div></div>
+</div>
+<details class="definitions no-print"><summary>Columns</summary>
+  <form method="get" class="columns-picker">
+    <input type="hidden" name="preset" value="last_month">
+    <label class="check"><input type="checkbox" name="col" value="id" checked> Entry ID</label><label class="check"><input type="checkbox" name="col" value="date" checked> Date</label><label class="check"><input type="checkbox" name="col" value="person" checked> Person</label><label class="check"><input type="checkbox" name="col" value="client" checked> Client</label><label class="check"><input type="checkbox" name="col" value="project" checked> Project</label><label class="check"><input type="checkbox" name="col" value="code"> Project code</label><label class="check"><input type="checkbox" name="col" value="task" checked> Task</label><label class="check"><input type="checkbox" name="col" value="notes" checked> Notes</label><label class="check"><input type="checkbox" name="col" value="duration" checked> Duration</label><label class="check"><input type="checkbox" name="col" value="hours"> Hours</label><label class="check"><input type="checkbox" name="col" value="billable" checked> Billable</label><label class="check"><input type="checkbox" name="col" value="approval" checked> Approval</label><label class="check"><input type="checkbox" name="col" value="billing" checked> Billing status</label><label class="check"><input type="checkbox" name="col" value="rate" checked> Billing rate</label><label class="check"><input type="checkbox" name="col" value="rate_source"> Rate source</label><label class="check"><input type="checkbox" name="col" value="value" checked> Hourly billing value</label><label class="check"><input type="checkbox" name="col" value="cost_rate"> Cost rate</label><label class="check"><input type="checkbox" name="col" value="cost" checked> Est. labour cost</label><label class="check"><input type="checkbox" name="col" value="invoice"> Invoice reference</label><label class="check"><input type="checkbox" name="col" value="source"> Source</label>
+    <button class="btn btn-sm" type="submit">Show columns</button>
+  </form>
+</details>
+<div class="table-wrap">
+<table class="table table-compact">
+  <thead><tr>
+    
+      
+        <th class="num"><a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Entry ID</a></th>
+      
+    
+      
+        <th><a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Date ↑</a></th>
+      
+    
+      
+        <th><a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Person</a></th>
+      
+    
+      
+        <th><a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Client</a></th>
+      
+    
+      
+        <th><a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Project</a></th>
+      
+    
+      
+        <th><a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Task</a></th>
+      
+    
+      <th>Notes</th>
+    
+      
+        <th class="num"><a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Duration</a></th>
+      
+    
+      <th>Billable</th>
+    
+      <th>Approval</th>
+    
+      <th>Billing status</th>
+    
+      <th class="num">Billing rate</th>
+    
+      <th class="num">Hourly billing value</th>
+    
+      <th class="num">Est. labour cost</th>
+    
+  </tr></thead>
+  <tbody>
+  
+    <tr>
+      
+        <td class="num mono">3</td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Client check-in call</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$360.00</td>
+        
+      
+        <td class="num">$195.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">7</td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$120.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">8</td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$120.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">13</td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Brand palette clean-up</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$240.00</td>
+        
+      
+        <td class="num">$90.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">14</td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Brand palette clean-up</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$135.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">15</td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Homepage hero options</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$60.00</td>
+        
+      
+        <td class="num">$22.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">16</td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Brand palette clean-up</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$180.00</td>
+        
+      
+        <td class="num">$67.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">19</td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Sam Developer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Programming</td>
+      
+        <td>Booking widget integration</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$240.00</td>
+        
+      
+        <td class="num">$100.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">22</td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Sam Developer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Development</td>
+      
+        <td>Form spam filter</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$180.00</td>
+        
+      
+        <td class="num">$75.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">29</a></td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Peach</td>
+      
+        <td>Huddle</td>
+        
+      
+        <td>Huddle</td>
+      
+        <td>Team stand-up</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>No</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Non-billable</td>
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">30</a></td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Timeline update</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$360.00</td>
+        
+      
+        <td class="num">$156.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">31</a></td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$180.00</td>
+        
+      
+        <td class="num">$78.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">32</a></td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Cedar Coast Tourism (demo)</td>
+      
+        <td>2026 Retainer - Website Edits</td>
+        
+      
+        <td>Strategy</td>
+      
+        <td>Campaign planning workshop</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">33</a></td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Timeline update</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$240.00</td>
+        
+      
+        <td class="num">$104.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">833</td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Motion Graphics</td>
+      
+        <td>Logo sting animation</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$55.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">834</td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Poster series layouts</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$165.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">835</td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Motion Graphics</td>
+      
+        <td>Reel captions</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$82.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">836</td>
+        
+      
+        <td class="nowrap">2026-09-07</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Wayfinding sign layouts</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$55.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">36</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Client check-in call</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$240.00</td>
+        
+      
+        <td class="num">$130.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">38</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Client check-in call</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$120.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">39</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Client check-in call</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$120.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">40</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$30.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">41</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Client check-in call</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$120.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">42</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$60.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">43</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Event poster revisions</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$22.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">44</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Brand palette clean-up</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$360.00</td>
+        
+      
+        <td class="num">$135.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">46</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Social tiles for launch week</td>
+        
+      
+        <td class="num">2:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$112.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">48</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Sam Developer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Programming</td>
+      
+        <td>Booking widget integration</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$360.00</td>
+        
+      
+        <td class="num">$150.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">50</a></td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Strategy</td>
+      
+        <td>Quarterly content plan</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$78.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">51</a></td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Copywriting</td>
+      
+        <td>Newsletter copy</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$26.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">52</a></td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Strategy</td>
+      
+        <td>Quarterly content plan</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$156.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">53</a></td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Client check-in call</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$180.00</td>
+        
+      
+        <td class="num">$78.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">837</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Motion Graphics</td>
+      
+        <td>Reel captions</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$55.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">838</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Poster series layouts</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$110.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">839</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Motion Graphics</td>
+      
+        <td>Logo sting animation</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$165.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">840</td>
+        
+      
+        <td class="nowrap">2026-09-08</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Wayfinding sign layouts</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$55.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">55</td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Timeline update</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$65.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">57</td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$65.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">59</td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Client check-in call</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$60.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">60</td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$180.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">61</td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$120.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">62</td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Client check-in call</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$120.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">63</td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Social tiles for launch week</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$45.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">64</td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Event poster revisions</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$90.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">65</td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Social tiles for launch week</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$240.00</td>
+        
+      
+        <td class="num">$90.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">68</td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Sam Developer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Programming</td>
+      
+        <td>Analytics events</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$240.00</td>
+        
+      
+        <td class="num">$100.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">79</a></td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Cedar Coast Tourism (demo)</td>
+      
+        <td>2026 Retainer - Website Edits</td>
+        
+      
+        <td>Strategy</td>
+      
+        <td>Quarterly content plan</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">80</a></td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Strategy</td>
+      
+        <td>Campaign planning workshop</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$78.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">81</a></td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Cedar Coast Tourism (demo)</td>
+      
+        <td>2026 Retainer - Website Edits</td>
+        
+      
+        <td>Strategy</td>
+      
+        <td>Quarterly content plan</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">82</a></td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Peach</td>
+      
+        <td>Admin</td>
+        
+      
+        <td>Admin</td>
+      
+        <td>Expense sorting</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>No</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Non-billable</td>
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">83</a></td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Copywriting</td>
+      
+        <td>Blog post draft</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$156.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">84</a></td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Strategy</td>
+      
+        <td>Campaign planning workshop</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$52.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">841</td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Festival map illustration</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$165.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">842</td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Motion Graphics</td>
+      
+        <td>Reel captions</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$165.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">843</td>
+        
+      
+        <td class="nowrap">2026-09-09</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Motion Graphics</td>
+      
+        <td>Logo sting animation</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$55.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">86</td>
+        
+      
+        <td class="nowrap">2026-09-10</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$60.00</td>
+        
+      
+        <td class="num">$32.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">87</td>
+        
+      
+        <td class="nowrap">2026-09-10</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$60.00</td>
+        
+      
+        <td class="num">$32.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">89</td>
+        
+      
+        <td class="nowrap">2026-09-10</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$360.00</td>
+        
+      
+        <td class="num">$195.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">93</td>
+        
+      
+        <td class="nowrap">2026-09-10</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$90.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">96</td>
+        
+      
+        <td class="nowrap">2026-09-10</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Social tiles for launch week</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$60.00</td>
+        
+      
+        <td class="num">$22.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">97</td>
+        
+      
+        <td class="nowrap">2026-09-10</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Event poster revisions</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$240.00</td>
+        
+      
+        <td class="num">$90.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">98</td>
+        
+      
+        <td class="nowrap">2026-09-10</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Homepage hero options</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$360.00</td>
+        
+      
+        <td class="num">$135.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">100</td>
+        
+      
+        <td class="nowrap">2026-09-10</td>
+        
+      
+        <td>Sam Developer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Development</td>
+      
+        <td>Page speed improvements</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$60.00</td>
+        
+      
+        <td class="num">$25.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">102</td>
+        
+      
+        <td class="nowrap">2026-09-10</td>
+        
+      
+        <td>Sam Developer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Programming</td>
+      
+        <td>Analytics events</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$360.00</td>
+        
+      
+        <td class="num">$150.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">107</td>
+        
+      
+        <td class="nowrap">2026-09-10</td>
+        
+      
+        <td>Riley Video</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Motion Graphics</td>
+      
+        <td>Logo sting animation</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$144.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">109</td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Timeline update</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$360.00</td>
+        
+      
+        <td class="num">$195.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">110</td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$65.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">113</td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Client check-in call</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$120.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">114</td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Timeline update</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$60.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">115</td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Timeline update</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$120.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">119</td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Homepage hero options</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$45.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">122</td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Social tiles for launch week</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$360.00</td>
+        
+      
+        <td class="num">$135.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">124</td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Sam Developer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Development</td>
+      
+        <td>Fix menu on mobile</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$360.00</td>
+        
+      
+        <td class="num">$150.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">126</td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Sam Developer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Programming</td>
+      
+        <td>Analytics events</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$50.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">128</td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Riley Video</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Motion Graphics</td>
+      
+        <td>Reel captions</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$24.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">131</a></td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Copywriting</td>
+      
+        <td>Newsletter copy</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$156.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">132</a></td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Copywriting</td>
+      
+        <td>Newsletter copy</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$78.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">133</a></td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Cedar Coast Tourism (demo)</td>
+      
+        <td>2026 Retainer - Website Edits</td>
+        
+      
+        <td>Strategy</td>
+      
+        <td>Campaign planning workshop</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">134</a></td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Cedar Coast Tourism (demo)</td>
+      
+        <td>2026 Retainer - Website Edits</td>
+        
+      
+        <td>Strategy</td>
+      
+        <td>Campaign planning workshop</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">135</a></td>
+        
+      
+        <td class="nowrap">2026-09-11</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Peach</td>
+      
+        <td>Admin</td>
+        
+      
+        <td>Admin</td>
+      
+        <td>Email and planning</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>No</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Non-billable</td>
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">136</td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Client check-in call</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$60.00</td>
+        
+      
+        <td class="num">$32.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">137</td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$360.00</td>
+        
+      
+        <td class="num">$195.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">141</td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Timeline update</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$180.00</td>
+        
+      
+        <td class="num">$97.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">146</td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Timeline update</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$90.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">148</td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Brand palette clean-up</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$67.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">151</td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Jordan Designer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Event poster revisions</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$180.00</td>
+        
+      
+        <td class="num">$67.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">152</td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Sam Developer</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Programming</td>
+      
+        <td>Booking widget integration</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$180.00</td>
+        
+      
+        <td class="num">$75.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">160</td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Riley Video</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Motion Graphics</td>
+      
+        <td>Reel captions</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$72.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">162</a></td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Peach</td>
+      
+        <td>Admin</td>
+        
+      
+        <td>Admin</td>
+      
+        <td>Email and planning</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>No</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Non-billable</td>
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">163</a></td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Cedar Coast Tourism (demo)</td>
+      
+        <td>2026 Retainer - Website Edits</td>
+        
+      
+        <td>Strategy</td>
+      
+        <td>Campaign planning workshop</td>
+        
+      
+        <td class="num">2:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Money is shown only for projects you manage">—</span></td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">164</a></td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Copywriting</td>
+      
+        <td>Newsletter copy</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$78.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono"><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">165</a></td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Casey Strategist</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Strategy</td>
+      
+        <td>Quarterly content plan</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$78.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">844</td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Motion Graphics</td>
+      
+        <td>Reel captions</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$55.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">845</td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Wayfinding sign layouts</td>
+        
+      
+        <td class="num">1:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$55.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">846</td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Motion Graphics</td>
+      
+        <td>Reel captions</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$165.00</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">847</td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Wayfinding sign layouts</td>
+        
+      
+        <td class="num">1:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$82.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">848</td>
+        
+      
+        <td class="nowrap">2026-09-15</td>
+        
+      
+        <td>Drew Contractor</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Design</td>
+      
+        <td>Poster series layouts</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$27.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">169</td>
+        
+      
+        <td class="nowrap">2026-09-16</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Timeline update</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$60.00</td>
+        
+      
+        <td class="num">$32.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">170</td>
+        
+      
+        <td class="nowrap">2026-09-16</td>
+        
+      
+        <td>Avery Admin</td>
+      
+        <td>Northwind Outfitters (demo)</td>
+      
+        <td>Website Support</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Scope review</td>
+        
+      
+        <td class="num">0:30</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num">$120.00</td>
+        
+      
+        <td class="num">$60.00</td>
+        
+      
+        <td class="num">$32.50</td>
+        
+      
+    </tr>
+  
+    <tr>
+      
+        <td class="num mono">172</td>
+        
+      
+        <td class="nowrap">2026-09-16</td>
+        
+      
+        <td>Blake Reviewer</td>
+      
+        <td>Harbourfront Festival (demo)</td>
+      
+        <td>Festival Rebrand</td>
+        
+      
+        <td>Project Management</td>
+      
+        <td>Client check-in call</td>
+        
+      
+        <td class="num">3:00</td>
+        
+      
+        <td>Yes</td>
+        
+      
+        <td><span class="badge badge-ok">Approved</span></td>
+        
+      
+        <td>Not invoiced</td>
+      
+        <td class="num"><span class="muted">unknown</span></td>
+        
+      
+        <td class="num"><span class="muted" title="Unknown or not applicable">—</span></td>
+        
+      
+        <td class="num">$180.00</td>
+        
+      
+    </tr>
+  
+  </tbody>
+  
+  <tfoot><tr>
+    <td>Total, all 257 rows</td>
+    
+  
+    <td></td>
+  
+    <td></td>
+  
+    <td></td>
+  
+    <td></td>
+  
+    <td></td>
+  
+    <td></td>
+  
+    <td class="num">424:00</td>
+    
+  
+    <td></td>
+  
+    <td></td>
+  
+    <td></td>
+  
+    <td></td>
+  
+    <td class="num">$17,940.00</td>
+    
+  
+    <td class="num">$20,504.50</td>
+    
+  </tr></tfoot>
+  
+</table>
+
+<nav class="pagination" aria-label="Pages">
+  <span class="muted small">Page 1 of 3 · totals above cover every page</span>
+  
+  <a class="btn btn-sm" href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Next →</a>
+</nav>
+
+</div>
+
+
+<div class="row-between no-print">
+  <p class="report-meta">Generated Fri 16 Oct 2026, 10:28:30 (America/Halifax). Showing your own time and all time on the projects you manage. Money is shown only for the projects you manage. Running timers are not included until stopped.</p>
+  <details class="no-print">
+  <summary class="btn btn-ghost btn-sm">Save this report…</summary>
+  <form method="post" action="/reports/saved/new/" class="card">
+    
+    <input type="hidden" name="report_type" value="detailed">
+    <input type="hidden" name="query" value="preset=last_month&amp;col=id&amp;col=date&amp;col=person&amp;col=client&amp;col=project&amp;col=task&amp;col=notes&amp;col=duration&amp;col=billable&amp;col=approval&amp;col=billing&amp;col=rate&amp;col=value&amp;col=cost">
+    
+    <div class="field"><label for="saved-name">Name</label><input id="saved-name" type="text" name="name" maxlength="120" required></div>
+    
+    <button class="btn btn-sm" type="submit">Save</button>
+  </form>
+</details>
+
+</div>
+
+
+</main>
+<footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
+<div class="toast-region" aria-live="polite"></div>
+<div id="announcer" class="sr-only" role="status"></div>
+</body>
+</html>

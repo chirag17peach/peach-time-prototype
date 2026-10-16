@@ -42,15 +42,15 @@
 
 </span>
 
-      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
-        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 36 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">36</span>
       </a>
       <details class="user-menu">
-        <summary>Avery <span class="muted small">▾</span></summary>
-        <div class="menu" role="menu">
+        <summary>Avery<span class="sr-only">, account menu</span> <span class="muted small" aria-hidden="true">▾</span></summary>
+        <div class="menu">
           <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
-          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
-          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit">Sign out</button></form>
         </div>
       </details>
     </div>
@@ -121,7 +121,7 @@
 <div class="field">
   <label for="id_effective_from">Effective from</label>
   <input type="date" name="effective_from" value="2026-03-30" required aria-describedby="id_effective_from_helptext" id="id_effective_from">
-  <div class="help" id="id_effective_from_help">For monthly budgets this is rounded to the first day of its month.</div>
+  <div class="help" id="id_effective_from_helptext">For monthly budgets this is rounded to the first day of its month.</div>
   
 </div>
 
@@ -130,7 +130,7 @@
 <div class="field">
   <label for="id_hours">Budget hours <span class="muted small">(optional)</span></label>
   <input type="text" name="hours" maxlength="20" aria-describedby="id_hours_helptext" id="id_hours">
-  <div class="help" id="id_hours_help">e.g. 20 or 20:00. Zero is allowed.</div>
+  <div class="help" id="id_hours_helptext">e.g. 20 or 20:00. Zero is allowed.</div>
   
 </div>
 
@@ -140,7 +140,7 @@
         
 <div class="field">
   <label class="check"><input type="checkbox" name="no_budget" aria-describedby="id_no_budget_helptext" id="id_no_budget"> <span>No budget from this date</span></label>
-  <div class="help" id="id_no_budget_help">Different from a zero budget: nothing is tracked against it.</div>
+  <div class="help" id="id_no_budget_helptext">Different from a zero budget: nothing is tracked against it.</div>
   
 </div>
 
@@ -174,7 +174,7 @@
 <section class="card" id="tasks" aria-labelledby="tasks-h">
   <div class="card-head"><h2 id="tasks-h">Tasks (6)</h2><span class="small muted">Billable here sets the default for new entries on this project only.</span></div>
   <div class="table-wrap"><table class="table table-compact">
-    <thead><tr><th>Task</th><th>Billable default</th><th>Open for new time</th><th class="num">Order</th><th class="num">Hours</th><th></th></tr></thead>
+    <thead><tr><th>Task</th><th>Billable default</th><th>Open for new time</th><th class="num">Order</th><th class="num">Hours</th><th><span class="sr-only">Actions</span></th></tr></thead>
     <tbody>
     
       <tr>
@@ -347,25 +347,60 @@
   <ul class="audit-list">
     
       <li class="row-between"><span>Avery Admin <span class="muted small">avery@peach-demo.example</span></span>
-        <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="1"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form></li>
+        <span class="row">
+          
+          <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="1"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form>
+        </span></li>
     
       <li class="row-between"><span>Blake Reviewer <span class="muted small">blake@peach-demo.example</span></span>
-        <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="2"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form></li>
+        <span class="row">
+          
+          <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="2"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form>
+        </span></li>
     
-      <li class="row-between"><span>Casey Strategist <span class="muted small">casey@peach-demo.example</span></span>
-        <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="6"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form></li>
+      <li class="row-between"><span>Casey Strategist <span class="muted small">casey@peach-demo.example</span> <span class="badge badge-info">Manages this project</span></span>
+        <span class="row">
+          
+          <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="manager"><input type="hidden" name="user" value="6"><input type="hidden" name="is_manager" value="0"><button class="btn btn-sm btn-ghost" type="submit">Stop managing</button></form>
+          
+          <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="6"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form>
+        </span></li>
     
       <li class="row-between"><span>Jordan Designer <span class="muted small">jordan@peach-demo.example</span></span>
-        <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="3"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form></li>
+        <span class="row">
+          
+          <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="3"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form>
+        </span></li>
     
       <li class="row-between"><span>Riley Video <span class="muted small">riley@peach-demo.example</span></span>
-        <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="5"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form></li>
+        <span class="row">
+          
+          <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="5"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form>
+        </span></li>
     
       <li class="row-between"><span>Sam Developer <span class="muted small">sam@peach-demo.example</span></span>
-        <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="4"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form></li>
+        <span class="row">
+          
+          <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="4"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form>
+        </span></li>
     
   </ul>
+  <p class="help">A manager sees all time on this project in reports, and can approve weeks made up only of time on projects they manage. Only people with the Project manager role (Team page) can be made managers; money stays hidden unless they also have financial access. Unassigning someone ends their manager access here.</p>
   
+  
+  <details class="definitions"><summary>Assign people</summary>
+    <form method="post" action="/projects/12/members/">
+      <input type="hidden" name="action" value="add">
+      <div class="columns-picker"><div id="id_users"><div>
+    <label for="id_users_0"><input type="checkbox" name="users" value="8" id="id_users_0">
+ Drew Contractor</label>
+
+</div>
+</div></div>
+      <div class="form-actions"><button class="btn" type="submit">Assign selected</button></div>
+    </form>
+    <form method="post" action="/projects/12/members/" class="form-actions"><input type="hidden" name="action" value="add_all"><button class="btn btn-ghost" type="submit">Assign everyone active</button></form>
+  </details>
   
 </section>
 
@@ -375,7 +410,7 @@
     <p class="help">Rates are effective-dated. Each entry keeps the rate resolved for its work date, so adding or changing a rate never silently changes past reports. To re-value existing entries, an administrator runs an explicit recalculation (Settings → Rate recalculation).
     </p>
     <div class="table-wrap"><table class="table table-compact">
-      <thead><tr><th>Applies to</th><th>Effective from</th><th class="num">Rate</th><th>Note</th><th></th></tr></thead>
+      <thead><tr><th>Applies to</th><th>Effective from</th><th class="num">Rate</th><th>Note</th><th><span class="sr-only">Actions</span></th></tr></thead>
       <tbody>
         <tr><td>Whole project</td><td>30 Mar 2026</td><td class="num">$120.00</td><td>Demo (fictitious)</td>
           <td class="actions"><form method="post" action="/projects/12/rates/" data-confirm="Delete this rate? Entries keep their current snapshots."><input type="hidden" name="action" value="delete"><input type="hidden" name="rate" value="1"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Delete</button></form></td></tr>
@@ -508,5 +543,6 @@
 </main>
 <footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
 <div class="toast-region" aria-live="polite"></div>
+<div id="announcer" class="sr-only" role="status"></div>
 </body>
 </html>

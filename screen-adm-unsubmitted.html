@@ -42,15 +42,15 @@
 
 </span>
 
-      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
-        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 36 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">36</span>
       </a>
       <details class="user-menu">
-        <summary>Avery <span class="muted small">▾</span></summary>
-        <div class="menu" role="menu">
+        <summary>Avery<span class="sr-only">, account menu</span> <span class="muted small" aria-hidden="true">▾</span></summary>
+        <div class="menu">
           <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
-          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
-          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit">Sign out</button></form>
         </div>
       </details>
     </div>
@@ -63,15 +63,16 @@
   
 <div class="page-head"><h1>Approvals</h1></div>
 <nav class="subnav" aria-label="Approval queues">
-  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Pending (4)</a>
+  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Pending (5)</a>
   <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Rejected (1)</a>
-  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview." aria-current="page">Unsubmitted (20)</a>
+  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview." aria-current="page">Unsubmitted (23)</a>
   <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Recently approved</a>
 </nav>
 
+
 <p class="muted">Past weeks (last 8) that are still draft or sent back and have logged or scheduled time. Missing time is a reminder only.</p>
 <div class="table-wrap"><table class="table">
-  <thead><tr><th>Person</th><th>Week</th><th>Status</th><th class="num">Logged</th><th class="num">Scheduled</th><th class="num">Missing</th><th></th></tr></thead>
+  <thead><tr><th>Person</th><th>Week</th><th>Status</th><th class="num">Logged</th><th class="num">Scheduled</th><th class="num">Missing</th><th><span class="sr-only">Actions</span></th></tr></thead>
   <tbody>
     <tr><td>Avery Admin</td><td class="nowrap">17 Aug – 23 Aug</td><td><span class="badge">Draft</span></td>
       <td class="num">0:00</td><td class="num">40:00</td><td class="num"><span class="badge badge-warn">40:00</span></td>
@@ -83,6 +84,10 @@
   
     <tr><td>Casey Strategist</td><td class="nowrap">17 Aug – 23 Aug</td><td><span class="badge">Draft</span></td>
       <td class="num">0:00</td><td class="num">40:00</td><td class="num"><span class="badge badge-warn">40:00</span></td>
+      <td class="actions"><a class="btn btn-sm" href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">Open week</a></td></tr>
+  
+    <tr><td>Drew Contractor</td><td class="nowrap">17 Aug – 23 Aug</td><td><span class="badge">Draft</span></td>
+      <td class="num">0:00</td><td class="num">21:00</td><td class="num"><span class="badge badge-warn">21:00</span></td>
       <td class="actions"><a class="btn btn-sm" href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">Open week</a></td></tr>
   
     <tr><td>Jordan Designer</td><td class="nowrap">17 Aug – 23 Aug</td><td><span class="badge">Draft</span></td>
@@ -109,6 +114,10 @@
       <td class="num">0:00</td><td class="num">40:00</td><td class="num"><span class="badge badge-warn">40:00</span></td>
       <td class="actions"><a class="btn btn-sm" href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">Open week</a></td></tr>
   
+    <tr><td>Drew Contractor</td><td class="nowrap">24 Aug – 30 Aug</td><td><span class="badge">Draft</span></td>
+      <td class="num">0:00</td><td class="num">21:00</td><td class="num"><span class="badge badge-warn">21:00</span></td>
+      <td class="actions"><a class="btn btn-sm" href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">Open week</a></td></tr>
+  
     <tr><td>Jordan Designer</td><td class="nowrap">24 Aug – 30 Aug</td><td><span class="badge">Draft</span></td>
       <td class="num">0:00</td><td class="num">40:00</td><td class="num"><span class="badge badge-warn">40:00</span></td>
       <td class="actions"><a class="btn btn-sm" href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">Open week</a></td></tr>
@@ -131,6 +140,10 @@
   
     <tr><td>Casey Strategist</td><td class="nowrap">31 Aug – 6 Sep</td><td><span class="badge">Draft</span></td>
       <td class="num">0:00</td><td class="num">40:00</td><td class="num"><span class="badge badge-warn">40:00</span></td>
+      <td class="actions"><a class="btn btn-sm" href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">Open week</a></td></tr>
+  
+    <tr><td>Drew Contractor</td><td class="nowrap">31 Aug – 6 Sep</td><td><span class="badge">Draft</span></td>
+      <td class="num">0:00</td><td class="num">21:00</td><td class="num"><span class="badge badge-warn">21:00</span></td>
       <td class="actions"><a class="btn btn-sm" href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">Open week</a></td></tr>
   
     <tr><td>Jordan Designer</td><td class="nowrap">31 Aug – 6 Sep</td><td><span class="badge">Draft</span></td>
@@ -159,5 +172,6 @@
 </main>
 <footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
 <div class="toast-region" aria-live="polite"></div>
+<div id="announcer" class="sr-only" role="status"></div>
 </body>
 </html>

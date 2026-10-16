@@ -42,15 +42,15 @@
 
 </span>
 
-      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
-        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 36 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">36</span>
       </a>
       <details class="user-menu">
-        <summary>Avery <span class="muted small">▾</span></summary>
-        <div class="menu" role="menu">
+        <summary>Avery<span class="sr-only">, account menu</span> <span class="muted small" aria-hidden="true">▾</span></summary>
+        <div class="menu">
           <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
-          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
-          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit">Sign out</button></form>
         </div>
       </details>
     </div>
@@ -79,7 +79,7 @@
     <form method="get" action="/time/day/2026-10-16/" class="row">
       <label class="sr-only" for="person">Timesheet of</label>
       <select id="person" name="user" data-autosubmit>
-        <option value="1" selected>Avery Admin</option><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="3">Jordan Designer</option><option value="5">Riley Video</option><option value="4">Sam Developer</option>
+        <option value="1" selected>Avery Admin</option><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="8">Drew Contractor</option><option value="3">Jordan Designer</option><option value="5">Riley Video</option><option value="4">Sam Developer</option>
       </select>
       <noscript><button class="btn btn-sm" type="submit">Show</button></noscript>
     </form>
@@ -151,7 +151,7 @@
     <form method="post" action="/time/day/2026-10-16/" novalidate>
       
       
-      <input type="hidden" name="idempotency_key" value="ddfc69c1-de77-449c-95b7-9e4a125db135" id="id_idempotency_key">
+      <input type="hidden" name="idempotency_key" value="b1e5c1d0-3148-4e7b-b0ee-12979110b875" id="id_idempotency_key">
       
 
       <div class="entry-form">
@@ -219,7 +219,7 @@
   </div>
   
   
-  <button type="button" class="btn btn-ghost btn-sm picker-fav" data-favourite-toggle data-url="/time/favourites/toggle/" aria-pressed="false" hidden>☆ Add to favourites</button>
+  <button type="button" class="btn btn-ghost btn-sm picker-fav" data-favourite-toggle data-url="/time/favourites/toggle/" aria-pressed="false" hidden><span aria-hidden="true">☆</span> Favourite</button>
 </div>
 
 </div>
@@ -270,8 +270,8 @@
 
         </div>
         <div class="actions">
-          <button class="btn btn-primary" type="submit" name="action" value="save">Save entry</button>
-          <button class="btn btn-accent" type="submit" name="action" value="start_timer">▶ Start timer</button>
+          <button class="btn btn-primary" type="submit" name="action" value="save" id="add-save">Save entry</button>
+          <button class="btn btn-accent" type="submit" name="action" value="start_timer"><span aria-hidden="true">▶</span> Start timer</button>
           <span class="help">Type 1.5 or 1:30; both mean 1 h 30 min. To use the timer instead, leave the duration empty and press Start timer.</span>
         </div>
       </div>
@@ -293,15 +293,15 @@
     </div>
     <div class="entry-notes">Timeline update</div>
   </div>
-  <div class="entry-duration" aria-label="Duration 1:30">1:30</div>
+  <div class="entry-duration"><span class="sr-only">Duration </span>1:30</div>
   <div class="entry-actions">
     
       <a class="btn btn-sm" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Edit</a>
       
       <form method="post" action="/time/timer/start/" class="inline-form">
-        <input type="hidden" name="resume_entry" value="805"><input type="hidden" name="request_key" value="594c1acd-361e-475f-a760-b5a8bee8113c">
+        <input type="hidden" name="resume_entry" value="805"><input type="hidden" name="request_key" value="c7589989-fa30-445d-818c-da6683fbea91">
         <input type="hidden" name="next" value="/time/day/2026-10-16/"><input type="hidden" name="day" value="2026-10-16">
-        <button class="btn btn-sm" type="submit" title="Start a timer that adds to this entry">▶ Start</button>
+        <button class="btn btn-sm" type="submit" title="Start a timer that adds to this entry"><span aria-hidden="true">▶</span> Start</button>
       </form>
       
     
@@ -329,15 +329,15 @@
     </div>
     <div class="entry-notes">Timeline update</div>
   </div>
-  <div class="entry-duration" aria-label="Duration 0:30">0:30</div>
+  <div class="entry-duration"><span class="sr-only">Duration </span>0:30</div>
   <div class="entry-actions">
     
       <a class="btn btn-sm" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Edit</a>
       
       <form method="post" action="/time/timer/start/" class="inline-form">
-        <input type="hidden" name="resume_entry" value="806"><input type="hidden" name="request_key" value="224f6d11-1661-4855-bf37-45f3615aea9e">
+        <input type="hidden" name="resume_entry" value="806"><input type="hidden" name="request_key" value="c1402457-09eb-4071-b65b-16b619648ca7">
         <input type="hidden" name="next" value="/time/day/2026-10-16/"><input type="hidden" name="day" value="2026-10-16">
-        <button class="btn btn-sm" type="submit" title="Start a timer that adds to this entry">▶ Start</button>
+        <button class="btn btn-sm" type="submit" title="Start a timer that adds to this entry"><span aria-hidden="true">▶</span> Start</button>
       </form>
       
     
@@ -365,15 +365,15 @@
     </div>
     <div class="entry-notes">Timeline update</div>
   </div>
-  <div class="entry-duration" aria-label="Duration 0:30">0:30</div>
+  <div class="entry-duration"><span class="sr-only">Duration </span>0:30</div>
   <div class="entry-actions">
     
       <a class="btn btn-sm" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Edit</a>
       
       <form method="post" action="/time/timer/start/" class="inline-form">
-        <input type="hidden" name="resume_entry" value="807"><input type="hidden" name="request_key" value="99e8c2cd-5d23-4299-bf0d-35cd3c50bdb0">
+        <input type="hidden" name="resume_entry" value="807"><input type="hidden" name="request_key" value="bba47dc3-c407-4e9e-9f87-e376715e82a7">
         <input type="hidden" name="next" value="/time/day/2026-10-16/"><input type="hidden" name="day" value="2026-10-16">
-        <button class="btn btn-sm" type="submit" title="Start a timer that adds to this entry">▶ Start</button>
+        <button class="btn btn-sm" type="submit" title="Start a timer that adds to this entry"><span aria-hidden="true">▶</span> Start</button>
       </form>
       
     
@@ -401,15 +401,15 @@
     </div>
     <div class="entry-notes">Timeline update</div>
   </div>
-  <div class="entry-duration" aria-label="Duration 2:00">2:00</div>
+  <div class="entry-duration"><span class="sr-only">Duration </span>2:00</div>
   <div class="entry-actions">
     
       <a class="btn btn-sm" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Edit</a>
       
       <form method="post" action="/time/timer/start/" class="inline-form">
-        <input type="hidden" name="resume_entry" value="808"><input type="hidden" name="request_key" value="3e85572e-6d02-4114-a382-21a7d2f5968e">
+        <input type="hidden" name="resume_entry" value="808"><input type="hidden" name="request_key" value="91827b34-98ff-433a-ae2f-5343674d5f29">
         <input type="hidden" name="next" value="/time/day/2026-10-16/"><input type="hidden" name="day" value="2026-10-16">
-        <button class="btn btn-sm" type="submit" title="Start a timer that adds to this entry">▶ Start</button>
+        <button class="btn btn-sm" type="submit" title="Start a timer that adds to this entry"><span aria-hidden="true">▶</span> Start</button>
       </form>
       
     
@@ -437,15 +437,15 @@
     </div>
     <div class="entry-notes">Expense sorting</div>
   </div>
-  <div class="entry-duration" aria-label="Duration 2:00">2:00</div>
+  <div class="entry-duration"><span class="sr-only">Duration </span>2:00</div>
   <div class="entry-actions">
     
       <a class="btn btn-sm" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Edit</a>
       
       <form method="post" action="/time/timer/start/" class="inline-form">
-        <input type="hidden" name="resume_entry" value="809"><input type="hidden" name="request_key" value="c5fb6721-063f-4ae1-9619-84c8fc166eb1">
+        <input type="hidden" name="resume_entry" value="809"><input type="hidden" name="request_key" value="33653547-90bc-4755-8166-16efd3fc3358">
         <input type="hidden" name="next" value="/time/day/2026-10-16/"><input type="hidden" name="day" value="2026-10-16">
-        <button class="btn btn-sm" type="submit" title="Start a timer that adds to this entry">▶ Start</button>
+        <button class="btn btn-sm" type="submit" title="Start a timer that adds to this entry"><span aria-hidden="true">▶</span> Start</button>
       </form>
       
     
@@ -472,5 +472,6 @@
 </main>
 <footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
 <div class="toast-region" aria-live="polite"></div>
+<div id="announcer" class="sr-only" role="status"></div>
 </body>
 </html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Approvals · Peach Time</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="brand.css">
+  <script src="picker.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body data-proto-role="Viewing as Casey Strategist (project manager)">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="screen-mgr-day.html"><span class="brand-dot" aria-hidden="true"></span>Peach Time</a>
+    <nav class="nav" aria-label="Main">
+      
+        <a href="screen-mgr-day.html">My Time</a>
+      
+        <a href="screen-mgr-reports.html">Reports</a>
+      
+        <a href="screen-mgr-approvals.html" aria-current="page">Approvals</a>
+      
+        <a href="screen-mgr-account.html">Settings</a>
+      
+    </nav>
+    <div class="topbar-right">
+      <span id="timer-pill-slot">
+
+  <span data-timer-id="" hidden></span>
+
+</span>
+
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 9 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">9</span>
+      </a>
+      <details class="user-menu">
+        <summary>Casey<span class="sr-only">, account menu</span> <span class="muted small" aria-hidden="true">▾</span></summary>
+        <div class="menu">
+          <div class="menu-head muted small">casey@peach-demo.example<br>Project manager</div>
+          <a href="screen-mgr-account.html">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit">Sign out</button></form>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container ">
+  
+
+  
+<div class="page-head"><h1>Approvals</h1></div>
+<nav class="subnav" aria-label="Approval queues">
+  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview." aria-current="page">Pending (1)</a>
+  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Rejected (0)</a>
+  
+  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Recently approved</a>
+</nav>
+<p class="muted">You can approve or send back someone else's week when every entry in it is on a project you manage. Weeks with any time on other projects, administrators' weeks and your own weeks are reviewed by an administrator, who also handles reopening approved weeks.</p>
+
+<div class="table-wrap"><table class="table">
+  <thead><tr><th>Person</th><th>Week</th><th class="num">Logged</th><th class="num">Billable</th><th>Submitted</th><th><span class="sr-only">Actions</span></th></tr></thead>
+  <tbody>
+    <tr><td>Drew Contractor</td><td class="nowrap">5 Oct – 11 Oct</td>
+      <td class="num">20:30</td><td class="num">20:30</td>
+      
+      <td class="small">16 Oct 10:28</td>
+      <td class="actions">
+        
+        <form method="post" action="/approvals/41/decide/" class="inline-form"><input type="hidden" name="action" value="approve"><input type="hidden" name="expected_version" value="2"><input type="hidden" name="next" value="queue"><button class="btn btn-sm btn-primary" type="submit">Approve</button></form>
+        
+        <a class="btn btn-sm" href="screen-mgr-review.html">Review</a></td></tr>
+  </tbody>
+</table></div>
+
+
+</main>
+<footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
+<div class="toast-region" aria-live="polite"></div>
+<div id="announcer" class="sr-only" role="status"></div>
+</body>
+</html>

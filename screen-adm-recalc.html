@@ -42,15 +42,15 @@
 
 </span>
 
-      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
-        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 36 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">36</span>
       </a>
       <details class="user-menu">
-        <summary>Avery <span class="muted small">▾</span></summary>
-        <div class="menu" role="menu">
+        <summary>Avery<span class="sr-only">, account menu</span> <span class="muted small" aria-hidden="true">▾</span></summary>
+        <div class="menu">
           <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
-          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
-          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit">Sign out</button></form>
         </div>
       </details>
     </div>
@@ -101,7 +101,7 @@
     
 <div class="field">
   <label class="check"><input type="checkbox" name="include_locked" aria-describedby="id_include_locked_helptext" id="id_include_locked"> <span>Include approved or period-locked entries</span></label>
-  <div class="help" id="id_include_locked_help">Approved time keeps its approval; only the rate snapshots change. Recorded in the audit history.</div>
+  <div class="help" id="id_include_locked_helptext">Approved time keeps its approval; only the rate snapshots change. Recorded in the audit history.</div>
   
 </div>
 
@@ -109,7 +109,7 @@
     
 <div class="field">
   <label class="check"><input type="checkbox" name="include_imported" aria-describedby="id_include_imported_helptext" id="id_include_imported"> <span>Include rates that came from an import</span></label>
-  <div class="help" id="id_include_imported_help">Off by default: imported rates are historical values from the source system.</div>
+  <div class="help" id="id_include_imported_helptext">Off by default: imported rates are historical values from the source system.</div>
   
 </div>
 
@@ -123,5 +123,6 @@
 </main>
 <footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
 <div class="toast-region" aria-live="polite"></div>
+<div id="announcer" class="sr-only" role="status"></div>
 </body>
 </html>

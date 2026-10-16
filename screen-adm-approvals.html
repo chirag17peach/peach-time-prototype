@@ -42,15 +42,15 @@
 
 </span>
 
-      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
-        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 36 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">36</span>
       </a>
       <details class="user-menu">
-        <summary>Avery <span class="muted small">▾</span></summary>
-        <div class="menu" role="menu">
+        <summary>Avery<span class="sr-only">, account menu</span> <span class="muted small" aria-hidden="true">▾</span></summary>
+        <div class="menu">
           <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
-          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
-          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit">Sign out</button></form>
         </div>
       </details>
     </div>
@@ -63,19 +63,20 @@
   
 <div class="page-head"><h1>Approvals</h1></div>
 <nav class="subnav" aria-label="Approval queues">
-  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview." aria-current="page">Pending (4)</a>
+  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview." aria-current="page">Pending (5)</a>
   <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Rejected (1)</a>
   <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Unsubmitted</a>
   <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Recently approved</a>
 </nav>
 
+
 <div class="table-wrap"><table class="table">
-  <thead><tr><th>Person</th><th>Week</th><th class="num">Logged</th><th class="num">Billable</th><th class="num">Scheduled</th><th>Submitted</th><th></th></tr></thead>
+  <thead><tr><th>Person</th><th>Week</th><th class="num">Logged</th><th class="num">Billable</th><th class="num">Scheduled</th><th>Submitted</th><th><span class="sr-only">Actions</span></th></tr></thead>
   <tbody>
     <tr><td>Avery Admin</td><td class="nowrap">5 Oct – 11 Oct</td>
       <td class="num">30:30</td><td class="num">23:30</td>
       <td class="num">40:00 <span class="badge badge-warn" title="Scheduled minus logged">−9:30</span></td>
-      <td class="small">16 Oct 00:12</td>
+      <td class="small">16 Oct 10:28</td>
       <td class="actions">
         <span class="small muted">Yours: another admin approves</span>
         <a class="btn btn-sm" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Review</a></td></tr>
@@ -83,32 +84,42 @@
     <tr><td>Blake Reviewer</td><td class="nowrap">5 Oct – 11 Oct</td>
       <td class="num">40:00</td><td class="num">7:30</td>
       <td class="num">40:00</td>
-      <td class="small">16 Oct 00:12</td>
+      <td class="small">16 Oct 10:28</td>
       <td class="actions">
         
         <form method="post" action="/approvals/26/decide/" class="inline-form"><input type="hidden" name="action" value="approve"><input type="hidden" name="expected_version" value="2"><input type="hidden" name="next" value="queue"><button class="btn btn-sm btn-primary" type="submit">Approve</button></form>
         
-        <a class="btn btn-sm" href="screen-adm-review.html">Review</a></td></tr>
+        <a class="btn btn-sm" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Review</a></td></tr>
   
     <tr><td>Casey Strategist</td><td class="nowrap">5 Oct – 11 Oct</td>
       <td class="num">38:30</td><td class="num">31:00</td>
       <td class="num">40:00 <span class="badge badge-warn" title="Scheduled minus logged">−1:30</span></td>
-      <td class="small">16 Oct 00:12</td>
+      <td class="small">16 Oct 10:28</td>
       <td class="actions">
         
         <form method="post" action="/approvals/30/decide/" class="inline-form"><input type="hidden" name="action" value="approve"><input type="hidden" name="expected_version" value="2"><input type="hidden" name="next" value="queue"><button class="btn btn-sm btn-primary" type="submit">Approve</button></form>
         
         <a class="btn btn-sm" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Review</a></td></tr>
   
+    <tr><td>Drew Contractor</td><td class="nowrap">5 Oct – 11 Oct</td>
+      <td class="num">20:30</td><td class="num">20:30</td>
+      <td class="num">21:00 <span class="badge badge-warn" title="Scheduled minus logged">−0:30</span></td>
+      <td class="small">16 Oct 10:28</td>
+      <td class="actions">
+        
+        <form method="post" action="/approvals/41/decide/" class="inline-form"><input type="hidden" name="action" value="approve"><input type="hidden" name="expected_version" value="2"><input type="hidden" name="next" value="queue"><button class="btn btn-sm btn-primary" type="submit">Approve</button></form>
+        
+        <a class="btn btn-sm" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Review</a></td></tr>
+  
     <tr><td>Riley Video</td><td class="nowrap">5 Oct – 11 Oct</td>
       <td class="num">37:00</td><td class="num">26:00</td>
       <td class="num">40:00 <span class="badge badge-warn" title="Scheduled minus logged">−3:00</span></td>
-      <td class="small">16 Oct 00:12</td>
+      <td class="small">16 Oct 10:28</td>
       <td class="actions">
         
         <form method="post" action="/approvals/29/decide/" class="inline-form"><input type="hidden" name="action" value="approve"><input type="hidden" name="expected_version" value="2"><input type="hidden" name="next" value="queue"><button class="btn btn-sm btn-primary" type="submit">Approve</button></form>
         
-        <a class="btn btn-sm" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Review</a></td></tr>
+        <a class="btn btn-sm" href="screen-adm-review.html">Review</a></td></tr>
   </tbody>
 </table></div>
 
@@ -116,5 +127,6 @@
 </main>
 <footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
 <div class="toast-region" aria-live="polite"></div>
+<div id="announcer" class="sr-only" role="status"></div>
 </body>
 </html>

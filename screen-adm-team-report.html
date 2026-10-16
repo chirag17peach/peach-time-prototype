@@ -42,15 +42,15 @@
 
 </span>
 
-      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
-        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 36 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">36</span>
       </a>
       <details class="user-menu">
-        <summary>Avery <span class="muted small">▾</span></summary>
-        <div class="menu" role="menu">
+        <summary>Avery<span class="sr-only">, account menu</span> <span class="muted small" aria-hidden="true">▾</span></summary>
+        <div class="menu">
           <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
-          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
-          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit">Sign out</button></form>
         </div>
       </details>
     </div>
@@ -83,7 +83,7 @@
 
 <div class="print-only">
   <h2>Peach Time · Team</h2>
-  <p>Date range: 2026-10-05 to 2026-10-11 (Last week) · Generated 2026-10-16 09:12 (America/Halifax) by Avery Admin</p>
+  <p>Date range: 2026-10-05 to 2026-10-11 (Last week) · Generated 2026-10-16 10:28 (America/Halifax) by Avery Admin</p>
 </div>
 <form method="get" class="filters no-print" aria-label="Report filters">
   
@@ -101,7 +101,9 @@
       <select id="f-task" name="task"><option value="">All tasks</option><option value="3">Admin</option><option value="4">Copywriting</option><option value="5">Design</option><option value="6">Design - Assets</option><option value="1">Development</option><option value="7">Huddle</option><option value="8">Monitoring</option><option value="9">Motion Graphics</option><option value="10">Post-Production</option><option value="11">Pre-Production</option><option value="12">Production</option><option value="13">Programming</option><option value="14">Project Management</option><option value="15">Quality Assurance Testing</option><option value="16">Reporting</option><option value="17">Research</option><option value="18">Scheduling</option><option value="19">Social Media Planning</option><option value="20">Storyboard - Production</option><option value="21">Storyboard Design - Motion</option><option value="2">Strategy</option></select></div>
     
     <div class="field"><label for="f-person">Person</label>
-      <select id="f-person" name="person"><option value="">Everyone</option><option value="1">Avery Admin</option><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="3">Jordan Designer</option><option value="7">Morgan Former (inactive)</option><option value="5">Riley Video</option><option value="4">Sam Developer</option></select></div>
+      <select id="f-person" name="person"><option value="">Everyone</option><option value="1">Avery Admin</option><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="8">Drew Contractor</option><option value="3">Jordan Designer</option><option value="7">Morgan Former (inactive)</option><option value="5">Riley Video</option><option value="4">Sam Developer</option></select></div>
+    
+    
     <div class="field"><label for="f-team">Team</label>
       <select id="f-team" name="team"><option value="">All teams</option><option value="2">Design</option><option value="3">Development</option><option value="1">Management</option><option value="5">Strategy</option><option value="4">Video</option></select></div>
     
@@ -127,12 +129,15 @@
 
 
 <div class="stats">
-  <div class="stat"><p class="label">Logged</p><div class="value">226:00</div></div>
-  <div class="stat"><p class="label">Billable</p><div class="value">159:30</div><div class="sub">70.58% of logged</div></div>
-  <div class="stat"><p class="label">Available (scheduled to date)</p><div class="value">240:00</div></div>
-  <div class="stat"><p class="label">Billable utilization</p><div class="value">66.46%</div><div class="sub">billable ÷ available</div></div>
-  <div class="stat"><p class="label">Possible missing time</p><div class="value">15:00</div><div class="sub">a reminder, not a score</div></div>
+  <div class="stat"><p class="label">Logged</p><div class="value">246:30</div></div>
+  <div class="stat"><p class="label">Billable</p><div class="value">180:00</div><div class="sub">73.02% of logged</div></div>
+  
+  <div class="stat"><p class="label">Available (scheduled to date)</p><div class="value">261:00</div></div>
+  <div class="stat"><p class="label">Billable utilization</p><div class="value">68.97%</div><div class="sub">billable ÷ available</div></div>
+  <div class="stat"><p class="label">Possible missing time</p><div class="value">15:30</div><div class="sub">a reminder, not a score</div></div>
+  
 </div>
+
 <div class="table-wrap">
 <table class="table">
   <thead><tr><th>Person</th><th class="num">Logged</th><th class="num">Billable</th><th class="num">Non-billable</th><th class="num">Available</th><th class="num">Missing</th><th>Billable utilization</th><th>Timesheets in period</th></tr></thead>
@@ -142,60 +147,84 @@
       <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Avery Admin</a><div class="small muted">Management</div></td>
       <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">30:30</a></td>
       <td class="num">23:30</td><td class="num">7:00</td>
+      
       <td class="num">40:00</td>
       <td class="num"><span class="badge badge-warn">9:30</span></td>
       <td>58.75%</td>
       <td class="small">1 submitted</td>
+      
     </tr>
   
     <tr>
       <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Blake Reviewer</a><div class="small muted">Management</div></td>
       <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">40:00</a></td>
       <td class="num">7:30</td><td class="num">32:30</td>
+      
       <td class="num">40:00</td>
       <td class="num">0:00</td>
       <td>18.75%</td>
       <td class="small">1 submitted</td>
+      
     </tr>
   
     <tr>
       <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Casey Strategist</a><div class="small muted">Strategy</div></td>
       <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">38:30</a></td>
       <td class="num">31:00</td><td class="num">7:30</td>
+      
       <td class="num">40:00</td>
       <td class="num"><span class="badge badge-warn">1:30</span></td>
       <td>77.50%</td>
       <td class="small">1 submitted</td>
+      
+    </tr>
+  
+    <tr>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Drew Contractor</a><div class="small muted">Design</div></td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">20:30</a></td>
+      <td class="num">20:30</td><td class="num">0:00</td>
+      
+      <td class="num">21:00</td>
+      <td class="num"><span class="badge badge-warn">0:30</span></td>
+      <td>97.62%</td>
+      <td class="small">1 submitted</td>
+      
     </tr>
   
     <tr>
       <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Jordan Designer</a><div class="small muted">Design</div></td>
       <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">39:00</a></td>
       <td class="num">36:30</td><td class="num">2:30</td>
+      
       <td class="num">40:00</td>
       <td class="num"><span class="badge badge-warn">1:00</span></td>
       <td>91.25%</td>
       <td class="small">1 rejected</td>
+      
     </tr>
   
     <tr>
       <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Riley Video</a><div class="small muted">Video</div></td>
       <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">37:00</a></td>
       <td class="num">26:00</td><td class="num">11:00</td>
+      
       <td class="num">40:00</td>
       <td class="num"><span class="badge badge-warn">3:00</span></td>
       <td>65.00%</td>
       <td class="small">1 submitted</td>
+      
     </tr>
   
     <tr>
       <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Sam Developer</a><div class="small muted">Development</div></td>
       <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">41:00</a></td>
       <td class="num">35:00</td><td class="num">6:00</td>
+      
       <td class="num">40:00</td>
       <td class="num">0:00</td>
       <td>87.50%</td>
       <td class="small">1 draft</td>
+      
     </tr>
   
   </tbody>
@@ -211,7 +240,7 @@
 
 
 <div class="row-between no-print">
-  <p class="report-meta">Generated Fri 16 Oct 2026, 09:12:42 (America/Halifax).  Running timers are not included until stopped.</p>
+  <p class="report-meta">Generated Fri 16 Oct 2026, 10:28:30 (America/Halifax).  Running timers are not included until stopped.</p>
   <details class="no-print">
   <summary class="btn btn-ghost btn-sm">Save this report…</summary>
   <form method="post" action="/reports/saved/new/" class="card">
@@ -222,7 +251,7 @@
     <div class="field"><label for="saved-name">Name</label><input id="saved-name" type="text" name="name" maxlength="120" required></div>
     
     <div class="field"><label for="saved-share">Share with</label>
-      <select id="saved-share" name="share_with" multiple size="4"><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="3">Jordan Designer</option><option value="5">Riley Video</option><option value="4">Sam Developer</option></select>
+      <select id="saved-share" name="share_with" multiple size="4"><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="8">Drew Contractor</option><option value="3">Jordan Designer</option><option value="5">Riley Video</option><option value="4">Sam Developer</option></select>
       <p class="help">Sharing only shares the filters. Each person still sees only the data their own role allows.</p></div>
     
     <button class="btn btn-sm" type="submit">Save</button>
@@ -235,5 +264,6 @@
 </main>
 <footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
 <div class="toast-region" aria-live="polite"></div>
+<div id="announcer" class="sr-only" role="status"></div>
 </body>
 </html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Account & security · Peach Time</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="brand.css">
+  <script src="picker.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body data-proto-role="Viewing as Casey Strategist (project manager)">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="screen-mgr-day.html"><span class="brand-dot" aria-hidden="true"></span>Peach Time</a>
+    <nav class="nav" aria-label="Main">
+      
+        <a href="screen-mgr-day.html">My Time</a>
+      
+        <a href="screen-mgr-reports.html">Reports</a>
+      
+        <a href="screen-mgr-approvals.html">Approvals</a>
+      
+        <a href="screen-mgr-account.html" aria-current="page">Settings</a>
+      
+    </nav>
+    <div class="topbar-right">
+      <span id="timer-pill-slot">
+
+  <span data-timer-id="" hidden></span>
+
+</span>
+
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 9 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">9</span>
+      </a>
+      <details class="user-menu">
+        <summary>Casey<span class="sr-only">, account menu</span> <span class="muted small" aria-hidden="true">▾</span></summary>
+        <div class="menu">
+          <div class="menu-head muted small">casey@peach-demo.example<br>Project manager</div>
+          <a href="screen-mgr-account.html">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit">Sign out</button></form>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container ">
+  
+
+  
+<div class="page-head"><h1>Account &amp; security</h1></div>
+<div class="cols">
+  <section class="card" aria-labelledby="profile-h">
+    <h2 id="profile-h">Profile</h2>
+    <form method="post" novalidate>
+      
+      
+<div class="field">
+  <label for="id_profile-first_name">First name</label>
+  <input type="text" name="profile-first_name" value="Casey" maxlength="100" required id="id_profile-first_name">
+  
+  
+</div>
+
+
+      
+<div class="field">
+  <label for="id_profile-last_name">Last name <span class="muted small">(optional)</span></label>
+  <input type="text" name="profile-last_name" value="Strategist" maxlength="100" id="id_profile-last_name">
+  
+  
+</div>
+
+
+      <p class="small muted">Email: casey@peach-demo.example · Role: Project manager · Team: Strategy</p>
+      <button class="btn" type="submit" name="save_profile">Save profile</button>
+    </form>
+  </section>
+  <section class="card" aria-labelledby="pw-h">
+    <h2 id="pw-h">Change password</h2>
+    <form method="post" novalidate>
+      
+      
+<div class="field">
+  <label for="id_pw-current_password">Current password</label>
+  <input type="password" name="pw-current_password" autocomplete="current-password" required id="id_pw-current_password">
+  
+  
+</div>
+
+
+      
+<div class="field">
+  <label for="id_pw-password1">New password</label>
+  <input type="password" name="pw-password1" autocomplete="new-password" required aria-describedby="id_pw-password1_helptext" id="id_pw-password1">
+  <div class="help" id="id_pw-password1_helptext">At least 12 characters. Avoid common passwords.</div>
+  
+</div>
+
+
+      
+<div class="field">
+  <label for="id_pw-password2">Confirm password</label>
+  <input type="password" name="pw-password2" autocomplete="new-password" required id="id_pw-password2">
+  
+  
+</div>
+
+
+      <button class="btn" type="submit" name="change_password">Change password</button>
+    </form>
+  </section>
+</div>
+<section class="card" aria-labelledby="mfa-h">
+  <h2 id="mfa-h">Two-step verification</h2>
+  
+    <p>Off.  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Set it up</a></p>
+  
+</section>
+<section class="card" aria-labelledby="sessions-h">
+  <div class="card-head"><h2 id="sessions-h">Signed-in sessions</h2>
+    <form method="post" action="/account/sessions/revoke-others/"><button class="btn btn-sm" type="submit">Sign out all other sessions</button></form>
+  </div>
+  <div class="table-wrap"><table class="table">
+    <thead><tr><th>Device</th><th>IP address</th><th>Signed in</th><th>Last active</th><th><span class="sr-only">Actions</span></th></tr></thead>
+    <tbody>
+    
+      <tr><td>Unknown <span class="badge badge-ok">This session</span></td>
+        <td class="mono">—</td><td>16 Oct 2026 10:28</td><td>0 minutes ago</td>
+        <td class="actions"></td></tr>
+    
+    </tbody>
+  </table></div>
+</section>
+
+</main>
+<footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
+<div class="toast-region" aria-live="polite"></div>
+<div id="announcer" class="sr-only" role="status"></div>
+</body>
+</html>

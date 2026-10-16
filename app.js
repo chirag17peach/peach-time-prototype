@@ -20,8 +20,60 @@
     toast("Network problem: nothing was saved. Check your connection and try again.", "error");
   });
   document.addEventListener("htmx:afterSettle", function (event) {
-    init(event.detail.elt);
+    var elt = event.detail.elt;
+    init(elt);
+    if (elt.id === "day-panel" || elt.id === "week-panel") afterPanelUpdate(elt);
+    else if (elt.id === "cell-details") focusFirst(elt, ["h2"]);
+    else if (elt.matches && elt.matches("li.entry") && focusLost()) focusFirst(elt, ["button, input, select, textarea"]);  // inline edit opened
   });
+
+  // ---------------------------------------------------------------- focus and announcements after in-place updates
+  // A swapped panel replaces the control that had focus, and live regions that arrive inside new content are
+  // often not announced. So: focus the first invalid field after a failed save; otherwise, if focus was lost,
+  // move it somewhere sensible; and repeat the panel's messages in #announcer, which never gets swapped.
+  var INVALID = '[aria-invalid="true"]';
+  var AFTER_UPDATE = [INVALID, ".alert-error", ".entry.is-new", ".timer-card", "#add-time", "#week-panel h2"];
+  var requestedFrom = null;  // id of the control that started the request (hx-disabled-elt blurs it meanwhile)
+
+  document.addEventListener("htmx:beforeRequest", function () {
+    requestedFrom = document.activeElement ? document.activeElement.id : null;
+  });
+
+  function focusLost() {
+    var active = document.activeElement;
+    return !active || active === document.body || !document.body.contains(active);
+  }
+  function focusFirst(scope, selectors) {
+    for (var i = 0; i < selectors.length; i++) {
+      var candidates = scope.querySelectorAll(selectors[i]);
+      for (var j = 0; j < candidates.length; j++) {
+        var target = candidates[j];
+        if (target.type === "hidden" || !target.getClientRects().length) continue;  // hidden inputs, the native picker select
+        if (!target.matches("a[href], button, input, select, textarea, [tabindex]")) target.setAttribute("tabindex", "-1");
+        target.focus();
+        return true;
+      }
+    }
+    return false;
+  }
+  function announce(text) {
+    var region = document.getElementById("announcer");
+    if (!region || !text) return;
+    region.textContent = "";
+    setTimeout(function () { region.textContent = text; }, 100);  // a change, even when the text repeats
+  }
+  function afterPanelUpdate(panel) {
+    if (!focusFirst(panel, [INVALID]) && focusLost()) {
+      var again = requestedFrom && document.getElementById(requestedFrom);  // the same control in the new panel
+      if (again && panel.contains(again)) again.focus();
+      else focusFirst(panel, AFTER_UPDATE);
+    }
+    var texts = [];
+    panel.querySelectorAll(".messages li:not(.alert-error), .alert-warning").forEach(function (node) {
+      texts.push(node.textContent.trim());
+    });
+    announce(texts.join(" "));
+  }
 
   // ---------------------------------------------------------------- toasts
   function toast(text, kind) {
@@ -89,7 +141,8 @@
       };
       if (hint && !hint.dataset.default) hint.dataset.default = hint.textContent;
       input.addEventListener("input", update);
-      if (input.value) update();
+      // After a failed save the server's error is already shown (and described); don't repeat it in the hint.
+      if (input.value && input.getAttribute("aria-invalid") !== "true") update();
     });
   }
 
@@ -150,6 +203,16 @@
 
   document.addEventListener("click", function (event) {
     if (event.target.closest("[data-print]")) window.print();
+    var menu = document.querySelector("details.user-menu[open]");
+    if (menu && !menu.contains(event.target)) menu.open = false;
+  });
+
+  // The account menu is a <details> disclosure: Escape closes it and returns focus to its summary.
+  document.addEventListener("keydown", function (event) {
+    var menu = event.key === "Escape" && event.target.closest && event.target.closest("details.user-menu[open]");
+    if (!menu) return;
+    menu.open = false;
+    menu.querySelector("summary").focus();
   });
 
   document.addEventListener("change", function (event) {
@@ -166,12 +229,21 @@
     scope.querySelectorAll("[data-week-grid]").forEach(function (grid) {
       if (grid.dataset.bound) return;
       grid.dataset.bound = "1";
+      var status = grid.querySelector("[data-dirty-status]");
+      var markDirty = function () {
+        var count = grid.querySelectorAll("input.dirty").length;
+        grid.dataset.dirty = count ? "1" : "";
+        // Colour isn't the only sign of unsaved cells: the count is shown as text and announced.
+        var text = !count ? "" : count === 1 ? "1 unsaved change" : count + " unsaved changes";
+        if (status && status.textContent !== text) status.textContent = text;
+      };
       grid.addEventListener("input", function (event) {
         var input = event.target;
         if (!input.matches("input[data-original]")) return;
         input.classList.toggle("dirty", input.value.trim() !== input.dataset.original);
-        grid.dataset.dirty = grid.querySelector("input.dirty") ? "1" : "";
+        markDirty();
       });
+      markDirty();  // a grid returned with errors still holds the unsaved input
       grid.addEventListener("keydown", function (event) {
         var input = event.target;
         if (!input.matches(".cell input") || (event.key !== "ArrowUp" && event.key !== "ArrowDown")) return;

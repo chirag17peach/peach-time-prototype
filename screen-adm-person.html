@@ -42,15 +42,15 @@
 
 </span>
 
-      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
-        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 36 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">36</span>
       </a>
       <details class="user-menu">
-        <summary>Avery <span class="muted small">▾</span></summary>
-        <div class="menu" role="menu">
+        <summary>Avery<span class="sr-only">, account menu</span> <span class="muted small" aria-hidden="true">▾</span></summary>
+        <div class="menu">
           <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
-          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
-          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit">Sign out</button></form>
         </div>
       </details>
     </div>
@@ -111,13 +111,23 @@
           
 <div class="field">
   <label for="id_person-role">Role</label>
-  <select name="person-role" id="id_person-role">
+  <select name="person-role" aria-describedby="id_person-role_helptext" id="id_person-role">
   <option value="employee" selected>Employee</option>
+
+  <option value="manager">Project manager</option>
 
   <option value="admin">Administrator</option>
 
 </select>
+  <div class="help" id="id_person-role_helptext">Project managers see their own time plus all time on the projects they&#x27;re made manager of (on each project&#x27;s page), and can approve weeks made up only of that time.</div>
   
+</div>
+
+
+          
+<div class="field">
+  <label class="check"><input type="checkbox" name="person-financial_access" aria-describedby="id_person-financial_access_helptext" id="id_person-financial_access"> <span>Financial access</span></label>
+  <div class="help" id="id_person-financial_access_helptext">Project managers only: also show rates, hourly billing value and labour cost for the projects they manage.</div>
   
 </div>
 
@@ -163,7 +173,7 @@
 
 
         </div>
-        <p class="help">Changing the email or role signs the person out everywhere. Administrators must use two-step verification.</p>
+        <p class="help">Changing the email or role signs the person out everywhere. Administrators must use two-step verification. Financial access only applies to project managers and is cleared for any other role; changing the role away from Project manager also ends their project manager assignments.</p>
         <button class="btn btn-primary" type="submit">Save</button>
       </form>
     </section>
@@ -292,7 +302,7 @@
 <div class="field">
   <label for="id_hours_per_day">Hours per day <span class="muted small">(optional)</span></label>
   <input type="text" name="hours_per_day" maxlength="10" aria-describedby="id_hours_per_day_helptext" id="id_hours_per_day">
-  <div class="help" id="id_hours_per_day_help">Leave blank for full days off; enter e.g. 4 for half days.</div>
+  <div class="help" id="id_hours_per_day_helptext">Leave blank for full days off; enter e.g. 4 for half days.</div>
   
 </div>
 
@@ -387,14 +397,14 @@
   <div class="stack">
     <section class="card" aria-labelledby="access-h">
       <h2 id="access-h">Access</h2>
-      <p>Active · 153 time entries · last sign-in 16 Oct 2026 09:12</p>
+      <p>Active · 153 time entries · last sign-in 16 Oct 2026 10:28</p>
       
       
       <div class="stack">
         
         <form method="post" action="/team/3/action/"><input type="hidden" name="action" value="reset"><button class="btn btn-sm" type="submit">Create password reset link</button></form>
         
-        <form method="post" action="/team/3/action/"><input type="hidden" name="action" value="revoke_sessions"><button class="btn btn-sm" type="submit">Sign out all sessions (8)</button></form>
+        <form method="post" action="/team/3/action/"><input type="hidden" name="action" value="revoke_sessions"><button class="btn btn-sm" type="submit">Sign out all sessions (1)</button></form>
         
         
         <form method="post" action="/team/3/action/" class="stack" data-confirm="Deactivate Jordan Designer? They'll be signed out and can't sign in. Their time stays in reports.">
@@ -407,12 +417,13 @@
     </section>
     <section class="card" aria-labelledby="projects-h">
       <h2 id="projects-h">Assigned projects (13)</h2>
-      <ul><li><a href="screen-adm-project.html">Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Harbourfront Festival (demo) · Festival Rebrand</a></li><li><a href="screen-adm-project-hourly.html">Northwind Outfitters (demo) · Website Support</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Admin</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Business Development</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Contract Base - Custom Time Entry</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Huddle</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Misc.</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · SOP</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Social Media</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Viva Events</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Website</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Witch Crawl</a></li></ul>
+      <ul class="link-list"><li><a href="screen-adm-project.html">Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Harbourfront Festival (demo) · Festival Rebrand</a></li><li><a href="screen-adm-project-hourly.html">Northwind Outfitters (demo) · Website Support</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Admin</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Business Development</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Contract Base - Custom Time Entry</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Huddle</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Misc.</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · SOP</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Social Media</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Viva Events</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Website</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Witch Crawl</a></li></ul>
+      
     </section>
     
     <section class="card" aria-labelledby="sess-h">
       <h2 id="sess-h">Sessions</h2>
-      <ul class="small"><li>Unknown device ·  · active 0 minutes ago</li><li>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) A… · 127.0.0.1 · active 0 minutes ago</li><li>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) A… · 127.0.0.1 · active 0 minutes ago</li><li>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) A… · 127.0.0.1 · active 1 minute ago</li><li>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) A… · 127.0.0.1 · active 2 minutes ago</li><li>Unknown device ·  · active 8 hours, 31 minutes ago</li><li>Unknown device ·  · active 8 hours, 55 minutes ago</li><li>Unknown device ·  · active 8 hours, 56 minutes ago</li></ul>
+      <ul class="small"><li>Unknown device ·  · active 0 minutes ago</li></ul>
     </section>
     
   </div>
@@ -421,5 +432,6 @@
 </main>
 <footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
 <div class="toast-region" aria-live="polite"></div>
+<div id="announcer" class="sr-only" role="status"></div>
 </body>
 </html>
