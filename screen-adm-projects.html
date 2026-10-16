@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Projects · Peach Time</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="brand.css">
+  <script src="picker.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body data-proto-role="Viewing as Avery Admin (administrator)">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="screen-adm-day.html"><span class="brand-dot" aria-hidden="true"></span>Peach Time</a>
+    <nav class="nav" aria-label="Main">
+      
+        <a href="screen-adm-day.html">My Time</a>
+      
+        <a href="screen-adm-reports.html">Reports</a>
+      
+        <a href="screen-adm-projects.html" aria-current="page">Projects</a>
+      
+        <a href="screen-adm-clients.html">Clients</a>
+      
+        <a href="screen-adm-team.html">Team</a>
+      
+        <a href="screen-adm-approvals.html">Approvals</a>
+      
+        <a href="screen-adm-settings.html">Settings</a>
+      
+    </nav>
+    <div class="topbar-right">
+      <span id="timer-pill-slot">
+
+  <span data-timer-id="" hidden></span>
+
+</span>
+
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      </a>
+      <details class="user-menu">
+        <summary>Avery <span class="muted small">▾</span></summary>
+        <div class="menu" role="menu">
+          <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container ">
+  
+
+  
+<div class="page-head"><h1>Projects</h1><a class="btn btn-primary" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">+ New project</a></div>
+<nav class="subnav" aria-label="Projects section">
+  <a href="screen-adm-projects.html" aria-current="page">Projects</a>
+  <a href="screen-adm-tasks.html">Task templates</a>
+</nav>
+
+<div class="row-between">
+  <form method="get" class="row">
+    <input type="hidden" name="status" value="active">
+    <label class="sr-only" for="q">Search</label><input id="q" type="search" name="q" value="" placeholder="Search name, code or client">
+    <label class="sr-only" for="client">Client</label>
+    <select id="client" name="client" data-autosubmit><option value="">All clients</option><option value="2">Cedar Coast Tourism (demo)</option><option value="4">Harbourfront Festival (demo)</option><option value="3">Northwind Outfitters (demo)</option><option value="1">Peach</option></select>
+    <button class="btn" type="submit">Filter</button>
+  </form>
+  <nav class="seg" aria-label="Status filter">
+  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview." aria-current="page">Active</a>
+  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Archived</a>
+  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">All</a>
+</nav>
+
+</div>
+<div class="table-wrap">
+<table class="table">
+  <thead><tr><th>Code</th><th>Project</th><th>Client</th><th>Billing</th><th>Budget (current period)</th><th class="num">This month</th><th class="num">All time</th><th></th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td class="mono">CCT-2026-RET</td>
+      <td><a href="screen-adm-project.html">2026 Retainer - Website Edits</a></td>
+      <td>Cedar Coast Tourism (demo)</td>
+      <td>Retainer</td>
+      <td>
+  
+  <svg class="meter over" viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="104.67% used" focusable="false"><rect class="meter-bg" width="100" height="8" rx="4"></rect><rect class="meter-fill" width="100" height="8" rx="4"></rect></svg>
+
+  <div class="small">
+    157:00 of 150:00 h
+    · 104.67% <span class="badge badge-bad">Over</span>
+  </div>
+  
+
+</td>
+      <td class="num">157:00</td>
+      <td class="num">384:00</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="screen-adm-project-report.html">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td class="mono">HBF-REBRAND</td>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Festival Rebrand</a></td>
+      <td>Harbourfront Festival (demo)</td>
+      <td>Fixed fee</td>
+      <td>
+  
+  <svg class="meter" viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="46.44% used" focusable="false"><rect class="meter-bg" width="100" height="8" rx="4"></rect><rect class="meter-fill" width="46.4" height="8" rx="4"></rect></svg>
+
+  <div class="small">
+    274:00 of 590:00 h
+    · 46.44% <span class="badge badge-ok">Ok</span>
+  </div>
+  
+
+</td>
+      <td class="num">119:00</td>
+      <td class="num">274:00</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td class="mono">NWO-WEB</td>
+      <td><a href="screen-adm-project-hourly.html">Website Support</a></td>
+      <td>Northwind Outfitters (demo)</td>
+      <td>Hourly</td>
+      <td>
+  
+  <svg class="meter" viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="58.69% used" focusable="false"><rect class="meter-bg" width="100" height="8" rx="4"></rect><rect class="meter-fill" width="58.7" height="8" rx="4"></rect></svg>
+
+  <div class="small">
+    246:30 of 420:00 h
+    · 58.69% <span class="badge badge-ok">Ok</span>
+  </div>
+  
+
+</td>
+      <td class="num">97:00</td>
+      <td class="num">246:30</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td class="mono">PEA-ADMIN</td>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Admin</a></td>
+      <td>Peach</td>
+      <td>Internal / non-billable</td>
+      <td><span class="muted small">—</span>
+</td>
+      <td class="num">140:00</td>
+      <td class="num">340:30</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td class="mono">PEA-BIZDEV</td>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Business Development</a></td>
+      <td>Peach</td>
+      <td>Internal / non-billable</td>
+      <td><span class="muted small">—</span>
+</td>
+      <td class="num">0:00</td>
+      <td class="num">0:00</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td class="mono">PEA-CONTRACT</td>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Contract Base - Custom Time Entry</a></td>
+      <td>Peach</td>
+      <td>Internal / non-billable</td>
+      <td><span class="muted small">—</span>
+</td>
+      <td class="num">0:00</td>
+      <td class="num">0:00</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td class="mono">PEA-HUDDLE</td>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Huddle</a></td>
+      <td>Peach</td>
+      <td>Internal / non-billable</td>
+      <td><span class="muted small">—</span>
+</td>
+      <td class="num">6:00</td>
+      <td class="num">15:00</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td class="mono">PEA-MISC</td>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Misc.</a></td>
+      <td>Peach</td>
+      <td>Internal / non-billable</td>
+      <td><span class="muted small">—</span>
+</td>
+      <td class="num">0:00</td>
+      <td class="num">0:00</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td class="mono">PEA-SOP</td>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">SOP</a></td>
+      <td>Peach</td>
+      <td>Internal / non-billable</td>
+      <td><span class="muted small">—</span>
+</td>
+      <td class="num">0:00</td>
+      <td class="num">0:00</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td class="mono">PEA-SOCIAL</td>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Social Media</a></td>
+      <td>Peach</td>
+      <td>Internal / non-billable</td>
+      <td><span class="muted small">—</span>
+</td>
+      <td class="num">0:00</td>
+      <td class="num">0:00</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td class="mono">PEA-VIVA</td>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Viva Events</a></td>
+      <td>Peach</td>
+      <td>Internal / non-billable</td>
+      <td><span class="muted small">—</span>
+</td>
+      <td class="num">0:00</td>
+      <td class="num">0:00</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td class="mono">PEA-WEB</td>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Website</a></td>
+      <td>Peach</td>
+      <td>Internal / non-billable</td>
+      <td><span class="muted small">—</span>
+</td>
+      <td class="num">0:00</td>
+      <td class="num">0:00</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td class="mono">PEA-WITCH</td>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Witch Crawl</a></td>
+      <td>Peach</td>
+      <td>Internal / non-billable</td>
+      <td><span class="muted small">—</span>
+</td>
+      <td class="num">0:00</td>
+      <td class="num">0:00</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Report</a></td>
+    </tr>
+  
+  </tbody>
+</table>
+</div>
+
+</main>
+<footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
+<div class="toast-region" aria-live="polite"></div>
+</body>
+</html>

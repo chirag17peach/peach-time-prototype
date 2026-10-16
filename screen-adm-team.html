@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Team · Peach Time</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="brand.css">
+  <script src="picker.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body data-proto-role="Viewing as Avery Admin (administrator)">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="screen-adm-day.html"><span class="brand-dot" aria-hidden="true"></span>Peach Time</a>
+    <nav class="nav" aria-label="Main">
+      
+        <a href="screen-adm-day.html">My Time</a>
+      
+        <a href="screen-adm-reports.html">Reports</a>
+      
+        <a href="screen-adm-projects.html">Projects</a>
+      
+        <a href="screen-adm-clients.html">Clients</a>
+      
+        <a href="screen-adm-team.html" aria-current="page">Team</a>
+      
+        <a href="screen-adm-approvals.html">Approvals</a>
+      
+        <a href="screen-adm-settings.html">Settings</a>
+      
+    </nav>
+    <div class="topbar-right">
+      <span id="timer-pill-slot">
+
+  <span data-timer-id="" hidden></span>
+
+</span>
+
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      </a>
+      <details class="user-menu">
+        <summary>Avery <span class="muted small">▾</span></summary>
+        <div class="menu" role="menu">
+          <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container ">
+  
+
+  
+<div class="page-head"><h1>Team</h1><div class="row"><a class="btn" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Manage teams</a><a class="btn btn-primary" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">+ Invite person</a></div></div>
+<div class="row-between">
+  <form method="get" class="row">
+    <input type="hidden" name="status" value="active">
+    <label class="sr-only" for="team">Team</label>
+    <select id="team" name="team" data-autosubmit><option value="">All teams</option><option value="2">Design</option><option value="3">Development</option><option value="1">Management</option><option value="5">Strategy</option><option value="4">Video</option></select>
+    <noscript><button class="btn" type="submit">Filter</button></noscript>
+  </form>
+  <nav class="seg" aria-label="Status filter">
+    <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview." aria-current="page">Active</a>
+    <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Inactive</a>
+    <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">All</a>
+  </nav>
+</div>
+<div class="table-wrap">
+<table class="table">
+  <thead><tr><th>Person</th><th>Role</th><th>Team</th><th>Status</th><th class="num">This week</th><th class="num">Scheduled</th><th>Last sign-in</th><th></th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Avery Admin</a><div class="small muted">avery@peach-demo.example</div></td>
+      <td>Administrator</td>
+      <td>Management</td>
+      <td><span class="badge badge-ok">Active</span></td>
+      <td class="num"><a href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">30:00</a></td>
+      <td class="num">40:00</td>
+      <td>16 Oct 2026</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Blake Reviewer</a><div class="small muted">blake@peach-demo.example</div></td>
+      <td>Administrator</td>
+      <td>Management</td>
+      <td><span class="badge badge-ok">Active</span></td>
+      <td class="num"><a href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">40:30</a></td>
+      <td class="num">40:00</td>
+      <td>never</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Casey Strategist</a><div class="small muted">casey@peach-demo.example</div></td>
+      <td>Employee</td>
+      <td>Strategy</td>
+      <td><span class="badge badge-ok">Active</span></td>
+      <td class="num"><a href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">31:00</a></td>
+      <td class="num">40:00</td>
+      <td>never</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td><a href="screen-adm-person.html">Jordan Designer</a><div class="small muted">jordan@peach-demo.example</div></td>
+      <td>Employee</td>
+      <td>Design</td>
+      <td><span class="badge badge-ok">Active</span></td>
+      <td class="num"><a href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">38:00</a></td>
+      <td class="num">40:00</td>
+      <td>16 Oct 2026</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Riley Video</a><div class="small muted">riley@peach-demo.example</div></td>
+      <td>Employee</td>
+      <td>Video</td>
+      <td><span class="badge badge-ok">Active</span></td>
+      <td class="num"><a href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">38:00</a></td>
+      <td class="num">40:00</td>
+      <td>never</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Report</a></td>
+    </tr>
+  
+    <tr>
+      <td><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Sam Developer</a><div class="small muted">sam@peach-demo.example</div></td>
+      <td>Employee</td>
+      <td>Development</td>
+      <td><span class="badge badge-ok">Active</span></td>
+      <td class="num"><a href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">31:00</a></td>
+      <td class="num">40:00</td>
+      <td>never</td>
+      <td class="actions"><a class="btn btn-sm btn-ghost" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Report</a></td>
+    </tr>
+  
+  </tbody>
+</table>
+</div>
+<p class="help">“This week” is logged time; it is not a performance score. Scheduled hours exclude holidays and recorded leave.</p>
+
+</main>
+<footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
+<div class="toast-region" aria-live="polite"></div>
+</body>
+</html>

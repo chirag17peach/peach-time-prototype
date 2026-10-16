@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>NWO-WEB · Website Support · Peach Time</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="brand.css">
+  <script src="picker.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body data-proto-role="Viewing as Avery Admin (administrator)">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="screen-adm-day.html"><span class="brand-dot" aria-hidden="true"></span>Peach Time</a>
+    <nav class="nav" aria-label="Main">
+      
+        <a href="screen-adm-day.html">My Time</a>
+      
+        <a href="screen-adm-reports.html">Reports</a>
+      
+        <a href="screen-adm-projects.html" aria-current="page">Projects</a>
+      
+        <a href="screen-adm-clients.html">Clients</a>
+      
+        <a href="screen-adm-team.html">Team</a>
+      
+        <a href="screen-adm-approvals.html">Approvals</a>
+      
+        <a href="screen-adm-settings.html">Settings</a>
+      
+    </nav>
+    <div class="topbar-right">
+      <span id="timer-pill-slot">
+
+  <span data-timer-id="" hidden></span>
+
+</span>
+
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      </a>
+      <details class="user-menu">
+        <summary>Avery <span class="muted small">▾</span></summary>
+        <div class="menu" role="menu">
+          <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container ">
+  
+
+  
+<div class="page-head">
+  <div>
+    <div class="muted">Northwind Outfitters (demo) · <span class="mono">NWO-WEB</span></div>
+    <h1>Website Support </h1>
+  </div>
+  <div class="row">
+    <a class="btn" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Project report</a>
+    <a class="btn" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Entries</a>
+    <a class="btn btn-primary" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Edit settings</a>
+  </div>
+</div>
+<nav class="subnav" aria-label="Projects section">
+  <a href="screen-adm-projects.html" aria-current="page">Projects</a>
+  <a href="screen-adm-tasks.html">Task templates</a>
+</nav>
+
+
+<div class="stats">
+  <div class="stat"><p class="label">Billing model</p><div class="value">Hourly</div>
+    <div class="sub">One project-wide rate</div></div>
+  <div class="stat"><p class="label">All-time hours</p><div class="value">246:30</div><div class="sub">246:30 billable</div></div>
+  <div class="stat"><p class="label">Dates</p><div class="value small">30 Mar 2026 → open</div><div class="sub">Lead: none</div></div>
+  <div class="stat"><p class="label">Notes</p><div class="value small">Optional</div></div>
+</div>
+
+<section class="card" id="budget" aria-labelledby="budget-h">
+  <div class="card-head"><h2 id="budget-h">Budget · Total project hours</h2>
+    <span class="small muted">Counts all project time</span></div>
+  
+    
+    
+      <div class="stats">
+        <div class="stat"><p class="label">Whole project</p>
+          <div class="value">246:30 / 420:00</div>
+          <svg class="meter" viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="58.69% used" focusable="false"><rect class="meter-bg" width="100" height="8" rx="4"></rect><rect class="meter-fill" width="58.7" height="8" rx="4"></rect></svg>
+
+          <div class="sub">58.69% used <span class="badge badge-ok">Ok</span></div></div>
+        <div class="stat"><p class="label">Remaining</p><div class="value">173:30</div>
+          <div class="sub">Not over budget</div></div>
+        
+        <div class="stat"><p class="label">Estimate</p>
+          <div class="value small">Runs out ≈ 13 Nov 2026</div>
+          <div class="sub">Assumes the last 14 days' pace (6:02/day, weekends included) continues. An estimate, not a commitment.</div></div>
+      </div>
+    
+    
+
+    
+
+    
+
+    <details class="definitions"><summary>Set or change the budget</summary>
+      <form method="post" action="/projects/12/budget/" novalidate>
+        
+        <div class="form-grid">
+          
+          
+<div class="field">
+  <label for="id_effective_from">Effective from</label>
+  <input type="date" name="effective_from" value="2026-03-30" required aria-describedby="id_effective_from_helptext" id="id_effective_from">
+  <div class="help" id="id_effective_from_help">For monthly budgets this is rounded to the first day of its month.</div>
+  
+</div>
+
+
+          
+<div class="field">
+  <label for="id_hours">Budget hours <span class="muted small">(optional)</span></label>
+  <input type="text" name="hours" maxlength="20" aria-describedby="id_hours_helptext" id="id_hours">
+  <div class="help" id="id_hours_help">e.g. 20 or 20:00. Zero is allowed.</div>
+  
+</div>
+
+
+          
+        </div>
+        
+<div class="field">
+  <label class="check"><input type="checkbox" name="no_budget" aria-describedby="id_no_budget_helptext" id="id_no_budget"> <span>No budget from this date</span></label>
+  <div class="help" id="id_no_budget_help">Different from a zero budget: nothing is tracked against it.</div>
+  
+</div>
+
+
+        
+<div class="field">
+  <label for="id_reason">Reason</label>
+  <textarea name="reason" cols="40" rows="2" maxlength="500" required id="id_reason">
+</textarea>
+  
+  
+</div>
+
+
+        <button class="btn" type="submit">Save budget revision</button>
+      </form>
+    </details>
+    
+    <details class="definitions"><summary>Budget history (1)</summary>
+      <div class="table-wrap"><table class="table table-compact">
+        <thead><tr><th>Effective from</th><th>Task</th><th class="num">Budget</th><th>Reason</th><th>By</th></tr></thead>
+        <tbody><tr><td>30 Mar 2026</td><td>Whole project</td>
+          <td class="num">420:00 h</td>
+          <td>Demo budget (fictitious)</td><td>— · 16 Oct 2026</td></tr></tbody>
+      </table></div>
+    </details>
+    
+  
+</section>
+
+<section class="card" id="tasks" aria-labelledby="tasks-h">
+  <div class="card-head"><h2 id="tasks-h">Tasks (6)</h2><span class="small muted">Billable here sets the default for new entries on this project only.</span></div>
+  <div class="table-wrap"><table class="table table-compact">
+    <thead><tr><th>Task</th><th>Billable default</th><th>Open for new time</th><th class="num">Order</th><th class="num">Hours</th><th></th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td>Admin</td>
+        <td colspan="3">
+          <form method="post" action="/projects/12/tasks/" class="row">
+            <input type="hidden" name="action" value="update"><input type="hidden" name="project_task" value="237">
+            <label class="check"><input type="checkbox" name="billable" value="1"> Billable</label>
+            <label class="check"><input type="checkbox" name="is_active" value="1" checked> Open</label>
+            <label class="sr-only" for="order-237">Sort order</label><input id="order-237" type="number" name="sort_order" value="0" min="0" class="mono" size="4">
+            <button class="btn btn-sm" type="submit">Update</button>
+          </form>
+        </td>
+        <td class="num">0:00</td>
+        <td class="actions"><form method="post" action="/projects/12/tasks/" data-confirm="Remove Admin from this project? If it has time, it will be closed instead."><input type="hidden" name="action" value="remove"><input type="hidden" name="project_task" value="237"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Remove</button></form></td>
+      </tr>
+    
+      <tr>
+        <td>Design</td>
+        <td colspan="3">
+          <form method="post" action="/projects/12/tasks/" class="row">
+            <input type="hidden" name="action" value="update"><input type="hidden" name="project_task" value="232">
+            <label class="check"><input type="checkbox" name="billable" value="1" checked> Billable</label>
+            <label class="check"><input type="checkbox" name="is_active" value="1" checked> Open</label>
+            <label class="sr-only" for="order-232">Sort order</label><input id="order-232" type="number" name="sort_order" value="0" min="0" class="mono" size="4">
+            <button class="btn btn-sm" type="submit">Update</button>
+          </form>
+        </td>
+        <td class="num">54:00</td>
+        <td class="actions"><form method="post" action="/projects/12/tasks/" data-confirm="Remove Design from this project? If it has time, it will be closed instead."><input type="hidden" name="action" value="remove"><input type="hidden" name="project_task" value="232"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Remove</button></form></td>
+      </tr>
+    
+      <tr>
+        <td>Development</td>
+        <td colspan="3">
+          <form method="post" action="/projects/12/tasks/" class="row">
+            <input type="hidden" name="action" value="update"><input type="hidden" name="project_task" value="233">
+            <label class="check"><input type="checkbox" name="billable" value="1" checked> Billable</label>
+            <label class="check"><input type="checkbox" name="is_active" value="1" checked> Open</label>
+            <label class="sr-only" for="order-233">Sort order</label><input id="order-233" type="number" name="sort_order" value="0" min="0" class="mono" size="4">
+            <button class="btn btn-sm" type="submit">Update</button>
+          </form>
+        </td>
+        <td class="num">36:30</td>
+        <td class="actions"><form method="post" action="/projects/12/tasks/" data-confirm="Remove Development from this project? If it has time, it will be closed instead."><input type="hidden" name="action" value="remove"><input type="hidden" name="project_task" value="233"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Remove</button></form></td>
+      </tr>
+    
+      <tr>
+        <td>Programming</td>
+        <td colspan="3">
+          <form method="post" action="/projects/12/tasks/" class="row">
+            <input type="hidden" name="action" value="update"><input type="hidden" name="project_task" value="234">
+            <label class="check"><input type="checkbox" name="billable" value="1" checked> Billable</label>
+            <label class="check"><input type="checkbox" name="is_active" value="1" checked> Open</label>
+            <label class="sr-only" for="order-234">Sort order</label><input id="order-234" type="number" name="sort_order" value="0" min="0" class="mono" size="4">
+            <button class="btn btn-sm" type="submit">Update</button>
+          </form>
+        </td>
+        <td class="num">41:30</td>
+        <td class="actions"><form method="post" action="/projects/12/tasks/" data-confirm="Remove Programming from this project? If it has time, it will be closed instead."><input type="hidden" name="action" value="remove"><input type="hidden" name="project_task" value="234"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Remove</button></form></td>
+      </tr>
+    
+      <tr>
+        <td>Project Management</td>
+        <td colspan="3">
+          <form method="post" action="/projects/12/tasks/" class="row">
+            <input type="hidden" name="action" value="update"><input type="hidden" name="project_task" value="235">
+            <label class="check"><input type="checkbox" name="billable" value="1" checked> Billable</label>
+            <label class="check"><input type="checkbox" name="is_active" value="1" checked> Open</label>
+            <label class="sr-only" for="order-235">Sort order</label><input id="order-235" type="number" name="sort_order" value="0" min="0" class="mono" size="4">
+            <button class="btn btn-sm" type="submit">Update</button>
+          </form>
+        </td>
+        <td class="num">114:30</td>
+        <td class="actions"><form method="post" action="/projects/12/tasks/" data-confirm="Remove Project Management from this project? If it has time, it will be closed instead."><input type="hidden" name="action" value="remove"><input type="hidden" name="project_task" value="235"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Remove</button></form></td>
+      </tr>
+    
+      <tr>
+        <td>Quality Assurance Testing</td>
+        <td colspan="3">
+          <form method="post" action="/projects/12/tasks/" class="row">
+            <input type="hidden" name="action" value="update"><input type="hidden" name="project_task" value="236">
+            <label class="check"><input type="checkbox" name="billable" value="1" checked> Billable</label>
+            <label class="check"><input type="checkbox" name="is_active" value="1" checked> Open</label>
+            <label class="sr-only" for="order-236">Sort order</label><input id="order-236" type="number" name="sort_order" value="0" min="0" class="mono" size="4">
+            <button class="btn btn-sm" type="submit">Update</button>
+          </form>
+        </td>
+        <td class="num">0:00</td>
+        <td class="actions"><form method="post" action="/projects/12/tasks/" data-confirm="Remove Quality Assurance Testing from this project? If it has time, it will be closed instead."><input type="hidden" name="action" value="remove"><input type="hidden" name="project_task" value="236"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Remove</button></form></td>
+      </tr>
+    
+    </tbody>
+  </table></div>
+  
+  <details class="definitions"><summary>Add tasks</summary>
+    <form method="post" action="/projects/12/tasks/">
+      <input type="hidden" name="action" value="add">
+      <div class="columns-picker"><div id="id_tasks"><div>
+    <label for="id_tasks_0"><input type="checkbox" name="tasks" value="4" id="id_tasks_0">
+ Copywriting</label>
+
+</div><div>
+    <label for="id_tasks_1"><input type="checkbox" name="tasks" value="6" id="id_tasks_1">
+ Design - Assets</label>
+
+</div><div>
+    <label for="id_tasks_2"><input type="checkbox" name="tasks" value="7" id="id_tasks_2">
+ Huddle</label>
+
+</div><div>
+    <label for="id_tasks_3"><input type="checkbox" name="tasks" value="8" id="id_tasks_3">
+ Monitoring</label>
+
+</div><div>
+    <label for="id_tasks_4"><input type="checkbox" name="tasks" value="9" id="id_tasks_4">
+ Motion Graphics</label>
+
+</div><div>
+    <label for="id_tasks_5"><input type="checkbox" name="tasks" value="10" id="id_tasks_5">
+ Post-Production</label>
+
+</div><div>
+    <label for="id_tasks_6"><input type="checkbox" name="tasks" value="11" id="id_tasks_6">
+ Pre-Production</label>
+
+</div><div>
+    <label for="id_tasks_7"><input type="checkbox" name="tasks" value="12" id="id_tasks_7">
+ Production</label>
+
+</div><div>
+    <label for="id_tasks_8"><input type="checkbox" name="tasks" value="16" id="id_tasks_8">
+ Reporting</label>
+
+</div><div>
+    <label for="id_tasks_9"><input type="checkbox" name="tasks" value="17" id="id_tasks_9">
+ Research</label>
+
+</div><div>
+    <label for="id_tasks_10"><input type="checkbox" name="tasks" value="18" id="id_tasks_10">
+ Scheduling</label>
+
+</div><div>
+    <label for="id_tasks_11"><input type="checkbox" name="tasks" value="19" id="id_tasks_11">
+ Social Media Planning</label>
+
+</div><div>
+    <label for="id_tasks_12"><input type="checkbox" name="tasks" value="20" id="id_tasks_12">
+ Storyboard - Production</label>
+
+</div><div>
+    <label for="id_tasks_13"><input type="checkbox" name="tasks" value="21" id="id_tasks_13">
+ Storyboard Design - Motion</label>
+
+</div><div>
+    <label for="id_tasks_14"><input type="checkbox" name="tasks" value="2" id="id_tasks_14">
+ Strategy</label>
+
+</div>
+</div></div>
+      <button class="btn" type="submit">Add selected tasks</button>
+    </form>
+  </details>
+  
+</section>
+
+<section class="card" id="team" aria-labelledby="team-h">
+  <div class="card-head"><h2 id="team-h">People (6)</h2><span class="small muted">Only assigned people can log time here.</span></div>
+  
+  <ul class="audit-list">
+    
+      <li class="row-between"><span>Avery Admin <span class="muted small">avery@peach-demo.example</span></span>
+        <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="1"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form></li>
+    
+      <li class="row-between"><span>Blake Reviewer <span class="muted small">blake@peach-demo.example</span></span>
+        <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="2"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form></li>
+    
+      <li class="row-between"><span>Casey Strategist <span class="muted small">casey@peach-demo.example</span></span>
+        <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="6"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form></li>
+    
+      <li class="row-between"><span>Jordan Designer <span class="muted small">jordan@peach-demo.example</span></span>
+        <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="3"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form></li>
+    
+      <li class="row-between"><span>Riley Video <span class="muted small">riley@peach-demo.example</span></span>
+        <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="5"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form></li>
+    
+      <li class="row-between"><span>Sam Developer <span class="muted small">sam@peach-demo.example</span></span>
+        <form method="post" action="/projects/12/members/"><input type="hidden" name="action" value="remove"><input type="hidden" name="user" value="4"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Unassign</button></form></li>
+    
+  </ul>
+  
+  
+</section>
+
+<section class="card" id="rates" aria-labelledby="rates-h">
+  <div class="card-head"><h2 id="rates-h">Billing rates · One project-wide rate</h2><span class="small muted">Amounts in CAD</span></div>
+  
+    <p class="help">Rates are effective-dated. Each entry keeps the rate resolved for its work date, so adding or changing a rate never silently changes past reports. To re-value existing entries, an administrator runs an explicit recalculation (Settings → Rate recalculation).
+    </p>
+    <div class="table-wrap"><table class="table table-compact">
+      <thead><tr><th>Applies to</th><th>Effective from</th><th class="num">Rate</th><th>Note</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>Whole project</td><td>30 Mar 2026</td><td class="num">$120.00</td><td>Demo (fictitious)</td>
+          <td class="actions"><form method="post" action="/projects/12/rates/" data-confirm="Delete this rate? Entries keep their current snapshots."><input type="hidden" name="action" value="delete"><input type="hidden" name="rate" value="1"><button class="btn btn-sm btn-ghost btn-danger" type="submit">Delete</button></form></td></tr>
+      </tbody>
+    </table></div>
+    <details class="definitions"><summary>Add a rate</summary>
+      <form method="post" action="/projects/12/rates/" novalidate>
+        
+        <div class="form-grid">
+          
+          
+          
+<div class="field">
+  <label for="id_effective_from">Effective from</label>
+  <input type="date" name="effective_from" value="2026-10-16" required id="id_effective_from">
+  
+  
+</div>
+
+
+          
+<div class="field">
+  <label for="id_hourly_rate">Hourly rate</label>
+  <input type="number" name="hourly_rate" min="0" step="0.01" required id="id_hourly_rate">
+  
+  
+</div>
+
+
+          
+<div class="field">
+  <label for="id_note">Reason / note <span class="muted small">(optional)</span></label>
+  <input type="text" name="note" maxlength="200" id="id_note">
+  
+  
+</div>
+
+
+        </div>
+        <button class="btn" type="submit">Add rate</button>
+      </form>
+    </details>
+  
+</section>
+
+<section class="card" aria-labelledby="manage-h">
+  <h2 id="manage-h">Manage</h2>
+  <details class="definitions"><summary>Duplicate this project</summary>
+    <form method="post" action="/projects/12/duplicate/" novalidate>
+      
+      <div class="form-grid">
+        
+<div class="field">
+  <label for="id_name">Name</label>
+  <input type="text" name="name" value="Website Support (copy)" maxlength="200" required id="id_name">
+  
+  
+</div>
+
+
+        
+<div class="field">
+  <label for="id_code">Code</label>
+  <input type="text" name="code" value="NWO-WEB-COPY" maxlength="32" required id="id_code">
+  
+  
+</div>
+
+
+        
+<div class="field">
+  <label for="id_client">Client</label>
+  <select name="client" required id="id_client">
+  <option value="">---------</option>
+
+  <option value="2">Cedar Coast Tourism (demo)</option>
+
+  <option value="4">Harbourfront Festival (demo)</option>
+
+  <option value="3" selected>Northwind Outfitters (demo)</option>
+
+  <option value="1">Peach</option>
+
+</select>
+  
+  
+</div>
+
+
+      </div>
+      
+<div class="field">
+  <label class="check"><input type="checkbox" name="copy_members" id="id_copy_members" checked> <span>Copy assigned people</span></label>
+  
+  
+</div>
+
+
+      
+<div class="field">
+  <label class="check"><input type="checkbox" name="copy_rates" id="id_copy_rates" checked> <span>Copy billing rates</span></label>
+  
+  
+</div>
+
+
+      
+<div class="field">
+  <label class="check"><input type="checkbox" name="copy_budget" id="id_copy_budget" checked> <span>Copy current budget</span></label>
+  
+  
+</div>
+
+
+      <p class="help">Tasks and their billable settings are always copied. Time entries are never copied.</p>
+      <button class="btn" type="submit">Create copy</button>
+    </form>
+  </details>
+  <div class="form-actions">
+    <form method="post" action="/projects/12/archive/">
+      
+      <input type="hidden" name="archive" value="1"><button class="btn" type="submit">Archive project</button>
+    </form>
+    <form method="post" action="/projects/12/delete/" data-confirm="Delete this project permanently? Only possible when no time was ever logged to it.">
+      <button class="btn btn-danger" type="submit">Delete (only if no time)</button>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
+<div class="toast-region" aria-live="polite"></div>
+</body>
+</html>

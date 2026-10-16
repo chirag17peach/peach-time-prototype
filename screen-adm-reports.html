@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Overview report · Peach Time</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="brand.css">
+  <script src="picker.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body data-proto-role="Viewing as Avery Admin (administrator)">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="screen-adm-day.html"><span class="brand-dot" aria-hidden="true"></span>Peach Time</a>
+    <nav class="nav" aria-label="Main">
+      
+        <a href="screen-adm-day.html">My Time</a>
+      
+        <a href="screen-adm-reports.html" aria-current="page">Reports</a>
+      
+        <a href="screen-adm-projects.html">Projects</a>
+      
+        <a href="screen-adm-clients.html">Clients</a>
+      
+        <a href="screen-adm-team.html">Team</a>
+      
+        <a href="screen-adm-approvals.html">Approvals</a>
+      
+        <a href="screen-adm-settings.html">Settings</a>
+      
+    </nav>
+    <div class="topbar-right">
+      <span id="timer-pill-slot">
+
+  <span data-timer-id="" hidden></span>
+
+</span>
+
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      </a>
+      <details class="user-menu">
+        <summary>Avery <span class="muted small">▾</span></summary>
+        <div class="menu" role="menu">
+          <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container ">
+  
+
+  
+<div class="page-head">
+  <h1>Reports · Overview</h1>
+  <div class="row no-print">
+    <a class="btn" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">CSV</a>
+<a class="btn" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">XLSX</a>
+
+    <button class="btn" type="button" data-print>Print / PDF</button>
+  </div>
+</div>
+<nav class="subnav" aria-label="Reports">
+  <a href="screen-adm-reports.html" aria-current="page">Overview</a>
+  <a href="screen-adm-detailed.html">Detailed time</a>
+  <a href="screen-adm-clients-report.html">Clients &amp; projects</a>
+  <a href="screen-adm-team-report.html">Team</a>
+  <a href="screen-adm-tasks-report.html">Tasks</a>
+  <a href="screen-adm-budgets.html">Budgets &amp; retainers</a>
+  <a href="screen-adm-financial.html">Financial</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Saved</a>
+</nav>
+
+<div class="print-only">
+  <h2>Peach Time · Overview</h2>
+  <p>Date range: 2026-09-01 to 2026-09-30 (Last month) · Generated 2026-10-16 09:12 (America/Halifax) by Avery Admin</p>
+</div>
+<form method="get" class="filters no-print" aria-label="Report filters">
+  
+  
+  <div class="form-grid">
+    <div class="field"><label for="f-preset">Period</label>
+      <select id="f-preset" name="preset"><option value="">Custom dates</option><option value="today">Today</option><option value="yesterday">Yesterday</option><option value="this_week">This week</option><option value="last_week">Last week</option><option value="this_month">This month</option><option value="last_month" selected>Last month</option><option value="this_quarter">This quarter</option><option value="last_quarter">Last quarter</option><option value="this_year">This year</option><option value="last_year">Last year</option><option value="last_30_days">Last 30 days</option></select></div>
+    <div class="field"><label for="f-start">From</label><input id="f-start" type="date" name="start" value="2026-09-01"></div>
+    <div class="field"><label for="f-end">To</label><input id="f-end" type="date" name="end" value="2026-09-30"></div>
+    <div class="field"><label for="f-client">Client</label>
+      <select id="f-client" name="client"><option value="">All clients</option><option value="2">Cedar Coast Tourism (demo)</option><option value="4">Harbourfront Festival (demo)</option><option value="3">Northwind Outfitters (demo)</option><option value="1">Peach</option></select></div>
+    <div class="field"><label for="f-project">Project</label>
+      <select id="f-project" name="project"><option value="">All projects</option><option value="11">Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits</option><option value="13">Harbourfront Festival (demo) · Festival Rebrand</option><option value="12">Northwind Outfitters (demo) · Website Support</option><option value="1">Peach · Admin</option><option value="3">Peach · Business Development</option><option value="4">Peach · Contract Base - Custom Time Entry</option><option value="5">Peach · Huddle</option><option value="6">Peach · Misc.</option><option value="8">Peach · SOP</option><option value="7">Peach · Social Media</option><option value="9">Peach · Viva Events</option><option value="2">Peach · Website</option><option value="10">Peach · Witch Crawl</option></select></div>
+    <div class="field"><label for="f-task">Task</label>
+      <select id="f-task" name="task"><option value="">All tasks</option><option value="3">Admin</option><option value="4">Copywriting</option><option value="5">Design</option><option value="6">Design - Assets</option><option value="1">Development</option><option value="7">Huddle</option><option value="8">Monitoring</option><option value="9">Motion Graphics</option><option value="10">Post-Production</option><option value="11">Pre-Production</option><option value="12">Production</option><option value="13">Programming</option><option value="14">Project Management</option><option value="15">Quality Assurance Testing</option><option value="16">Reporting</option><option value="17">Research</option><option value="18">Scheduling</option><option value="19">Social Media Planning</option><option value="20">Storyboard - Production</option><option value="21">Storyboard Design - Motion</option><option value="2">Strategy</option></select></div>
+    
+    <div class="field"><label for="f-person">Person</label>
+      <select id="f-person" name="person"><option value="">Everyone</option><option value="1">Avery Admin</option><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="3">Jordan Designer</option><option value="7">Morgan Former (inactive)</option><option value="5">Riley Video</option><option value="4">Sam Developer</option></select></div>
+    <div class="field"><label for="f-team">Team</label>
+      <select id="f-team" name="team"><option value="">All teams</option><option value="2">Design</option><option value="3">Development</option><option value="1">Management</option><option value="5">Strategy</option><option value="4">Video</option></select></div>
+    
+    <div class="field"><label for="f-billable">Billable</label>
+      <select id="f-billable" name="billable"><option value="all" selected>Billable and non-billable</option><option value="billable">Billable only</option><option value="non_billable">Non-billable only</option></select></div>
+    <div class="field"><label for="f-approval">Approval</label>
+      <select id="f-approval" name="approval"><option value="">Any status</option><option value="draft">Draft (not submitted)</option><option value="submitted">Submitted</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></div>
+    <div class="field"><label for="f-billing">Billing status</label>
+      <select id="f-billing" name="billing"><option value="all" selected>Any</option><option value="uninvoiced">Billable, not invoiced</option><option value="invoiced">Invoiced</option><option value="non_billable">Non-billable</option></select></div>
+    <div class="field"><label for="f-pstatus">Project status</label>
+      <select id="f-pstatus" name="project_status"><option value="all" selected>Active and archived</option><option value="active">Active projects</option><option value="archived">Archived projects</option></select></div>
+    
+    <div class="field"><label for="f-valuation">Valuation</label>
+      <select id="f-valuation" name="valuation"><option value="all" selected>Any</option><option value="missing_rate">Missing billing rate</option><option value="missing_cost">Missing cost rate</option></select></div>
+    
+    <div class="field"><label for="f-q">Notes contain</label><input id="f-q" type="search" name="q" value=""></div>
+    <div class="filter-actions"><button class="btn btn-primary" type="submit">Apply</button><a class="btn btn-ghost" href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Reset</a></div>
+  </div>
+  <p class="help">Choosing a period overrides the From/To dates; choose “Custom dates” to use them. All summaries, charts, drill-downs and exports use exactly these filters.</p>
+</form>
+<p class="filter-summary"><strong>Date range:</strong> 2026-09-01 to 2026-09-30 (Last month)</p>
+
+
+
+<div class="stats">
+  <div class="stat"><p class="label">Total hours</p><div class="value"><a href="screen-adm-detailed.html">741.00</a></div><div class="sub">741:00 · 469 entries</div></div>
+  <div class="stat"><p class="label">Billable hours</p><div class="value"><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">531.50</a></div><div class="sub">531:30</div></div>
+  <div class="stat"><p class="label">Non-billable hours</p><div class="value"><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">209.50</a></div><div class="sub">209:30</div></div>
+  <div class="stat"><p class="label">Billable share</p><div class="value">71.73%</div><div class="sub">billable ÷ all logged</div></div>
+  <div class="stat"><p class="label">Hourly billing value</p><div class="value">$17,940.00</div>
+    <div class="sub">hourly projects, known rates</div></div>
+  <div class="stat"><p class="label">Pending approvals</p><div class="value"><a href="screen-adm-approvals.html">4</a></div><div class="sub">submitted timesheets</div></div>
+</div>
+
+<figure class="card">
+  <svg class="chart" viewBox="0 0 760 200" role="img" aria-labelledby="chart-title chart-desc" focusable="false"><title id="chart-title">Hours logged per day</title><desc id="chart-desc">Bar chart of logged hours; the same numbers appear in the table below it. Peak 52:00.</desc><line class="axis" x1="44" y1="174.0" x2="754" y2="174.0" stroke-width="1"></line><text x="38" y="178.0" text-anchor="end">0h</text><line class="axis" x1="44" y1="92.0" x2="754" y2="92.0" stroke-width="1"></line><text x="38" y="96.0" text-anchor="end">40h</text><line class="axis" x1="44" y1="10.0" x2="754" y2="10.0" stroke-width="1"></line><text x="38" y="14.0" text-anchor="end">80h</text><a href="screen-adm-detailed.html" aria-label="01 Sep: 0:00 logged, 0:00 billable"><title>01 Sep: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="47.3" y="174.0" width="17.0" height="0.0"></rect><rect class="bar-rect" x="47.3" y="174.0" width="17.0" height="0.0"></rect><rect x="47.3" y="173.0" width="17.0" height="1" fill="#d0d4da"></rect></a><text x="55.8" y="192" text-anchor="middle">01 Sep</text><a href="screen-adm-detailed.html" aria-label="02 Sep: 0:00 logged, 0:00 billable"><title>02 Sep: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="71.0" y="174.0" width="17.0" height="0.0"></rect><rect class="bar-rect" x="71.0" y="174.0" width="17.0" height="0.0"></rect><rect x="71.0" y="173.0" width="17.0" height="1" fill="#d0d4da"></rect></a><a href="screen-adm-detailed.html" aria-label="03 Sep: 0:00 logged, 0:00 billable"><title>03 Sep: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="94.6" y="174.0" width="17.0" height="0.0"></rect><rect class="bar-rect" x="94.6" y="174.0" width="17.0" height="0.0"></rect><rect x="94.6" y="173.0" width="17.0" height="1" fill="#d0d4da"></rect></a><text x="103.2" y="192" text-anchor="middle">03 Sep</text><a href="screen-adm-detailed.html" aria-label="04 Sep: 0:00 logged, 0:00 billable"><title>04 Sep: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="118.3" y="174.0" width="17.0" height="0.0"></rect><rect class="bar-rect" x="118.3" y="174.0" width="17.0" height="0.0"></rect><rect x="118.3" y="173.0" width="17.0" height="1" fill="#d0d4da"></rect></a><a href="screen-adm-detailed.html" aria-label="05 Sep: 0:00 logged, 0:00 billable"><title>05 Sep: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="142.0" y="174.0" width="17.0" height="0.0"></rect><rect class="bar-rect" x="142.0" y="174.0" width="17.0" height="0.0"></rect><rect x="142.0" y="173.0" width="17.0" height="1" fill="#d0d4da"></rect></a><text x="150.5" y="192" text-anchor="middle">05 Sep</text><a href="screen-adm-detailed.html" aria-label="06 Sep: 0:00 logged, 0:00 billable"><title>06 Sep: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="165.6" y="174.0" width="17.0" height="0.0"></rect><rect class="bar-rect" x="165.6" y="174.0" width="17.0" height="0.0"></rect><rect x="165.6" y="173.0" width="17.0" height="1" fill="#d0d4da"></rect></a><a href="screen-adm-detailed.html" aria-label="07 Sep: 52:00 logged, 32:00 billable"><title>07 Sep: 52:00 logged, 32:00 billable</title><rect class="bar-rect secondary" x="189.3" y="67.4" width="17.0" height="41.0"></rect><rect class="bar-rect" x="189.3" y="108.4" width="17.0" height="65.6"></rect></a><text x="197.8" y="192" text-anchor="middle">07 Sep</text><a href="screen-adm-detailed.html" aria-label="08 Sep: 37:00 logged, 34:30 billable"><title>08 Sep: 37:00 logged, 34:30 billable</title><rect class="bar-rect secondary" x="213.0" y="98.2" width="17.0" height="5.1"></rect><rect class="bar-rect" x="213.0" y="103.3" width="17.0" height="70.7"></rect></a><a href="screen-adm-detailed.html" aria-label="09 Sep: 49:00 logged, 35:00 billable"><title>09 Sep: 49:00 logged, 35:00 billable</title><rect class="bar-rect secondary" x="236.6" y="73.5" width="17.0" height="28.7"></rect><rect class="bar-rect" x="236.6" y="102.2" width="17.0" height="71.8"></rect></a><text x="245.2" y="192" text-anchor="middle">09 Sep</text><a href="screen-adm-detailed.html" aria-label="10 Sep: 37:30 logged, 26:30 billable"><title>10 Sep: 37:30 logged, 26:30 billable</title><rect class="bar-rect secondary" x="260.3" y="97.1" width="17.0" height="22.6"></rect><rect class="bar-rect" x="260.3" y="119.7" width="17.0" height="54.3"></rect></a><a href="screen-adm-detailed.html" aria-label="11 Sep: 46:00 logged, 39:00 billable"><title>11 Sep: 46:00 logged, 39:00 billable</title><rect class="bar-rect secondary" x="284.0" y="79.7" width="17.0" height="14.3"></rect><rect class="bar-rect" x="284.0" y="94.0" width="17.0" height="80.0"></rect></a><text x="292.5" y="192" text-anchor="middle">11 Sep</text><a href="screen-adm-detailed.html" aria-label="12 Sep: 0:00 logged, 0:00 billable"><title>12 Sep: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="307.6" y="174.0" width="17.0" height="0.0"></rect><rect class="bar-rect" x="307.6" y="174.0" width="17.0" height="0.0"></rect><rect x="307.6" y="173.0" width="17.0" height="1" fill="#d0d4da"></rect></a><a href="screen-adm-detailed.html" aria-label="13 Sep: 0:00 logged, 0:00 billable"><title>13 Sep: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="331.3" y="174.0" width="17.0" height="0.0"></rect><rect class="bar-rect" x="331.3" y="174.0" width="17.0" height="0.0"></rect><rect x="331.3" y="173.0" width="17.0" height="1" fill="#d0d4da"></rect></a><text x="339.8" y="192" text-anchor="middle">13 Sep</text><a href="screen-adm-detailed.html" aria-label="14 Sep: 0:00 logged, 0:00 billable"><title>14 Sep: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="355.0" y="174.0" width="17.0" height="0.0"></rect><rect class="bar-rect" x="355.0" y="174.0" width="17.0" height="0.0"></rect><rect x="355.0" y="173.0" width="17.0" height="1" fill="#d0d4da"></rect></a><a href="screen-adm-detailed.html" aria-label="15 Sep: 45:30 logged, 35:00 billable"><title>15 Sep: 45:30 logged, 35:00 billable</title><rect class="bar-rect secondary" x="378.6" y="80.7" width="17.0" height="21.5"></rect><rect class="bar-rect" x="378.6" y="102.2" width="17.0" height="71.8"></rect></a><text x="387.2" y="192" text-anchor="middle">15 Sep</text><a href="screen-adm-detailed.html" aria-label="16 Sep: 48:00 logged, 34:30 billable"><title>16 Sep: 48:00 logged, 34:30 billable</title><rect class="bar-rect secondary" x="402.3" y="75.6" width="17.0" height="27.7"></rect><rect class="bar-rect" x="402.3" y="103.3" width="17.0" height="70.7"></rect></a><a href="screen-adm-detailed.html" aria-label="17 Sep: 45:00 logged, 31:00 billable"><title>17 Sep: 45:00 logged, 31:00 billable</title><rect class="bar-rect secondary" x="426.0" y="81.8" width="17.0" height="28.7"></rect><rect class="bar-rect" x="426.0" y="110.5" width="17.0" height="63.5"></rect></a><text x="434.5" y="192" text-anchor="middle">17 Sep</text><a href="screen-adm-detailed.html" aria-label="18 Sep: 38:00 logged, 22:30 billable"><title>18 Sep: 38:00 logged, 22:30 billable</title><rect class="bar-rect secondary" x="449.6" y="96.1" width="17.0" height="31.8"></rect><rect class="bar-rect" x="449.6" y="127.9" width="17.0" height="46.1"></rect></a><a href="screen-adm-detailed.html" aria-label="19 Sep: 0:00 logged, 0:00 billable"><title>19 Sep: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="473.3" y="174.0" width="17.0" height="0.0"></rect><rect class="bar-rect" x="473.3" y="174.0" width="17.0" height="0.0"></rect><rect x="473.3" y="173.0" width="17.0" height="1" fill="#d0d4da"></rect></a><text x="481.8" y="192" text-anchor="middle">19 Sep</text><a href="screen-adm-detailed.html" aria-label="20 Sep: 0:00 logged, 0:00 billable"><title>20 Sep: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="497.0" y="174.0" width="17.0" height="0.0"></rect><rect class="bar-rect" x="497.0" y="174.0" width="17.0" height="0.0"></rect><rect x="497.0" y="173.0" width="17.0" height="1" fill="#d0d4da"></rect></a><a href="screen-adm-detailed.html" aria-label="21 Sep: 48:30 logged, 33:30 billable"><title>21 Sep: 48:30 logged, 33:30 billable</title><rect class="bar-rect secondary" x="520.6" y="74.6" width="17.0" height="30.8"></rect><rect class="bar-rect" x="520.6" y="105.3" width="17.0" height="68.7"></rect></a><text x="529.2" y="192" text-anchor="middle">21 Sep</text><a href="screen-adm-detailed.html" aria-label="22 Sep: 39:00 logged, 26:00 billable"><title>22 Sep: 39:00 logged, 26:00 billable</title><rect class="bar-rect secondary" x="544.3" y="94.1" width="17.0" height="26.6"></rect><rect class="bar-rect" x="544.3" y="120.7" width="17.0" height="53.3"></rect></a><a href="screen-adm-detailed.html" aria-label="23 Sep: 46:00 logged, 35:00 billable"><title>23 Sep: 46:00 logged, 35:00 billable</title><rect class="bar-rect secondary" x="568.0" y="79.7" width="17.0" height="22.6"></rect><rect class="bar-rect" x="568.0" y="102.2" width="17.0" height="71.8"></rect></a><text x="576.5" y="192" text-anchor="middle">23 Sep</text><a href="screen-adm-detailed.html" aria-label="24 Sep: 35:30 logged, 30:00 billable"><title>24 Sep: 35:30 logged, 30:00 billable</title><rect class="bar-rect secondary" x="591.6" y="101.2" width="17.0" height="11.3"></rect><rect class="bar-rect" x="591.6" y="112.5" width="17.0" height="61.5"></rect></a><a href="screen-adm-detailed.html" aria-label="25 Sep: 43:30 logged, 27:00 billable"><title>25 Sep: 43:30 logged, 27:00 billable</title><rect class="bar-rect secondary" x="615.3" y="84.8" width="17.0" height="33.8"></rect><rect class="bar-rect" x="615.3" y="118.7" width="17.0" height="55.4"></rect></a><text x="623.8" y="192" text-anchor="middle">25 Sep</text><a href="screen-adm-detailed.html" aria-label="26 Sep: 0:00 logged, 0:00 billable"><title>26 Sep: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="639.0" y="174.0" width="17.0" height="0.0"></rect><rect class="bar-rect" x="639.0" y="174.0" width="17.0" height="0.0"></rect><rect x="639.0" y="173.0" width="17.0" height="1" fill="#d0d4da"></rect></a><a href="screen-adm-detailed.html" aria-label="27 Sep: 0:00 logged, 0:00 billable"><title>27 Sep: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="662.6" y="174.0" width="17.0" height="0.0"></rect><rect class="bar-rect" x="662.6" y="174.0" width="17.0" height="0.0"></rect><rect x="662.6" y="173.0" width="17.0" height="1" fill="#d0d4da"></rect></a><text x="671.2" y="192" text-anchor="middle">27 Sep</text><a href="screen-adm-detailed.html" aria-label="28 Sep: 46:30 logged, 31:30 billable"><title>28 Sep: 46:30 logged, 31:30 billable</title><rect class="bar-rect secondary" x="686.3" y="78.7" width="17.0" height="30.8"></rect><rect class="bar-rect" x="686.3" y="109.4" width="17.0" height="64.6"></rect></a><a href="screen-adm-detailed.html" aria-label="29 Sep: 45:00 logged, 34:30 billable"><title>29 Sep: 45:00 logged, 34:30 billable</title><rect class="bar-rect secondary" x="710.0" y="81.8" width="17.0" height="21.5"></rect><rect class="bar-rect" x="710.0" y="103.3" width="17.0" height="70.7"></rect></a><text x="718.5" y="192" text-anchor="middle">29 Sep</text><a href="screen-adm-detailed.html" aria-label="30 Sep: 39:00 logged, 24:00 billable"><title>30 Sep: 39:00 logged, 24:00 billable</title><rect class="bar-rect secondary" x="733.6" y="94.0" width="17.0" height="30.8"></rect><rect class="bar-rect" x="733.6" y="124.8" width="17.0" height="49.2"></rect></a></svg>
+  <figcaption class="legend"><span><i class="swatch-billable"></i>Billable</span><span><i class="swatch-other"></i>Non-billable</span><span>Select a bar to see its entries.</span></figcaption>
+  <details class="definitions"><summary>Chart data</summary>
+    <div class="table-wrap"><table class="table table-compact"><thead><tr><th>Day</th><th class="num">Hours</th><th class="num">Billable</th></tr></thead>
+      <tbody><tr><td><a href="screen-adm-detailed.html">01 Sep</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="screen-adm-detailed.html">02 Sep</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="screen-adm-detailed.html">03 Sep</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="screen-adm-detailed.html">04 Sep</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="screen-adm-detailed.html">05 Sep</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="screen-adm-detailed.html">06 Sep</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="screen-adm-detailed.html">07 Sep</a></td><td class="num">52:00</td><td class="num">32:00</td></tr><tr><td><a href="screen-adm-detailed.html">08 Sep</a></td><td class="num">37:00</td><td class="num">34:30</td></tr><tr><td><a href="screen-adm-detailed.html">09 Sep</a></td><td class="num">49:00</td><td class="num">35:00</td></tr><tr><td><a href="screen-adm-detailed.html">10 Sep</a></td><td class="num">37:30</td><td class="num">26:30</td></tr><tr><td><a href="screen-adm-detailed.html">11 Sep</a></td><td class="num">46:00</td><td class="num">39:00</td></tr><tr><td><a href="screen-adm-detailed.html">12 Sep</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="screen-adm-detailed.html">13 Sep</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="screen-adm-detailed.html">14 Sep</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="screen-adm-detailed.html">15 Sep</a></td><td class="num">45:30</td><td class="num">35:00</td></tr><tr><td><a href="screen-adm-detailed.html">16 Sep</a></td><td class="num">48:00</td><td class="num">34:30</td></tr><tr><td><a href="screen-adm-detailed.html">17 Sep</a></td><td class="num">45:00</td><td class="num">31:00</td></tr><tr><td><a href="screen-adm-detailed.html">18 Sep</a></td><td class="num">38:00</td><td class="num">22:30</td></tr><tr><td><a href="screen-adm-detailed.html">19 Sep</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="screen-adm-detailed.html">20 Sep</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="screen-adm-detailed.html">21 Sep</a></td><td class="num">48:30</td><td class="num">33:30</td></tr><tr><td><a href="screen-adm-detailed.html">22 Sep</a></td><td class="num">39:00</td><td class="num">26:00</td></tr><tr><td><a href="screen-adm-detailed.html">23 Sep</a></td><td class="num">46:00</td><td class="num">35:00</td></tr><tr><td><a href="screen-adm-detailed.html">24 Sep</a></td><td class="num">35:30</td><td class="num">30:00</td></tr><tr><td><a href="screen-adm-detailed.html">25 Sep</a></td><td class="num">43:30</td><td class="num">27:00</td></tr><tr><td><a href="screen-adm-detailed.html">26 Sep</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="screen-adm-detailed.html">27 Sep</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="screen-adm-detailed.html">28 Sep</a></td><td class="num">46:30</td><td class="num">31:30</td></tr><tr><td><a href="screen-adm-detailed.html">29 Sep</a></td><td class="num">45:00</td><td class="num">34:30</td></tr><tr><td><a href="screen-adm-detailed.html">30 Sep</a></td><td class="num">39:00</td><td class="num">24:00</td></tr></tbody></table></div>
+  </details>
+</figure>
+
+
+
+<section class="card">
+  <div class="card-head"><h2>Budget warnings</h2><a href="screen-adm-budgets.html">All budgets</a></div>
+  <ul class="audit-list"><li class="row-between"><a href="screen-adm-project.html">Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits</a><span>October 2026: 104.67% <span class="badge badge-bad">Over</span></span></li></ul>
+</section>
+
+<div class="cols">
+  <section><div class="card-head"><h2>By client</h2></div><div class="table-wrap">
+<table class="table">
+  <thead><tr><th>Client</th><th class="num">Hours</th><th class="num">Billable</th><th class="num">Non-billable</th><th>Billable share</th><th class="num">Hourly value</th><th class="num">Entries</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Cedar Coast Tourism (demo)</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">227:00</a></td>
+      <td class="num">227:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">140</td>
+    </tr>
+  
+    <tr>
+      <td>Peach</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">209:30</a></td>
+      <td class="num">0:00</td><td class="num">209:30</td>
+      <td>0.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">149</td>
+    </tr>
+  
+    <tr>
+      <td>Harbourfront Festival (demo)</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">155:00</a></td>
+      <td class="num">155:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">89</td>
+    </tr>
+  
+    <tr>
+      <td>Northwind Outfitters (demo)</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">149:30</a></td>
+      <td class="num">149:30</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$17,940.00</td>
+      <td class="num">91</td>
+    </tr>
+  
+  </tbody>
+  
+</table>
+</div>
+</section>
+  <section><div class="card-head"><h2>By project</h2></div><div class="table-wrap">
+<table class="table">
+  <thead><tr><th>Project</th><th class="num">Hours</th><th class="num">Billable</th><th class="num">Non-billable</th><th>Billable share</th><th class="num">Hourly value</th><th class="num">Entries</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>2026 Retainer - Website Edits (CCT-2026-RET)</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">227:00</a></td>
+      <td class="num">227:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">140</td>
+    </tr>
+  
+    <tr>
+      <td>Admin (PEA-ADMIN)</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">200:30</a></td>
+      <td class="num">0:00</td><td class="num">200:30</td>
+      <td>0.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">131</td>
+    </tr>
+  
+    <tr>
+      <td>Festival Rebrand (HBF-REBRAND)</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">155:00</a></td>
+      <td class="num">155:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">89</td>
+    </tr>
+  
+    <tr>
+      <td>Website Support (NWO-WEB)</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">149:30</a></td>
+      <td class="num">149:30</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$17,940.00</td>
+      <td class="num">91</td>
+    </tr>
+  
+    <tr>
+      <td>Huddle (PEA-HUDDLE)</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">9:00</a></td>
+      <td class="num">0:00</td><td class="num">9:00</td>
+      <td>0.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">18</td>
+    </tr>
+  
+  </tbody>
+  
+</table>
+</div>
+</section>
+</div>
+<div class="cols">
+  <section><div class="card-head"><h2>By person</h2></div><div class="table-wrap">
+<table class="table">
+  <thead><tr><th>Person</th><th class="num">Hours</th><th class="num">Billable</th><th class="num">Non-billable</th><th>Billable share</th><th class="num">Hourly value</th><th class="num">Entries</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Jordan Designer</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">133:00</a></td>
+      <td class="num">106:30</td><td class="num">26:30</td>
+      <td>80.08%</td>
+      <td class="num">$3,900.00</td>
+      <td class="num">84</td>
+    </tr>
+  
+    <tr>
+      <td>Sam Developer</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">131:00</a></td>
+      <td class="num">95:30</td><td class="num">35:30</td>
+      <td>72.90%</td>
+      <td class="num">$5,220.00</td>
+      <td class="num">80</td>
+    </tr>
+  
+    <tr>
+      <td>Avery Admin</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">129:00</a></td>
+      <td class="num">83:30</td><td class="num">45:30</td>
+      <td>64.73%</td>
+      <td class="num">$4,920.00</td>
+      <td class="num">80</td>
+    </tr>
+  
+    <tr>
+      <td>Casey Strategist</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">118:00</a></td>
+      <td class="num">97:30</td><td class="num">20:30</td>
+      <td>82.63%</td>
+      <td class="num">$3,900.00</td>
+      <td class="num">74</td>
+    </tr>
+  
+    <tr>
+      <td>Riley Video</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">115:30</a></td>
+      <td class="num">84:30</td><td class="num">31:00</td>
+      <td>73.16%</td>
+      <td class="num">$0.00</td>
+      <td class="num">71</td>
+    </tr>
+  
+    <tr>
+      <td>Blake Reviewer</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">114:30</a></td>
+      <td class="num">64:00</td><td class="num">50:30</td>
+      <td>55.90%</td>
+      <td class="num">$0.00</td>
+      <td class="num">80</td>
+    </tr>
+  
+  </tbody>
+  
+</table>
+</div>
+</section>
+  <section><div class="card-head"><h2>By task</h2><a href="screen-adm-tasks-report.html">All 13</a></div><div class="table-wrap">
+<table class="table">
+  <thead><tr><th>Task</th><th class="num">Hours</th><th class="num">Billable</th><th class="num">Non-billable</th><th>Billable share</th><th class="num">Hourly value</th><th class="num">Entries</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Admin</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">200:30</a></td>
+      <td class="num">0:00</td><td class="num">200:30</td>
+      <td>0.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">131</td>
+    </tr>
+  
+    <tr>
+      <td>Project Management</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">180:00</a></td>
+      <td class="num">180:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$8,820.00</td>
+      <td class="num">109</td>
+    </tr>
+  
+    <tr>
+      <td>Design</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">77:30</a></td>
+      <td class="num">77:30</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$3,900.00</td>
+      <td class="num">47</td>
+    </tr>
+  
+    <tr>
+      <td>Strategy</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">47:00</a></td>
+      <td class="num">47:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">30</td>
+    </tr>
+  
+    <tr>
+      <td>Development</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">45:00</a></td>
+      <td class="num">45:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$1,860.00</td>
+      <td class="num">27</td>
+    </tr>
+  
+    <tr>
+      <td>Post-Production</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">37:30</a></td>
+      <td class="num">37:30</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">22</td>
+    </tr>
+  
+    <tr>
+      <td>Design - Assets</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">29:00</a></td>
+      <td class="num">29:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">20</td>
+    </tr>
+  
+    <tr>
+      <td>Programming</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">28:00</a></td>
+      <td class="num">28:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$3,360.00</td>
+      <td class="num">17</td>
+    </tr>
+  
+    <tr>
+      <td>Motion Graphics</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">24:00</a></td>
+      <td class="num">24:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">12</td>
+    </tr>
+  
+    <tr>
+      <td>Production</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">23:00</a></td>
+      <td class="num">23:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">15</td>
+    </tr>
+  
+  </tbody>
+  
+</table>
+</div>
+</section>
+</div>
+<details class="definitions"><summary>How these numbers are calculated</summary>
+  <dl>
+    <dt>Total hours</dt><dd>Sum of finalized entry durations (exact seconds) ÷ 3600. Running timers are excluded until stopped.</dd>
+    <dt>Billable share</dt><dd>Billable hours ÷ all logged hours × 100. N/A when nothing is logged.</dd>
+    <dt>Hourly billing value</dt><dd>For billable entries on hourly projects: hours × the rate snapshotted on each entry for its work date. Entries without a rate are excluded and listed. This is not revenue or an invoice.</dd>
+  </dl>
+</details>
+
+
+<div class="row-between no-print">
+  <p class="report-meta">Generated Fri 16 Oct 2026, 09:12:42 (America/Halifax).  Running timers are not included until stopped.</p>
+  <details class="no-print">
+  <summary class="btn btn-ghost btn-sm">Save this report…</summary>
+  <form method="post" action="/reports/saved/new/" class="card">
+    
+    <input type="hidden" name="report_type" value="overview">
+    <input type="hidden" name="query" value="preset=last_month">
+    
+    <div class="field"><label for="saved-name">Name</label><input id="saved-name" type="text" name="name" maxlength="120" required></div>
+    
+    <div class="field"><label for="saved-share">Share with</label>
+      <select id="saved-share" name="share_with" multiple size="4"><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="3">Jordan Designer</option><option value="5">Riley Video</option><option value="4">Sam Developer</option></select>
+      <p class="help">Sharing only shares the filters. Each person still sees only the data their own role allows.</p></div>
+    
+    <button class="btn btn-sm" type="submit">Save</button>
+  </form>
+</details>
+
+</div>
+
+
+</main>
+<footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
+<div class="toast-region" aria-live="polite"></div>
+</body>
+</html>

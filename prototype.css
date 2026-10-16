@@ -1,0 +1,10 @@
+/* Bar shown on every prototype screen. Colours come from the app's own tokens. */
+.proto-bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .25rem 1rem;
+  padding-block: .45rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  background: var(--ink); color: #fff; font-size: .82rem; font-weight: 600; text-align: center;
+}
+.proto-bar a { color: var(--accent); text-decoration: none; }
+.proto-bar a:hover, .proto-bar a:focus-visible { text-decoration: underline; outline-color: var(--accent); }
+.proto-who { color: #c9cdd3; font-weight: 500; }

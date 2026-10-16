@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Jordan Designer · Peach Time</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="brand.css">
+  <script src="picker.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body data-proto-role="Viewing as Avery Admin (administrator)">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="screen-adm-day.html"><span class="brand-dot" aria-hidden="true"></span>Peach Time</a>
+    <nav class="nav" aria-label="Main">
+      
+        <a href="screen-adm-day.html">My Time</a>
+      
+        <a href="screen-adm-reports.html">Reports</a>
+      
+        <a href="screen-adm-projects.html">Projects</a>
+      
+        <a href="screen-adm-clients.html">Clients</a>
+      
+        <a href="screen-adm-team.html" aria-current="page">Team</a>
+      
+        <a href="screen-adm-approvals.html">Approvals</a>
+      
+        <a href="screen-adm-settings.html">Settings</a>
+      
+    </nav>
+    <div class="topbar-right">
+      <span id="timer-pill-slot">
+
+  <span data-timer-id="" hidden></span>
+
+</span>
+
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      </a>
+      <details class="user-menu">
+        <summary>Avery <span class="muted small">▾</span></summary>
+        <div class="menu" role="menu">
+          <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container ">
+  
+
+  
+<div class="page-head">
+  <div><h1>Jordan Designer</h1><div class="muted">jordan@peach-demo.example · Employee · Active</div></div>
+  <div class="row">
+    <a class="btn" href="#" data-proto-missing="This preview includes today and this week (plus last week). Other dates need the real app.">Timesheet</a>
+    <a class="btn" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Report</a>
+    <a class="btn" href="screen-adm-team.html">Back</a>
+  </div>
+</div>
+
+
+
+<div class="cols-2">
+  <div class="stack">
+    <section class="card" aria-labelledby="profile-h">
+      <h2 id="profile-h">Profile and role</h2>
+      <form method="post" novalidate>
+        <input type="hidden" name="person-expected_version" value="1" id="id_person-expected_version">
+        
+
+        <div class="form-grid">
+          
+<div class="field">
+  <label for="id_person-first_name">First name</label>
+  <input type="text" name="person-first_name" value="Jordan" maxlength="100" required id="id_person-first_name">
+  
+  
+</div>
+
+
+          
+<div class="field">
+  <label for="id_person-last_name">Last name <span class="muted small">(optional)</span></label>
+  <input type="text" name="person-last_name" value="Designer" maxlength="100" id="id_person-last_name">
+  
+  
+</div>
+
+
+          
+<div class="field">
+  <label for="id_person-email">Email</label>
+  <input type="email" name="person-email" value="jordan@peach-demo.example" maxlength="254" required id="id_person-email">
+  
+  
+</div>
+
+
+          
+<div class="field">
+  <label for="id_person-role">Role</label>
+  <select name="person-role" id="id_person-role">
+  <option value="employee" selected>Employee</option>
+
+  <option value="admin">Administrator</option>
+
+</select>
+  
+  
+</div>
+
+
+          
+<div class="field">
+  <label for="id_person-team">Team <span class="muted small">(optional)</span></label>
+  <select name="person-team" id="id_person-team">
+  <option value="">---------</option>
+
+  <option value="2" selected>Design</option>
+
+  <option value="3">Development</option>
+
+  <option value="1">Management</option>
+
+  <option value="5">Strategy</option>
+
+  <option value="4">Video</option>
+
+</select>
+  
+  
+</div>
+
+
+          
+<div class="field">
+  <label for="id_person-employment_start_date">Employment start date <span class="muted small">(optional)</span></label>
+  <input type="date" name="person-employment_start_date" value="2025-09-11" id="id_person-employment_start_date">
+  
+  
+</div>
+
+
+          
+<div class="field">
+  <label for="id_person-employment_end_date">Employment end date <span class="muted small">(optional)</span></label>
+  <input type="date" name="person-employment_end_date" id="id_person-employment_end_date">
+  
+  
+</div>
+
+
+        </div>
+        <p class="help">Changing the email or role signs the person out everywhere. Administrators must use two-step verification.</p>
+        <button class="btn btn-primary" type="submit">Save</button>
+      </form>
+    </section>
+
+    <section class="card" id="schedule" aria-labelledby="schedule-h">
+      <h2 id="schedule-h">Work schedule</h2>
+      <p class="help">Used for missing-time warnings and utilization. Changes are effective-dated, so earlier weeks keep the schedule that applied then.</p>
+      <form method="post" action="/team/3/schedule/" novalidate>
+        
+        <div class="form-grid">
+          
+<div class="field">
+  <label for="id_day_0">Monday</label>
+  <input type="text" name="day_0" value="8:00" inputmode="decimal" size="6" maxlength="10" id="id_day_0">
+  
+  
+</div>
+
+
+<div class="field">
+  <label for="id_day_1">Tuesday</label>
+  <input type="text" name="day_1" value="8:00" inputmode="decimal" size="6" maxlength="10" id="id_day_1">
+  
+  
+</div>
+
+
+<div class="field">
+  <label for="id_day_2">Wednesday</label>
+  <input type="text" name="day_2" value="8:00" inputmode="decimal" size="6" maxlength="10" id="id_day_2">
+  
+  
+</div>
+
+
+<div class="field">
+  <label for="id_day_3">Thursday</label>
+  <input type="text" name="day_3" value="8:00" inputmode="decimal" size="6" maxlength="10" id="id_day_3">
+  
+  
+</div>
+
+
+<div class="field">
+  <label for="id_day_4">Friday</label>
+  <input type="text" name="day_4" value="8:00" inputmode="decimal" size="6" maxlength="10" id="id_day_4">
+  
+  
+</div>
+
+
+<div class="field">
+  <label for="id_day_5">Saturday</label>
+  <input type="text" name="day_5" value="0:00" inputmode="decimal" size="6" maxlength="10" id="id_day_5">
+  
+  
+</div>
+
+
+<div class="field">
+  <label for="id_day_6">Sunday</label>
+  <input type="text" name="day_6" value="0:00" inputmode="decimal" size="6" maxlength="10" id="id_day_6">
+  
+  
+</div>
+
+
+          
+<div class="field">
+  <label for="id_effective_from">Effective from</label>
+  <input type="date" name="effective_from" value="2026-10-16" required id="id_effective_from">
+  
+  
+</div>
+
+
+        </div>
+        <button class="btn" type="submit">Save schedule</button>
+      </form>
+      <p class="small muted">Using the organization default schedule.</p>
+    </section>
+
+    <section class="card" id="leave" aria-labelledby="leave-h">
+      <h2 id="leave-h">Leave and schedule overrides</h2>
+      
+      <form method="post" action="/team/3/leave/" novalidate>
+        
+        <div class="form-grid">
+          
+<div class="field">
+  <label for="id_start_date">Start date</label>
+  <input type="date" name="start_date" value="2026-10-16" required id="id_start_date">
+  
+  
+</div>
+
+
+          
+<div class="field">
+  <label for="id_end_date">End date</label>
+  <input type="date" name="end_date" value="2026-10-16" required id="id_end_date">
+  
+  
+</div>
+
+
+          
+<div class="field">
+  <label for="id_kind">Kind</label>
+  <select name="kind" id="id_kind">
+  <option value="vacation">Vacation</option>
+
+  <option value="sick">Sick</option>
+
+  <option value="personal">Personal</option>
+
+  <option value="other">Other</option>
+
+</select>
+  
+  
+</div>
+
+
+          
+<div class="field">
+  <label for="id_hours_per_day">Hours per day <span class="muted small">(optional)</span></label>
+  <input type="text" name="hours_per_day" maxlength="10" aria-describedby="id_hours_per_day_helptext" id="id_hours_per_day">
+  <div class="help" id="id_hours_per_day_help">Leave blank for full days off; enter e.g. 4 for half days.</div>
+  
+</div>
+
+
+        </div>
+        
+<div class="field">
+  <label for="id_note">Note <span class="muted small">(optional)</span></label>
+  <input type="text" name="note" maxlength="200" id="id_note">
+  
+  
+</div>
+
+
+        <button class="btn" type="submit">Record leave</button>
+      </form>
+    </section>
+
+    <section class="card" id="rates" aria-labelledby="rates-h">
+      <h2 id="rates-h">Rates <span class="small muted">(private: administrators only)</span></h2>
+      <div class="cols">
+        <div>
+          <h3>Internal cost rate</h3>
+          <p class="help">Estimated labour cost per hour. Used only for labour-cost estimates.</p>
+          <ul><li>$45.00/h from 11 Sep 2025 · Demo (fictitious)
+            <form method="post" action="/team/3/rates/" class="inline-form" data-confirm="Delete this cost rate?"><input type="hidden" name="kind" value="cost"><input type="hidden" name="action" value="delete"><input type="hidden" name="rate" value="3"><button class="link-button" type="submit">delete</button></form></li>
+          </ul>
+          <form method="post" action="/team/3/rates/" novalidate><input type="hidden" name="kind" value="cost">
+            
+<div class="field">
+  <label for="id_cost-effective_from">Effective from</label>
+  <input type="date" name="cost-effective_from" value="2026-10-16" required id="id_cost-effective_from">
+  
+  
+</div>
+
+
+<div class="field">
+  <label for="id_cost-hourly_rate">Hourly rate</label>
+  <input type="number" name="cost-hourly_rate" min="0" step="0.01" required id="id_cost-hourly_rate">
+  
+  
+</div>
+
+
+<div class="field">
+  <label for="id_cost-note">Reason / note <span class="muted small">(optional)</span></label>
+  <input type="text" name="cost-note" maxlength="200" id="id_cost-note">
+  
+  
+</div>
+
+
+            <button class="btn btn-sm" type="submit">Add cost rate</button></form>
+        </div>
+        <div>
+          <h3>Default billing rate</h3>
+          <p class="help">Used on “rate per person” projects when the project has no rate for this person.</p>
+          <ul><li class="muted">None.</li></ul>
+          <form method="post" action="/team/3/rates/" novalidate><input type="hidden" name="kind" value="billing">
+            
+<div class="field">
+  <label for="id_rate-effective_from">Effective from</label>
+  <input type="date" name="rate-effective_from" value="2026-10-16" required id="id_rate-effective_from">
+  
+  
+</div>
+
+
+<div class="field">
+  <label for="id_rate-hourly_rate">Hourly rate</label>
+  <input type="number" name="rate-hourly_rate" min="0" step="0.01" required id="id_rate-hourly_rate">
+  
+  
+</div>
+
+
+<div class="field">
+  <label for="id_rate-note">Reason / note <span class="muted small">(optional)</span></label>
+  <input type="text" name="rate-note" maxlength="200" id="id_rate-note">
+  
+  
+</div>
+
+
+            <button class="btn btn-sm" type="submit">Add default rate</button></form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="stack">
+    <section class="card" aria-labelledby="access-h">
+      <h2 id="access-h">Access</h2>
+      <p>Active · 153 time entries · last sign-in 16 Oct 2026 09:12</p>
+      
+      
+      <div class="stack">
+        
+        <form method="post" action="/team/3/action/"><input type="hidden" name="action" value="reset"><button class="btn btn-sm" type="submit">Create password reset link</button></form>
+        
+        <form method="post" action="/team/3/action/"><input type="hidden" name="action" value="revoke_sessions"><button class="btn btn-sm" type="submit">Sign out all sessions (8)</button></form>
+        
+        
+        <form method="post" action="/team/3/action/" class="stack" data-confirm="Deactivate Jordan Designer? They'll be signed out and can't sign in. Their time stays in reports.">
+          <input type="hidden" name="action" value="deactivate">
+          <label for="deact-reason">Reason <span class="muted small">(optional)</span></label><input id="deact-reason" type="text" name="reason">
+          <button class="btn btn-sm btn-danger" type="submit">Deactivate account</button>
+        </form>
+        
+      </div>
+    </section>
+    <section class="card" aria-labelledby="projects-h">
+      <h2 id="projects-h">Assigned projects (13)</h2>
+      <ul><li><a href="screen-adm-project.html">Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Harbourfront Festival (demo) · Festival Rebrand</a></li><li><a href="screen-adm-project-hourly.html">Northwind Outfitters (demo) · Website Support</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Admin</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Business Development</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Contract Base - Custom Time Entry</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Huddle</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Misc.</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · SOP</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Social Media</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Viva Events</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Website</a></li><li><a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Peach · Witch Crawl</a></li></ul>
+    </section>
+    
+    <section class="card" aria-labelledby="sess-h">
+      <h2 id="sess-h">Sessions</h2>
+      <ul class="small"><li>Unknown device ·  · active 0 minutes ago</li><li>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) A… · 127.0.0.1 · active 0 minutes ago</li><li>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) A… · 127.0.0.1 · active 0 minutes ago</li><li>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) A… · 127.0.0.1 · active 1 minute ago</li><li>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) A… · 127.0.0.1 · active 2 minutes ago</li><li>Unknown device ·  · active 8 hours, 31 minutes ago</li><li>Unknown device ·  · active 8 hours, 55 minutes ago</li><li>Unknown device ·  · active 8 hours, 56 minutes ago</li></ul>
+    </section>
+    
+  </div>
+</div>
+
+</main>
+<footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
+<div class="toast-region" aria-live="polite"></div>
+</body>
+</html>

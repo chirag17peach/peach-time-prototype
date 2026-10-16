@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Project report report · Peach Time</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="brand.css">
+  <script src="picker.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body data-proto-role="Viewing as Avery Admin (administrator)">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="screen-adm-day.html"><span class="brand-dot" aria-hidden="true"></span>Peach Time</a>
+    <nav class="nav" aria-label="Main">
+      
+        <a href="screen-adm-day.html">My Time</a>
+      
+        <a href="screen-adm-reports.html" aria-current="page">Reports</a>
+      
+        <a href="screen-adm-projects.html">Projects</a>
+      
+        <a href="screen-adm-clients.html">Clients</a>
+      
+        <a href="screen-adm-team.html">Team</a>
+      
+        <a href="screen-adm-approvals.html">Approvals</a>
+      
+        <a href="screen-adm-settings.html">Settings</a>
+      
+    </nav>
+    <div class="topbar-right">
+      <span id="timer-pill-slot">
+
+  <span data-timer-id="" hidden></span>
+
+</span>
+
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      </a>
+      <details class="user-menu">
+        <summary>Avery <span class="muted small">▾</span></summary>
+        <div class="menu" role="menu">
+          <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container ">
+  
+
+  
+<div class="page-head">
+  <h1>Reports · Project report</h1>
+  <div class="row no-print">
+    <a class="btn" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">CSV</a>
+<a class="btn" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">XLSX</a>
+
+    <button class="btn" type="button" data-print>Print / PDF</button>
+  </div>
+</div>
+<nav class="subnav" aria-label="Reports">
+  <a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Overview</a>
+  <a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Detailed time</a>
+  <a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-current="page">Clients &amp; projects</a>
+  <a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Team</a>
+  <a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Tasks</a>
+  <a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Budgets &amp; retainers</a>
+  <a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Financial</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Saved</a>
+</nav>
+
+<div class="print-only">
+  <h2>Peach Time · Project report</h2>
+  <p>Date range: 2026-10-01 to 2026-10-31 (This month) · Generated 2026-10-16 09:12 (America/Halifax) by Avery Admin</p>
+</div>
+<form method="get" class="filters no-print" aria-label="Report filters">
+  
+  
+  <div class="form-grid">
+    <div class="field"><label for="f-preset">Period</label>
+      <select id="f-preset" name="preset"><option value="">Custom dates</option><option value="today">Today</option><option value="yesterday">Yesterday</option><option value="this_week">This week</option><option value="last_week">Last week</option><option value="this_month" selected>This month</option><option value="last_month">Last month</option><option value="this_quarter">This quarter</option><option value="last_quarter">Last quarter</option><option value="this_year">This year</option><option value="last_year">Last year</option><option value="last_30_days">Last 30 days</option></select></div>
+    <div class="field"><label for="f-start">From</label><input id="f-start" type="date" name="start" value="2026-10-01"></div>
+    <div class="field"><label for="f-end">To</label><input id="f-end" type="date" name="end" value="2026-10-31"></div>
+    <div class="field"><label for="f-client">Client</label>
+      <select id="f-client" name="client"><option value="">All clients</option><option value="2">Cedar Coast Tourism (demo)</option><option value="4">Harbourfront Festival (demo)</option><option value="3">Northwind Outfitters (demo)</option><option value="1">Peach</option></select></div>
+    <div class="field"><label for="f-project">Project</label>
+      <select id="f-project" name="project"><option value="">All projects</option><option value="11">Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits</option><option value="13">Harbourfront Festival (demo) · Festival Rebrand</option><option value="12">Northwind Outfitters (demo) · Website Support</option><option value="1">Peach · Admin</option><option value="3">Peach · Business Development</option><option value="4">Peach · Contract Base - Custom Time Entry</option><option value="5">Peach · Huddle</option><option value="6">Peach · Misc.</option><option value="8">Peach · SOP</option><option value="7">Peach · Social Media</option><option value="9">Peach · Viva Events</option><option value="2">Peach · Website</option><option value="10">Peach · Witch Crawl</option></select></div>
+    <div class="field"><label for="f-task">Task</label>
+      <select id="f-task" name="task"><option value="">All tasks</option><option value="3">Admin</option><option value="4">Copywriting</option><option value="5">Design</option><option value="6">Design - Assets</option><option value="1">Development</option><option value="7">Huddle</option><option value="8">Monitoring</option><option value="9">Motion Graphics</option><option value="10">Post-Production</option><option value="11">Pre-Production</option><option value="12">Production</option><option value="13">Programming</option><option value="14">Project Management</option><option value="15">Quality Assurance Testing</option><option value="16">Reporting</option><option value="17">Research</option><option value="18">Scheduling</option><option value="19">Social Media Planning</option><option value="20">Storyboard - Production</option><option value="21">Storyboard Design - Motion</option><option value="2">Strategy</option></select></div>
+    
+    <div class="field"><label for="f-person">Person</label>
+      <select id="f-person" name="person"><option value="">Everyone</option><option value="1">Avery Admin</option><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="3">Jordan Designer</option><option value="7">Morgan Former (inactive)</option><option value="5">Riley Video</option><option value="4">Sam Developer</option></select></div>
+    <div class="field"><label for="f-team">Team</label>
+      <select id="f-team" name="team"><option value="">All teams</option><option value="2">Design</option><option value="3">Development</option><option value="1">Management</option><option value="5">Strategy</option><option value="4">Video</option></select></div>
+    
+    <div class="field"><label for="f-billable">Billable</label>
+      <select id="f-billable" name="billable"><option value="all" selected>Billable and non-billable</option><option value="billable">Billable only</option><option value="non_billable">Non-billable only</option></select></div>
+    <div class="field"><label for="f-approval">Approval</label>
+      <select id="f-approval" name="approval"><option value="">Any status</option><option value="draft">Draft (not submitted)</option><option value="submitted">Submitted</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></div>
+    <div class="field"><label for="f-billing">Billing status</label>
+      <select id="f-billing" name="billing"><option value="all" selected>Any</option><option value="uninvoiced">Billable, not invoiced</option><option value="invoiced">Invoiced</option><option value="non_billable">Non-billable</option></select></div>
+    <div class="field"><label for="f-pstatus">Project status</label>
+      <select id="f-pstatus" name="project_status"><option value="all" selected>Active and archived</option><option value="active">Active projects</option><option value="archived">Archived projects</option></select></div>
+    
+    <div class="field"><label for="f-valuation">Valuation</label>
+      <select id="f-valuation" name="valuation"><option value="all" selected>Any</option><option value="missing_rate">Missing billing rate</option><option value="missing_cost">Missing cost rate</option></select></div>
+    
+    <div class="field"><label for="f-q">Notes contain</label><input id="f-q" type="search" name="q" value=""></div>
+    <div class="filter-actions"><button class="btn btn-primary" type="submit">Apply</button><a class="btn btn-ghost" href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Reset</a></div>
+  </div>
+  <p class="help">Choosing a period overrides the From/To dates; choose “Custom dates” to use them. All summaries, charts, drill-downs and exports use exactly these filters.</p>
+</form>
+<p class="filter-summary"><strong>Date range:</strong> 2026-10-01 to 2026-10-31 (This month)</p>
+
+
+
+<nav aria-label="Breadcrumb" class="small"><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Clients</a> › <a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Cedar Coast Tourism (demo)</a> › 2026 Retainer - Website Edits</nav>
+<div class="row-between"><h2>2026 Retainer - Website Edits <span class="mono muted small">CCT-2026-RET</span></h2><a class="btn btn-sm" href="screen-adm-project.html">Project settings</a></div>
+
+<h3>Selected period · 1 Oct 2026 – 31 Oct 2026</h3>
+<div class="stats">
+  <div class="stat"><p class="label">Hours in period</p><div class="value"><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">157:00</a></div><div class="sub">114 entries</div></div>
+  <div class="stat"><p class="label">Billable in period</p><div class="value">157:00</div><div class="sub">100.00% share</div></div>
+  
+</div>
+
+<figure class="card">
+  <svg class="chart" viewBox="0 0 760 200" role="img" aria-labelledby="chart-title chart-desc" focusable="false"><title id="chart-title">Hours on 2026 Retainer - Website Edits in the selected period</title><desc id="chart-desc">Bar chart of logged hours; the same numbers appear in the table below it. Peak 17:30.</desc><line class="axis" x1="44" y1="174.0" x2="754" y2="174.0" stroke-width="1"></line><text x="38" y="178.0" text-anchor="end">0h</text><line class="axis" x1="44" y1="92.0" x2="754" y2="92.0" stroke-width="1"></line><text x="38" y="96.0" text-anchor="end">10h</text><line class="axis" x1="44" y1="10.0" x2="754" y2="10.0" stroke-width="1"></line><text x="38" y="14.0" text-anchor="end">20h</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="01 Oct: 10:30 logged, 10:30 billable"><title>01 Oct: 10:30 logged, 10:30 billable</title><rect class="bar-rect secondary" x="47.2" y="87.9" width="16.5" height="0.0"></rect><rect class="bar-rect" x="47.2" y="87.9" width="16.5" height="86.1"></rect></a><text x="55.5" y="192" text-anchor="middle">01 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="02 Oct: 11:00 logged, 11:00 billable"><title>02 Oct: 11:00 logged, 11:00 billable</title><rect class="bar-rect secondary" x="70.1" y="83.8" width="16.5" height="0.0"></rect><rect class="bar-rect" x="70.1" y="83.8" width="16.5" height="90.2"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="03 Oct: 0:00 logged, 0:00 billable"><title>03 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="93.0" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="93.0" y="174.0" width="16.5" height="0.0"></rect><rect x="93.0" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><text x="101.3" y="192" text-anchor="middle">03 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="04 Oct: 0:00 logged, 0:00 billable"><title>04 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="115.9" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="115.9" y="174.0" width="16.5" height="0.0"></rect><rect x="115.9" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="05 Oct: 12:30 logged, 12:30 billable"><title>05 Oct: 12:30 logged, 12:30 billable</title><rect class="bar-rect secondary" x="138.8" y="71.5" width="16.5" height="0.0"></rect><rect class="bar-rect" x="138.8" y="71.5" width="16.5" height="102.5"></rect></a><text x="147.1" y="192" text-anchor="middle">05 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="06 Oct: 11:00 logged, 11:00 billable"><title>06 Oct: 11:00 logged, 11:00 billable</title><rect class="bar-rect secondary" x="161.7" y="83.8" width="16.5" height="0.0"></rect><rect class="bar-rect" x="161.7" y="83.8" width="16.5" height="90.2"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="07 Oct: 17:30 logged, 17:30 billable"><title>07 Oct: 17:30 logged, 17:30 billable</title><rect class="bar-rect secondary" x="184.6" y="30.5" width="16.5" height="0.0"></rect><rect class="bar-rect" x="184.6" y="30.5" width="16.5" height="143.5"></rect></a><text x="192.9" y="192" text-anchor="middle">07 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="08 Oct: 11:30 logged, 11:30 billable"><title>08 Oct: 11:30 logged, 11:30 billable</title><rect class="bar-rect secondary" x="207.5" y="79.7" width="16.5" height="0.0"></rect><rect class="bar-rect" x="207.5" y="79.7" width="16.5" height="94.3"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="09 Oct: 13:00 logged, 13:00 billable"><title>09 Oct: 13:00 logged, 13:00 billable</title><rect class="bar-rect secondary" x="230.4" y="67.4" width="16.5" height="0.0"></rect><rect class="bar-rect" x="230.4" y="67.4" width="16.5" height="106.6"></rect></a><text x="238.7" y="192" text-anchor="middle">09 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="10 Oct: 0:00 logged, 0:00 billable"><title>10 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="253.3" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="253.3" y="174.0" width="16.5" height="0.0"></rect><rect x="253.3" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="11 Oct: 0:00 logged, 0:00 billable"><title>11 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="276.2" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="276.2" y="174.0" width="16.5" height="0.0"></rect><rect x="276.2" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><text x="284.5" y="192" text-anchor="middle">11 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="12 Oct: 15:00 logged, 15:00 billable"><title>12 Oct: 15:00 logged, 15:00 billable</title><rect class="bar-rect secondary" x="299.1" y="51.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="299.1" y="51.0" width="16.5" height="123.0"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="13 Oct: 10:00 logged, 10:00 billable"><title>13 Oct: 10:00 logged, 10:00 billable</title><rect class="bar-rect secondary" x="322.0" y="92.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="322.0" y="92.0" width="16.5" height="82.0"></rect></a><text x="330.3" y="192" text-anchor="middle">13 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="14 Oct: 16:30 logged, 16:30 billable"><title>14 Oct: 16:30 logged, 16:30 billable</title><rect class="bar-rect secondary" x="344.9" y="38.7" width="16.5" height="0.0"></rect><rect class="bar-rect" x="344.9" y="38.7" width="16.5" height="135.3"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="15 Oct: 14:30 logged, 14:30 billable"><title>15 Oct: 14:30 logged, 14:30 billable</title><rect class="bar-rect secondary" x="367.9" y="55.1" width="16.5" height="0.0"></rect><rect class="bar-rect" x="367.9" y="55.1" width="16.5" height="118.9"></rect></a><text x="376.1" y="192" text-anchor="middle">15 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="16 Oct: 14:00 logged, 14:00 billable"><title>16 Oct: 14:00 logged, 14:00 billable</title><rect class="bar-rect secondary" x="390.8" y="59.2" width="16.5" height="0.0"></rect><rect class="bar-rect" x="390.8" y="59.2" width="16.5" height="114.8"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="17 Oct: 0:00 logged, 0:00 billable"><title>17 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="413.7" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="413.7" y="174.0" width="16.5" height="0.0"></rect><rect x="413.7" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><text x="421.9" y="192" text-anchor="middle">17 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="18 Oct: 0:00 logged, 0:00 billable"><title>18 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="436.6" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="436.6" y="174.0" width="16.5" height="0.0"></rect><rect x="436.6" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="19 Oct: 0:00 logged, 0:00 billable"><title>19 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="459.5" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="459.5" y="174.0" width="16.5" height="0.0"></rect><rect x="459.5" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><text x="467.7" y="192" text-anchor="middle">19 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="20 Oct: 0:00 logged, 0:00 billable"><title>20 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="482.4" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="482.4" y="174.0" width="16.5" height="0.0"></rect><rect x="482.4" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="21 Oct: 0:00 logged, 0:00 billable"><title>21 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="505.3" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="505.3" y="174.0" width="16.5" height="0.0"></rect><rect x="505.3" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><text x="513.5" y="192" text-anchor="middle">21 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="22 Oct: 0:00 logged, 0:00 billable"><title>22 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="528.2" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="528.2" y="174.0" width="16.5" height="0.0"></rect><rect x="528.2" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="23 Oct: 0:00 logged, 0:00 billable"><title>23 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="551.1" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="551.1" y="174.0" width="16.5" height="0.0"></rect><rect x="551.1" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><text x="559.3" y="192" text-anchor="middle">23 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="24 Oct: 0:00 logged, 0:00 billable"><title>24 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="574.0" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="574.0" y="174.0" width="16.5" height="0.0"></rect><rect x="574.0" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="25 Oct: 0:00 logged, 0:00 billable"><title>25 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="596.9" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="596.9" y="174.0" width="16.5" height="0.0"></rect><rect x="596.9" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><text x="605.1" y="192" text-anchor="middle">25 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="26 Oct: 0:00 logged, 0:00 billable"><title>26 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="619.8" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="619.8" y="174.0" width="16.5" height="0.0"></rect><rect x="619.8" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="27 Oct: 0:00 logged, 0:00 billable"><title>27 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="642.7" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="642.7" y="174.0" width="16.5" height="0.0"></rect><rect x="642.7" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><text x="650.9" y="192" text-anchor="middle">27 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="28 Oct: 0:00 logged, 0:00 billable"><title>28 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="665.6" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="665.6" y="174.0" width="16.5" height="0.0"></rect><rect x="665.6" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="29 Oct: 0:00 logged, 0:00 billable"><title>29 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="688.5" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="688.5" y="174.0" width="16.5" height="0.0"></rect><rect x="688.5" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><text x="696.7" y="192" text-anchor="middle">29 Oct</text><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="30 Oct: 0:00 logged, 0:00 billable"><title>30 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="711.4" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="711.4" y="174.0" width="16.5" height="0.0"></rect><rect x="711.4" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." aria-label="31 Oct: 0:00 logged, 0:00 billable"><title>31 Oct: 0:00 logged, 0:00 billable</title><rect class="bar-rect secondary" x="734.3" y="174.0" width="16.5" height="0.0"></rect><rect class="bar-rect" x="734.3" y="174.0" width="16.5" height="0.0"></rect><rect x="734.3" y="173.0" width="16.5" height="1" fill="#d0d4da"></rect></a><text x="742.5" y="192" text-anchor="middle">31 Oct</text></svg>
+  <figcaption class="legend"><span><i class="swatch-billable"></i>Billable</span><span><i class="swatch-other"></i>Non-billable</span><span>Select a bar to see its entries.</span></figcaption>
+  <details class="definitions"><summary>Chart data</summary>
+    <div class="table-wrap"><table class="table table-compact"><thead><tr><th>Day</th><th class="num">Hours</th><th class="num">Billable</th></tr></thead>
+      <tbody><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">01 Oct</a></td><td class="num">10:30</td><td class="num">10:30</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">02 Oct</a></td><td class="num">11:00</td><td class="num">11:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">03 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">04 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">05 Oct</a></td><td class="num">12:30</td><td class="num">12:30</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">06 Oct</a></td><td class="num">11:00</td><td class="num">11:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">07 Oct</a></td><td class="num">17:30</td><td class="num">17:30</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">08 Oct</a></td><td class="num">11:30</td><td class="num">11:30</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">09 Oct</a></td><td class="num">13:00</td><td class="num">13:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">10 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">11 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">12 Oct</a></td><td class="num">15:00</td><td class="num">15:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">13 Oct</a></td><td class="num">10:00</td><td class="num">10:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">14 Oct</a></td><td class="num">16:30</td><td class="num">16:30</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">15 Oct</a></td><td class="num">14:30</td><td class="num">14:30</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">16 Oct</a></td><td class="num">14:00</td><td class="num">14:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">17 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">18 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">19 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">20 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">21 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">22 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">23 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">24 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">25 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">26 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">27 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">28 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">29 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">30 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">31 Oct</a></td><td class="num">0:00</td><td class="num">0:00</td></tr></tbody></table></div>
+  </details>
+</figure>
+
+
+<div class="cols">
+  <section><h3>By task (period)</h3><div class="table-wrap">
+<table class="table">
+  <thead><tr><th>Task</th><th class="num">Hours</th><th class="num">Billable</th><th class="num">Non-billable</th><th>Billable share</th><th class="num">Hourly value</th><th class="num">Entries</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Production</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">27:00</a></td>
+      <td class="num">27:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">19</td>
+    </tr>
+  
+    <tr>
+      <td>Design - Assets</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">24:00</a></td>
+      <td class="num">24:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">18</td>
+    </tr>
+  
+    <tr>
+      <td>Development</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">22:30</a></td>
+      <td class="num">22:30</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">18</td>
+    </tr>
+  
+    <tr>
+      <td>Project Management</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">21:00</a></td>
+      <td class="num">21:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">16</td>
+    </tr>
+  
+    <tr>
+      <td>Post-Production</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">17:30</a></td>
+      <td class="num">17:30</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">13</td>
+    </tr>
+  
+    <tr>
+      <td>Strategy</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">17:00</a></td>
+      <td class="num">17:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">10</td>
+    </tr>
+  
+    <tr>
+      <td>Quality Assurance Testing</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">14:30</a></td>
+      <td class="num">14:30</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">11</td>
+    </tr>
+  
+    <tr>
+      <td>Design</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">13:30</a></td>
+      <td class="num">13:30</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">9</td>
+    </tr>
+  
+  </tbody>
+  <tfoot><tr><td>Total</td><td class="num">157:00</td><td class="num">157:00</td><td class="num">0:00</td><td>100.00%</td><td class="num">$0.00</td><td class="num">114</td></tr></tfoot>
+</table>
+</div>
+</section>
+  <section><h3>By person (period)</h3><div class="table-wrap">
+<table class="table">
+  <thead><tr><th>Person</th><th class="num">Hours</th><th class="num">Billable</th><th class="num">Non-billable</th><th>Billable share</th><th class="num">Hourly value</th><th class="num">Entries</th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Riley Video</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">44:30</a></td>
+      <td class="num">44:30</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">32</td>
+    </tr>
+  
+    <tr>
+      <td>Jordan Designer</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">37:30</a></td>
+      <td class="num">37:30</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">27</td>
+    </tr>
+  
+    <tr>
+      <td>Sam Developer</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">37:00</a></td>
+      <td class="num">37:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">29</td>
+    </tr>
+  
+    <tr>
+      <td>Avery Admin</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">21:00</a></td>
+      <td class="num">21:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">16</td>
+    </tr>
+  
+    <tr>
+      <td>Casey Strategist</td>
+      <td class="num"><a class="drill" href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total." title="Show the entries behind this total">17:00</a></td>
+      <td class="num">17:00</td><td class="num">0:00</td>
+      <td>100.00%</td>
+      <td class="num">$0.00</td>
+      <td class="num">10</td>
+    </tr>
+  
+  </tbody>
+  <tfoot><tr><td>Total</td><td class="num">157:00</td><td class="num">157:00</td><td class="num">0:00</td><td>100.00%</td><td class="num">$0.00</td><td class="num">114</td></tr></tfoot>
+</table>
+</div>
+</section>
+</div>
+
+<h3>Whole project · all time</h3>
+<div class="stats">
+  <div class="stat"><p class="label">Total hours</p><div class="value"><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">384:00</a></div><div class="sub">since the first entry</div></div>
+  <div class="stat"><p class="label">Billable</p><div class="value">384:00</div></div>
+  
+    
+    <div class="stat"><p class="label">Est. labour cost (all time)</p><div class="value">$19,586.50</div></div>
+    
+  
+</div>
+
+<section class="card"><h3>Budget vs actual (Monthly hours (retainer))</h3>
+  
+  
+  <svg class="meter over" viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="104.67% used" focusable="false"><rect class="meter-bg" width="100" height="8" rx="4"></rect><rect class="meter-fill" width="100" height="8" rx="4"></rect></svg>
+
+  <div class="small">
+    157:00 of 150:00 h
+    · 104.67% <span class="badge badge-bad">Over</span>
+  </div>
+  
+
+
+  <p class="small">Remaining -7:00 · over by 7:00 · October 2026 (1 Oct–31 Oct)</p>
+</section>
+
+<section><h3>Monthly trend (last 12 months)</h3>
+  <div class="table-wrap"><table class="table table-compact"><thead><tr><th>Month</th><th class="num">Hours</th><th class="num">Billable</th></tr></thead>
+    <tbody><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Nov 2025</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Dec 2025</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Jan 2026</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Feb 2026</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Mar 2026</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Apr 2026</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">May 2026</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Jun 2026</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Jul 2026</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Aug 2026</a></td><td class="num">0:00</td><td class="num">0:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Sep 2026</a></td><td class="num">227:00</td><td class="num">227:00</td></tr><tr><td><a href="#" data-proto-missing="Drill-downs run on the server. In Peach Time this opens the entries behind the total.">Oct 2026</a></td><td class="num">157:00</td><td class="num">157:00</td></tr></tbody></table></div>
+</section>
+
+
+<div class="row-between no-print">
+  <p class="report-meta">Generated Fri 16 Oct 2026, 09:12:42 (America/Halifax).  Running timers are not included until stopped.</p>
+  <details class="no-print">
+  <summary class="btn btn-ghost btn-sm">Save this report…</summary>
+  <form method="post" action="/reports/saved/new/" class="card">
+    
+    <input type="hidden" name="report_type" value="project">
+    <input type="hidden" name="query" value="preset=this_month">
+    <input type="hidden" name="object_id" value="11">
+    <div class="field"><label for="saved-name">Name</label><input id="saved-name" type="text" name="name" maxlength="120" required></div>
+    
+    <div class="field"><label for="saved-share">Share with</label>
+      <select id="saved-share" name="share_with" multiple size="4"><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="3">Jordan Designer</option><option value="5">Riley Video</option><option value="4">Sam Developer</option></select>
+      <p class="help">Sharing only shares the filters. Each person still sees only the data their own role allows.</p></div>
+    
+    <button class="btn btn-sm" type="submit">Save</button>
+  </form>
+</details>
+
+</div>
+
+
+</main>
+<footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
+<div class="toast-region" aria-live="polite"></div>
+</body>
+</html>

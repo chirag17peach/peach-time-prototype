@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Rate recalculation · Peach Time</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="brand.css">
+  <script src="picker.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body data-proto-role="Viewing as Avery Admin (administrator)">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="screen-adm-day.html"><span class="brand-dot" aria-hidden="true"></span>Peach Time</a>
+    <nav class="nav" aria-label="Main">
+      
+        <a href="screen-adm-day.html">My Time</a>
+      
+        <a href="screen-adm-reports.html">Reports</a>
+      
+        <a href="screen-adm-projects.html">Projects</a>
+      
+        <a href="screen-adm-clients.html">Clients</a>
+      
+        <a href="screen-adm-team.html">Team</a>
+      
+        <a href="screen-adm-approvals.html">Approvals</a>
+      
+        <a href="screen-adm-settings.html" aria-current="page">Settings</a>
+      
+    </nav>
+    <div class="topbar-right">
+      <span id="timer-pill-slot">
+
+  <span data-timer-id="" hidden></span>
+
+</span>
+
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      </a>
+      <details class="user-menu">
+        <summary>Avery <span class="muted small">▾</span></summary>
+        <div class="menu" role="menu">
+          <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container ">
+  
+
+  
+<div class="page-head"><h1>Settings</h1></div>
+<nav class="subnav" aria-label="Settings">
+  <a href="screen-adm-settings.html">Organization</a>
+  <a href="screen-adm-holidays.html">Holidays</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Period lock</a>
+  <a href="screen-adm-recalc.html" aria-current="page">Rate recalculation</a>
+  <a href="screen-adm-imports.html">Imports</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Data export</a>
+  <a href="screen-adm-audit.html">Audit log</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">My account</a>
+</nav>
+
+<section class="card">
+  <h2>Recalculate rate snapshots</h2>
+  <p>Each entry stores the billing and cost rates that applied on its work date when it was saved. Later rate changes don't alter those values. Use this page to re-value entries on purpose, for example after adding a missing rate or correcting one. Every changed entry is recorded in the audit log with your reason.</p>
+  <form method="get" novalidate>
+    <div class="form-grid">
+      <div class="field"><label for="rc-project">Project</label><select id="rc-project" name="project_id"><option value="">All projects</option><option value="11">Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</option><option value="13">Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</option><option value="12">Northwind Outfitters (demo) · Website Support (NWO-WEB)</option><option value="1">Peach · Admin (PEA-ADMIN)</option><option value="3">Peach · Business Development (PEA-BIZDEV)</option><option value="4">Peach · Contract Base - Custom Time Entry (PEA-CONTRACT)</option><option value="5">Peach · Huddle (PEA-HUDDLE)</option><option value="6">Peach · Misc. (PEA-MISC)</option><option value="8">Peach · SOP (PEA-SOP)</option><option value="7">Peach · Social Media (PEA-SOCIAL)</option><option value="9">Peach · Viva Events (PEA-VIVA)</option><option value="2">Peach · Website (PEA-WEB)</option><option value="10">Peach · Witch Crawl (PEA-WITCH)</option></select></div>
+      
+<div class="field">
+  <label for="id_start">Work dates from</label>
+  <input type="date" name="start" value="2026-10-01" required id="id_start">
+  
+  
+</div>
+
+
+      
+<div class="field">
+  <label for="id_end">to</label>
+  <input type="date" name="end" value="2026-10-16" required id="id_end">
+  
+  
+</div>
+
+
+    </div>
+    
+<div class="field">
+  <label class="check"><input type="checkbox" name="include_locked" aria-describedby="id_include_locked_helptext" id="id_include_locked"> <span>Include approved or period-locked entries</span></label>
+  <div class="help" id="id_include_locked_help">Approved time keeps its approval; only the rate snapshots change. Recorded in the audit history.</div>
+  
+</div>
+
+
+    
+<div class="field">
+  <label class="check"><input type="checkbox" name="include_imported" aria-describedby="id_include_imported_helptext" id="id_include_imported"> <span>Include rates that came from an import</span></label>
+  <div class="help" id="id_include_imported_help">Off by default: imported rates are historical values from the source system.</div>
+  
+</div>
+
+
+    <button class="btn" type="submit">Preview changes</button>
+  </form>
+</section>
+
+
+
+</main>
+<footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
+<div class="toast-region" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Audit log · Peach Time</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="brand.css">
+  <script src="picker.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body data-proto-role="Viewing as Avery Admin (administrator)">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="screen-adm-day.html"><span class="brand-dot" aria-hidden="true"></span>Peach Time</a>
+    <nav class="nav" aria-label="Main">
+      
+        <a href="screen-adm-day.html">My Time</a>
+      
+        <a href="screen-adm-reports.html">Reports</a>
+      
+        <a href="screen-adm-projects.html">Projects</a>
+      
+        <a href="screen-adm-clients.html">Clients</a>
+      
+        <a href="screen-adm-team.html">Team</a>
+      
+        <a href="screen-adm-approvals.html">Approvals</a>
+      
+        <a href="screen-adm-settings.html" aria-current="page">Settings</a>
+      
+    </nav>
+    <div class="topbar-right">
+      <span id="timer-pill-slot">
+
+  <span data-timer-id="" hidden></span>
+
+</span>
+
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      </a>
+      <details class="user-menu">
+        <summary>Avery <span class="muted small">▾</span></summary>
+        <div class="menu" role="menu">
+          <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container ">
+  
+
+  
+<div class="page-head"><h1>Settings</h1></div>
+<nav class="subnav" aria-label="Settings">
+  <a href="screen-adm-settings.html">Organization</a>
+  <a href="screen-adm-holidays.html">Holidays</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Period lock</a>
+  <a href="screen-adm-recalc.html">Rate recalculation</a>
+  <a href="screen-adm-imports.html">Imports</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Data export</a>
+  <a href="screen-adm-audit.html" aria-current="page">Audit log</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">My account</a>
+</nav>
+
+<form method="get" class="filters"><div class="form-grid">
+  <div class="field"><label for="a-action">Area</label><select id="a-action" name="action"><option value="">Everything</option><option value="report">report</option><option value="time_entry">time_entry</option><option value="timesheet">timesheet</option></select></div>
+  <div class="field"><label for="a-person">Person (actor or subject)</label><select id="a-person" name="person"><option value="">Anyone</option><option value="1">Avery Admin</option><option value="2">Blake Reviewer</option><option value="6">Casey Strategist</option><option value="3">Jordan Designer</option><option value="7">Morgan Former</option><option value="5">Riley Video</option><option value="4">Sam Developer</option></select></div>
+  <div class="field"><label for="a-object">Record ID</label><input id="a-object" type="text" name="object_id" value=""></div>
+  <div class="field"><label for="a-days">Period</label><select id="a-days" name="days">
+    <option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option><option value="365">Last year</option><option value="0">All time</option></select></div>
+  <div class="filter-actions"><button class="btn btn-primary" type="submit">Filter</button></div>
+</div></form>
+<p class="help">The audit log is append-only: the database rejects any change or deletion of these rows. Names are stored as they were at the time.</p>
+<div class="table-wrap"><table class="table table-compact">
+  <thead><tr><th>When</th><th>Who</th><th>Action</th><th>Record</th><th>Changes</th><th>Reason</th></tr></thead>
+  <tbody>
+    <tr><td class="nowrap">2026-10-16 00:41:20</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-summary-project-20261001-20261031 <span class="muted small">#summary</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:41:20</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:41:20</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:41:19</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-summary-project-20261001-20261031 <span class="muted small">#summary</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:41:19</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:41:19</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:17:37</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-summary-project-20261001-20261031 <span class="muted small">#summary</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:17:37</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:17:37</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:17:36</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-summary-project-20261001-20261031 <span class="muted small">#summary</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:17:36</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:17:36</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:16:38</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-summary-project-20261001-20261031 <span class="muted small">#summary</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:16:38</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:16:38</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:16:37</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-summary-project-20261001-20261031 <span class="muted small">#summary</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:16:37</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:16:37</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">report.export</td>
+      <td>peach-time-detailed-20261001-20261031 <span class="muted small">#detailed</span></td>
+      <td class="small"></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Casey Strategist 2026-10-05 <span class="muted small">#30</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Riley Video 2026-10-05 <span class="muted small">#29</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.reject</td>
+      <td>Timesheet Jordan Designer 2026-10-05 <span class="muted small">#27</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → rejected</div></td>
+      <td class="small">Please add notes to Friday&#x27;s design time (demo).</td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Jordan Designer 2026-10-05 <span class="muted small">#27</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Blake Reviewer 2026-10-05 <span class="muted small">#26</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Avery Admin 2026-10-05 <span class="muted small">#25</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Casey Strategist 2026-09-28 <span class="muted small">#24</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Casey Strategist 2026-09-28 <span class="muted small">#24</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Riley Video 2026-09-28 <span class="muted small">#23</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Riley Video 2026-09-28 <span class="muted small">#23</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Sam Developer 2026-09-28 <span class="muted small">#22</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Sam Developer 2026-09-28 <span class="muted small">#22</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Jordan Designer 2026-09-28 <span class="muted small">#21</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Jordan Designer 2026-09-28 <span class="muted small">#21</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Blake Reviewer 2026-09-28 <span class="muted small">#20</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Blake Reviewer 2026-09-28 <span class="muted small">#20</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Avery Admin 2026-09-28 <span class="muted small">#19</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Avery Admin 2026-09-28 <span class="muted small">#19</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Casey Strategist 2026-09-21 <span class="muted small">#18</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Casey Strategist 2026-09-21 <span class="muted small">#18</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Riley Video 2026-09-21 <span class="muted small">#17</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Riley Video 2026-09-21 <span class="muted small">#17</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Sam Developer 2026-09-21 <span class="muted small">#16</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Sam Developer 2026-09-21 <span class="muted small">#16</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Jordan Designer 2026-09-21 <span class="muted small">#15</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Jordan Designer 2026-09-21 <span class="muted small">#15</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Blake Reviewer 2026-09-21 <span class="muted small">#14</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Blake Reviewer 2026-09-21 <span class="muted small">#14</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Avery Admin 2026-09-21 <span class="muted small">#13</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Avery Admin 2026-09-21 <span class="muted small">#13</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Casey Strategist 2026-09-14 <span class="muted small">#12</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Casey Strategist 2026-09-14 <span class="muted small">#12</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Riley Video 2026-09-14 <span class="muted small">#11</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Riley Video 2026-09-14 <span class="muted small">#11</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Sam Developer 2026-09-14 <span class="muted small">#10</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Sam Developer 2026-09-14 <span class="muted small">#10</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Jordan Designer 2026-09-14 <span class="muted small">#9</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Jordan Designer 2026-09-14 <span class="muted small">#9</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Blake Reviewer 2026-09-14 <span class="muted small">#8</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Blake Reviewer 2026-09-14 <span class="muted small">#8</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Avery Admin 2026-09-14 <span class="muted small">#7</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Avery Admin 2026-09-14 <span class="muted small">#7</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Casey Strategist 2026-09-07 <span class="muted small">#6</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Casey Strategist 2026-09-07 <span class="muted small">#6</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Riley Video 2026-09-07 <span class="muted small">#5</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Riley Video 2026-09-07 <span class="muted small">#5</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Sam Developer 2026-09-07 <span class="muted small">#4</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Sam Developer 2026-09-07 <span class="muted small">#4</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Jordan Designer 2026-09-07 <span class="muted small">#3</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Jordan Designer 2026-09-07 <span class="muted small">#3</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Blake Reviewer 2026-09-07 <span class="muted small">#2</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Blake Reviewer 2026-09-07 <span class="muted small">#2</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">timesheet.approve</td>
+      <td>Timesheet Avery Admin 2026-09-07 <span class="muted small">#1</span></td>
+      <td class="small"><div><span class="muted">status:</span> submitted → approved</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">timesheet.submit</td>
+      <td>Timesheet Avery Admin 2026-09-07 <span class="muted small">#1</span></td>
+      <td class="small"><div><span class="muted">status:</span> draft → submitted</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#832 Casey Strategist 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#832</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 6</div><div><span class="muted">notes:</span> — → Email and planning</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 52.00</div><div><span class="muted">timesheet:</span> — → 36</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#831 Casey Strategist 2026-10-16 HBF-REBRAND › Strategy <span class="muted small">#831</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 2</div><div><span class="muted">user:</span> — → 6</div><div><span class="muted">notes:</span> — → Quarterly content plan</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 52.00</div><div><span class="muted">timesheet:</span> — → 36</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Strategy</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#830 Casey Strategist 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#830</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 6</div><div><span class="muted">notes:</span> — → Email and planning</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 52.00</div><div><span class="muted">timesheet:</span> — → 36</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#829 Casey Strategist 2026-10-16 HBF-REBRAND › Strategy <span class="muted small">#829</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 2</div><div><span class="muted">user:</span> — → 6</div><div><span class="muted">notes:</span> — → Campaign planning workshop</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 52.00</div><div><span class="muted">timesheet:</span> — → 36</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Strategy</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Casey Strategist &lt;casey@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#828 Casey Strategist 2026-10-16 CCT-2026-RET › Strategy <span class="muted small">#828</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 2</div><div><span class="muted">user:</span> — → 6</div><div><span class="muted">notes:</span> — → Quarterly content plan</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 52.00</div><div><span class="muted">timesheet:</span> — → 36</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Strategy</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#827 Riley Video 2026-10-16 CCT-2026-RET › Production <span class="muted small">#827</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 12</div><div><span class="muted">user:</span> — → 5</div><div><span class="muted">notes:</span> — → B-roll capture</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 48.00</div><div><span class="muted">timesheet:</span> — → 35</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Production</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 1800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#826 Riley Video 2026-10-16 HBF-REBRAND › Motion Graphics <span class="muted small">#826</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 5</div><div><span class="muted">notes:</span> — → Logo sting animation</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 48.00</div><div><span class="muted">timesheet:</span> — → 35</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#825 Riley Video 2026-10-16 CCT-2026-RET › Production <span class="muted small">#825</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 12</div><div><span class="muted">user:</span> — → 5</div><div><span class="muted">notes:</span> — → B-roll capture</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 48.00</div><div><span class="muted">timesheet:</span> — → 35</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Production</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Riley Video &lt;riley@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#824 Riley Video 2026-10-16 HBF-REBRAND › Motion Graphics <span class="muted small">#824</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 9</div><div><span class="muted">user:</span> — → 5</div><div><span class="muted">notes:</span> — → Reel captions</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 48.00</div><div><span class="muted">timesheet:</span> — → 35</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Motion Graphics</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#823 Sam Developer 2026-10-16 CCT-2026-RET › Quality Assurance Testing <span class="muted small">#823</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 15</div><div><span class="muted">user:</span> — → 4</div><div><span class="muted">notes:</span> — → Ongoing work</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 50.00</div><div><span class="muted">timesheet:</span> — → 34</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Quality Assurance Testing</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#822 Sam Developer 2026-10-16 NWO-WEB › Programming <span class="muted small">#822</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 13</div><div><span class="muted">user:</span> — → 4</div><div><span class="muted">notes:</span> — → Analytics events</div><div><span class="muted">project:</span> — → 12</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 50.00</div><div><span class="muted">timesheet:</span> — → 34</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Programming</div><div><span class="muted">billing_rate:</span> — → 120.00</div><div><span class="muted">project_label:</span> — → Northwind Outfitters (demo) · Website Support (NWO-WEB)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → project</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#821 Sam Developer 2026-10-16 CCT-2026-RET › Development <span class="muted small">#821</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 1</div><div><span class="muted">user:</span> — → 4</div><div><span class="muted">notes:</span> — → Page speed improvements</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 50.00</div><div><span class="muted">timesheet:</span> — → 34</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Development</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#820 Sam Developer 2026-10-16 CCT-2026-RET › Development <span class="muted small">#820</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 1</div><div><span class="muted">user:</span> — → 4</div><div><span class="muted">notes:</span> — → Fix menu on mobile</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 50.00</div><div><span class="muted">timesheet:</span> — → 34</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Development</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Sam Developer &lt;sam@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#819 Sam Developer 2026-10-16 CCT-2026-RET › Quality Assurance Testing <span class="muted small">#819</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 15</div><div><span class="muted">user:</span> — → 4</div><div><span class="muted">notes:</span> — → Ongoing work</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 50.00</div><div><span class="muted">timesheet:</span> — → 34</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Quality Assurance Testing</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#818 Jordan Designer 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#818</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 3</div><div><span class="muted">notes:</span> — → Expense sorting</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 45.00</div><div><span class="muted">timesheet:</span> — → 33</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 3600</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#817 Jordan Designer 2026-10-16 HBF-REBRAND › Design <span class="muted small">#817</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 5</div><div><span class="muted">user:</span> — → 3</div><div><span class="muted">notes:</span> — → Brand palette clean-up</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 45.00</div><div><span class="muted">timesheet:</span> — → 33</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Design</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#816 Jordan Designer 2026-10-16 CCT-2026-RET › Design - Assets <span class="muted small">#816</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 6</div><div><span class="muted">user:</span> — → 3</div><div><span class="muted">notes:</span> — → Ongoing work</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 45.00</div><div><span class="muted">timesheet:</span> — → 33</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Design - Assets</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 1800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#815 Jordan Designer 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#815</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 3</div><div><span class="muted">notes:</span> — → Expense sorting</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 45.00</div><div><span class="muted">timesheet:</span> — → 33</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Jordan Designer &lt;jordan@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#814 Jordan Designer 2026-10-16 CCT-2026-RET › Design - Assets <span class="muted small">#814</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 6</div><div><span class="muted">user:</span> — → 3</div><div><span class="muted">notes:</span> — → Ongoing work</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 45.00</div><div><span class="muted">timesheet:</span> — → 33</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Design - Assets</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#813 Blake Reviewer 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#813</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 2</div><div><span class="muted">notes:</span> — → Expense sorting</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 60.00</div><div><span class="muted">timesheet:</span> — → 32</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#812 Blake Reviewer 2026-10-16 HBF-REBRAND › Project Management <span class="muted small">#812</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 14</div><div><span class="muted">user:</span> — → 2</div><div><span class="muted">notes:</span> — → Client check-in call</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 60.00</div><div><span class="muted">timesheet:</span> — → 32</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Project Management</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#811 Blake Reviewer 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#811</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 2</div><div><span class="muted">notes:</span> — → Email and planning</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 60.00</div><div><span class="muted">timesheet:</span> — → 32</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 10800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Blake Reviewer &lt;blake@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#810 Blake Reviewer 2026-10-16 HBF-REBRAND › Project Management <span class="muted small">#810</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 14</div><div><span class="muted">user:</span> — → 2</div><div><span class="muted">notes:</span> — → Scope review</div><div><span class="muted">project:</span> — → 13</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 60.00</div><div><span class="muted">timesheet:</span> — → 32</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Project Management</div><div><span class="muted">project_label:</span> — → Harbourfront Festival (demo) · Festival Rebrand (HBF-REBRAND)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#809 Avery Admin 2026-10-16 PEA-ADMIN › Admin <span class="muted small">#809</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 3</div><div><span class="muted">user:</span> — → 1</div><div><span class="muted">notes:</span> — → Expense sorting</div><div><span class="muted">project:</span> — → 1</div><div><span class="muted">billable:</span> — → False</div><div><span class="muted">cost_rate:</span> — → 65.00</div><div><span class="muted">timesheet:</span> — → 31</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Admin</div><div><span class="muted">project_label:</span> — → Peach · Admin (PEA-ADMIN)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#808 Avery Admin 2026-10-16 NWO-WEB › Project Management <span class="muted small">#808</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 14</div><div><span class="muted">user:</span> — → 1</div><div><span class="muted">notes:</span> — → Timeline update</div><div><span class="muted">project:</span> — → 12</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 65.00</div><div><span class="muted">timesheet:</span> — → 31</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Project Management</div><div><span class="muted">billing_rate:</span> — → 120.00</div><div><span class="muted">project_label:</span> — → Northwind Outfitters (demo) · Website Support (NWO-WEB)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 7200</div><div><span class="muted">billing_rate_source:</span> — → project</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#807 Avery Admin 2026-10-16 CCT-2026-RET › Project Management <span class="muted small">#807</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 14</div><div><span class="muted">user:</span> — → 1</div><div><span class="muted">notes:</span> — → Timeline update</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 65.00</div><div><span class="muted">timesheet:</span> — → 31</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Project Management</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 1800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#806 Avery Admin 2026-10-16 CCT-2026-RET › Project Management <span class="muted small">#806</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 14</div><div><span class="muted">user:</span> — → 1</div><div><span class="muted">notes:</span> — → Timeline update</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 65.00</div><div><span class="muted">timesheet:</span> — → 31</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Project Management</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 1800</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  
+    <tr><td class="nowrap">2026-10-16 00:12:52</td><td>Avery Admin &lt;avery@peach-demo.example&gt;</td><td class="mono">time_entry.create</td>
+      <td>#805 Avery Admin 2026-10-16 CCT-2026-RET › Project Management <span class="muted small">#805</span></td>
+      <td class="small"><div><span class="muted">task:</span> — → 14</div><div><span class="muted">user:</span> — → 1</div><div><span class="muted">notes:</span> — → Timeline update</div><div><span class="muted">project:</span> — → 11</div><div><span class="muted">billable:</span> — → True</div><div><span class="muted">cost_rate:</span> — → 65.00</div><div><span class="muted">timesheet:</span> — → 31</div><div><span class="muted">work_date:</span> — → 2026-10-16</div><div><span class="muted">task_label:</span> — → Project Management</div><div><span class="muted">project_label:</span> — → Cedar Coast Tourism (demo) · 2026 Retainer - Website Edits (CCT-2026-RET)</div><div><span class="muted">cost_rate_source:</span> — → cost_rate</div><div><span class="muted">duration_seconds:</span> — → 5400</div><div><span class="muted">billing_rate_source:</span> — → not_applicable</div></td>
+      <td class="small"></td></tr>
+  </tbody>
+</table>
+<nav class="pagination"><span class="small muted">Page 1 of 10</span><a class="btn btn-sm" href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Older →</a></nav>
+</div>
+
+</main>
+<footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
+<div class="toast-region" aria-live="polite"></div>
+</body>
+</html>

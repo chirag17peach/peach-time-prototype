@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Imports · Peach Time</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="brand.css">
+  <script src="picker.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body data-proto-role="Viewing as Avery Admin (administrator)">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="screen-adm-day.html"><span class="brand-dot" aria-hidden="true"></span>Peach Time</a>
+    <nav class="nav" aria-label="Main">
+      
+        <a href="screen-adm-day.html">My Time</a>
+      
+        <a href="screen-adm-reports.html">Reports</a>
+      
+        <a href="screen-adm-projects.html">Projects</a>
+      
+        <a href="screen-adm-clients.html">Clients</a>
+      
+        <a href="screen-adm-team.html">Team</a>
+      
+        <a href="screen-adm-approvals.html">Approvals</a>
+      
+        <a href="screen-adm-settings.html" aria-current="page">Settings</a>
+      
+    </nav>
+    <div class="topbar-right">
+      <span id="timer-pill-slot">
+
+  <span data-timer-id="" hidden></span>
+
+</span>
+
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      </a>
+      <details class="user-menu">
+        <summary>Avery <span class="muted small">▾</span></summary>
+        <div class="menu" role="menu">
+          <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container ">
+  
+
+  
+<div class="page-head"><h1>Settings</h1></div>
+<nav class="subnav" aria-label="Settings">
+  <a href="screen-adm-settings.html">Organization</a>
+  <a href="screen-adm-holidays.html">Holidays</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Period lock</a>
+  <a href="screen-adm-recalc.html">Rate recalculation</a>
+  <a href="screen-adm-imports.html" aria-current="page">Imports</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Data export</a>
+  <a href="screen-adm-audit.html">Audit log</a>
+  <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">My account</a>
+</nav>
+
+<div class="cols-2">
+  <section class="card"><h2>Import history</h2>
+    <div class="table-wrap"><table class="table table-compact">
+      <thead><tr><th>#</th><th>Type</th><th>File</th><th>Status</th><th class="num">Rows</th><th>Uploaded</th></tr></thead>
+      <tbody><tr><td colspan="6" class="empty">No imports yet.</td></tr></tbody>
+    </table></div>
+  </section>
+  <section class="card"><h2>New import</h2>
+    <form method="post" enctype="multipart/form-data" novalidate>
+      
+
+      
+<div class="field">
+  <label for="id_kind">The file contains</label>
+  <select name="kind" id="id_kind">
+  <option value="clients">Clients</option>
+
+  <option value="projects">Projects</option>
+
+  <option value="people">People</option>
+
+  <option value="task_assignments">Project task assignments</option>
+
+  <option value="time">Historical time entries</option>
+
+</select>
+  
+  
+</div>
+
+
+<div class="field">
+  <label for="id_source_system">Source label</label>
+  <input type="text" name="source_system" value="harvest" maxlength="32" required aria-describedby="id_source_system_helptext" id="id_source_system">
+  <div class="help" id="id_source_system_help">Stored on imported records, e.g. harvest.</div>
+  
+</div>
+
+
+<div class="field">
+  <label for="id_file">CSV file</label>
+  <input type="file" name="file" required aria-describedby="id_file_helptext" id="id_file">
+  <div class="help" id="id_file_help">UTF-8 CSV with a header row. Up to 200,000 rows.</div>
+  
+</div>
+
+
+      <button class="btn btn-primary" type="submit">Upload and map columns</button>
+    </form>
+    <p class="help">Suggested order: clients → projects → people → task assignments → time. Every import starts with a dry run, needs explicit decisions for unmatched names, and can be rolled back.</p>
+  </section>
+</div>
+
+</main>
+<footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
+<div class="toast-region" aria-live="polite"></div>
+</body>
+</html>

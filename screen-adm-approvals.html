@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Approvals · Peach Time</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="brand.css">
+  <script src="picker.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body data-proto-role="Viewing as Avery Admin (administrator)">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="screen-adm-day.html"><span class="brand-dot" aria-hidden="true"></span>Peach Time</a>
+    <nav class="nav" aria-label="Main">
+      
+        <a href="screen-adm-day.html">My Time</a>
+      
+        <a href="screen-adm-reports.html">Reports</a>
+      
+        <a href="screen-adm-projects.html">Projects</a>
+      
+        <a href="screen-adm-clients.html">Clients</a>
+      
+        <a href="screen-adm-team.html">Team</a>
+      
+        <a href="screen-adm-approvals.html" aria-current="page">Approvals</a>
+      
+        <a href="screen-adm-settings.html">Settings</a>
+      
+    </nav>
+    <div class="topbar-right">
+      <span id="timer-pill-slot">
+
+  <span data-timer-id="" hidden></span>
+
+</span>
+
+      <a class="icon-link" href="#" data-proto-missing="This screen isn&#x27;t part of the preview." aria-label="Notifications, 30 unread">
+        <span aria-hidden="true">🔔</span><span class="count" aria-hidden="true">30</span>
+      </a>
+      <details class="user-menu">
+        <summary>Avery <span class="muted small">▾</span></summary>
+        <div class="menu" role="menu">
+          <div class="menu-head muted small">avery@peach-demo.example<br>Administrator</div>
+          <a href="#" data-proto-missing="This screen isn&#x27;t part of the preview." role="menuitem">Account &amp; security</a>
+          <form method="post" action="/logout/"><button type="submit" role="menuitem">Sign out</button></form>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container ">
+  
+
+  
+<div class="page-head"><h1>Approvals</h1></div>
+<nav class="subnav" aria-label="Approval queues">
+  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview." aria-current="page">Pending (4)</a>
+  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Rejected (1)</a>
+  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Unsubmitted</a>
+  <a href="#" data-proto-missing="Filters and tabs run on the server, so they&#x27;re off in this preview.">Recently approved</a>
+</nav>
+
+<div class="table-wrap"><table class="table">
+  <thead><tr><th>Person</th><th>Week</th><th class="num">Logged</th><th class="num">Billable</th><th class="num">Scheduled</th><th>Submitted</th><th></th></tr></thead>
+  <tbody>
+    <tr><td>Avery Admin</td><td class="nowrap">5 Oct – 11 Oct</td>
+      <td class="num">30:30</td><td class="num">23:30</td>
+      <td class="num">40:00 <span class="badge badge-warn" title="Scheduled minus logged">−9:30</span></td>
+      <td class="small">16 Oct 00:12</td>
+      <td class="actions">
+        <span class="small muted">Yours: another admin approves</span>
+        <a class="btn btn-sm" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Review</a></td></tr>
+  
+    <tr><td>Blake Reviewer</td><td class="nowrap">5 Oct – 11 Oct</td>
+      <td class="num">40:00</td><td class="num">7:30</td>
+      <td class="num">40:00</td>
+      <td class="small">16 Oct 00:12</td>
+      <td class="actions">
+        
+        <form method="post" action="/approvals/26/decide/" class="inline-form"><input type="hidden" name="action" value="approve"><input type="hidden" name="expected_version" value="2"><input type="hidden" name="next" value="queue"><button class="btn btn-sm btn-primary" type="submit">Approve</button></form>
+        
+        <a class="btn btn-sm" href="screen-adm-review.html">Review</a></td></tr>
+  
+    <tr><td>Casey Strategist</td><td class="nowrap">5 Oct – 11 Oct</td>
+      <td class="num">38:30</td><td class="num">31:00</td>
+      <td class="num">40:00 <span class="badge badge-warn" title="Scheduled minus logged">−1:30</span></td>
+      <td class="small">16 Oct 00:12</td>
+      <td class="actions">
+        
+        <form method="post" action="/approvals/30/decide/" class="inline-form"><input type="hidden" name="action" value="approve"><input type="hidden" name="expected_version" value="2"><input type="hidden" name="next" value="queue"><button class="btn btn-sm btn-primary" type="submit">Approve</button></form>
+        
+        <a class="btn btn-sm" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Review</a></td></tr>
+  
+    <tr><td>Riley Video</td><td class="nowrap">5 Oct – 11 Oct</td>
+      <td class="num">37:00</td><td class="num">26:00</td>
+      <td class="num">40:00 <span class="badge badge-warn" title="Scheduled minus logged">−3:00</span></td>
+      <td class="small">16 Oct 00:12</td>
+      <td class="actions">
+        
+        <form method="post" action="/approvals/29/decide/" class="inline-form"><input type="hidden" name="action" value="approve"><input type="hidden" name="expected_version" value="2"><input type="hidden" name="next" value="queue"><button class="btn btn-sm btn-primary" type="submit">Approve</button></form>
+        
+        <a class="btn btn-sm" href="#" data-proto-missing="This screen isn&#x27;t part of the preview.">Review</a></td></tr>
+  </tbody>
+</table></div>
+
+
+</main>
+<footer class="site no-print">Peach Time 1.0.0 · Times shown in America/Halifax · Amounts in CAD</footer>
+<div class="toast-region" aria-live="polite"></div>
+</body>
+</html>
